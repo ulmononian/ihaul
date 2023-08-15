@@ -1,0 +1,285 @@
+Mon 14 Aug 2023 06:16:17 PM EDT
+Start Regression test
+
+Testing UFSWM Hash: f75ceb548f97ef710cca5b55cdd732fd713c2e8a
+Testing With Submodule Hashes:
+ 37cbb7d6840ae7515a9a8f0dfd4d89461b3396d1 ../AQM (v0.2.0-37-g37cbb7d)
+ 2aa6bfbb62ebeecd7da964b8074f6c3c41c7d1eb ../CDEPS-interface/CDEPS (cdeps0.4.17-38-g2aa6bfb)
+ d41c61dd332d5803d31408be1b9e8ef611856049 ../CICE-interface/CICE (CICE6.0.0-441-gd41c61d)
+ 9923d6d17700daf502d9a016138bf8eb8aad7f09 ../CMEPS-interface/CMEPS (cmeps_v0.4.1-2295-g9923d6d)
+ cabd7753ae17f7bfcc6dad56daf10868aa51c3f4 ../CMakeModules (v1.0.0-28-gcabd775)
+ f595b972ab0a099a8ef13ddad313ec2c0d8672d4 ../FV3 (heads/develop)
+ 6ea78fd79037b31a1dcdd30d8a315f6558d963e4 ../GOCART (sdr_v2.1.2.6-106-g6ea78fd)
+ 24437531dcf8580aadaf6ebeb9de544ccfc674f9 ../HYCOM-interface/HYCOM (2.3.00-120-g2443753)
+ fdbfa2523650b81a0771f3fb1791ea3e3dce66db ../MOM6-interface/MOM6 (dev/master/repository_split_2014.10.10-9713-gfdbfa2523)
+ 569e354ababbde7a7cd68647533769a5c966468d ../NOAHMP-interface/noahmp (v3.7.1-303-g569e354)
+ 59c554a12df3a04e0402ce5f17bb32cbbac193b2 ../WW3 (6.07.1-341-g59c554a1)
+ 3bfa4468d85e5b63980c28434f494967f38b10a3 ../stochastic_physics (ufs-v2.0.0-171-g3bfa446)
+Compile hafs_all_intel elapsed time 727 seconds. -DAPP=HAFS-ALL -DCCPP_SUITES=FV3_HAFS_v1_gfdlmp_tedmf,FV3_HAFS_v1_gfdlmp_tedmf_nonsst -D32BIT=ON -DMPI=ON -DCMAKE_BUILD_TYPE=Release
+Compile s2swa_intel elapsed time 843 seconds. -DAPP=S2SWA -DCCPP_SUITES=FV3_GFS_v17_coupled_p8 -DMPI=ON -DCMAKE_BUILD_TYPE=Release -DMOM6SOLO=ON
+
+baseline dir = /lustre/f2/scratch/Cameron.Book/FV3_RT/REGRESSION_TEST/cpld_control_p8_intel
+working dir  = /lustre/f2/scratch/Cameron.Book/FV3_RT/rt_27420/cpld_control_p8_intel
+Checking test 001 cpld_control_p8_intel results ....
+ Comparing sfcf021.tile1.nc .........OK
+ Comparing sfcf021.tile2.nc .........OK
+ Comparing sfcf021.tile3.nc .........OK
+ Comparing sfcf021.tile4.nc .........OK
+ Comparing sfcf021.tile5.nc .........OK
+ Comparing sfcf021.tile6.nc .........OK
+ Comparing atmf021.tile1.nc .........OK
+ Comparing atmf021.tile2.nc .........OK
+ Comparing atmf021.tile3.nc .........OK
+ Comparing atmf021.tile4.nc .........OK
+ Comparing atmf021.tile5.nc .........OK
+ Comparing atmf021.tile6.nc .........OK
+ Comparing sfcf024.tile1.nc .........OK
+ Comparing sfcf024.tile2.nc .........OK
+ Comparing sfcf024.tile3.nc .........OK
+ Comparing sfcf024.tile4.nc .........OK
+ Comparing sfcf024.tile5.nc .........OK
+ Comparing sfcf024.tile6.nc .........OK
+ Comparing atmf024.tile1.nc .........OK
+ Comparing atmf024.tile2.nc .........OK
+ Comparing atmf024.tile3.nc .........OK
+ Comparing atmf024.tile4.nc .........OK
+ Comparing atmf024.tile5.nc .........OK
+ Comparing atmf024.tile6.nc .........OK
+ Comparing gocart.inst_aod.20210323_0600z.nc4 .........OK
+ Comparing RESTART/20210323.060000.coupler.res .........OK
+ Comparing RESTART/20210323.060000.fv_core.res.nc .........OK
+ Comparing RESTART/20210323.060000.fv_core.res.tile1.nc .........OK
+ Comparing RESTART/20210323.060000.fv_core.res.tile2.nc .........OK
+ Comparing RESTART/20210323.060000.fv_core.res.tile3.nc .........OK
+ Comparing RESTART/20210323.060000.fv_core.res.tile4.nc .........OK
+ Comparing RESTART/20210323.060000.fv_core.res.tile5.nc .........OK
+ Comparing RESTART/20210323.060000.fv_core.res.tile6.nc .........OK
+ Comparing RESTART/20210323.060000.fv_srf_wnd.res.tile1.nc .........OK
+ Comparing RESTART/20210323.060000.fv_srf_wnd.res.tile2.nc .........OK
+ Comparing RESTART/20210323.060000.fv_srf_wnd.res.tile3.nc .........OK
+ Comparing RESTART/20210323.060000.fv_srf_wnd.res.tile4.nc .........OK
+ Comparing RESTART/20210323.060000.fv_srf_wnd.res.tile5.nc .........OK
+ Comparing RESTART/20210323.060000.fv_srf_wnd.res.tile6.nc .........OK
+ Comparing RESTART/20210323.060000.fv_tracer.res.tile1.nc .........OK
+ Comparing RESTART/20210323.060000.fv_tracer.res.tile2.nc .........OK
+ Comparing RESTART/20210323.060000.fv_tracer.res.tile3.nc .........OK
+ Comparing RESTART/20210323.060000.fv_tracer.res.tile4.nc .........OK
+ Comparing RESTART/20210323.060000.fv_tracer.res.tile5.nc .........OK
+ Comparing RESTART/20210323.060000.fv_tracer.res.tile6.nc .........OK
+ Comparing RESTART/20210323.060000.phy_data.tile1.nc .........OK
+ Comparing RESTART/20210323.060000.phy_data.tile2.nc .........OK
+ Comparing RESTART/20210323.060000.phy_data.tile3.nc .........OK
+ Comparing RESTART/20210323.060000.phy_data.tile4.nc .........OK
+ Comparing RESTART/20210323.060000.phy_data.tile5.nc .........OK
+ Comparing RESTART/20210323.060000.phy_data.tile6.nc .........OK
+ Comparing RESTART/20210323.060000.sfc_data.tile1.nc .........OK
+ Comparing RESTART/20210323.060000.sfc_data.tile2.nc .........OK
+ Comparing RESTART/20210323.060000.sfc_data.tile3.nc .........OK
+ Comparing RESTART/20210323.060000.sfc_data.tile4.nc .........OK
+ Comparing RESTART/20210323.060000.sfc_data.tile5.nc .........OK
+ Comparing RESTART/20210323.060000.sfc_data.tile6.nc .........OK
+ Comparing RESTART/20210323.060000.MOM.res.nc .........OK
+ Comparing RESTART/iced.2021-03-23-21600.nc .........OK
+ Comparing RESTART/ufs.cpld.cpl.r.2021-03-23-21600.nc .........OK
+ Comparing 20210323.060000.out_pnt.ww3 .........OK
+ Comparing 20210323.060000.out_grd.ww3 .........OK
+
+  0: The total amount of wall time                        = 360.326440
+  0: The maximum resident set size (KB)                   = 1601372
+
+Test 001 cpld_control_p8_intel PASS
+
+
+baseline dir = /lustre/f2/scratch/Cameron.Book/FV3_RT/REGRESSION_TEST/cpld_control_p8_intel
+working dir  = /lustre/f2/scratch/Cameron.Book/FV3_RT/rt_27420/cpld_2threads_p8_intel
+Checking test 002 cpld_2threads_p8_intel results ....
+ Comparing sfcf024.tile1.nc .........OK
+ Comparing sfcf024.tile2.nc .........OK
+ Comparing sfcf024.tile3.nc .........OK
+ Comparing sfcf024.tile4.nc .........OK
+ Comparing sfcf024.tile5.nc .........OK
+ Comparing sfcf024.tile6.nc .........OK
+ Comparing atmf024.tile1.nc .........OK
+ Comparing atmf024.tile2.nc .........OK
+ Comparing atmf024.tile3.nc .........OK
+ Comparing atmf024.tile4.nc .........OK
+ Comparing atmf024.tile5.nc .........OK
+ Comparing atmf024.tile6.nc .........OK
+ Comparing gocart.inst_aod.20210323_0600z.nc4 .........OK
+ Comparing RESTART/20210323.060000.coupler.res .........OK
+ Comparing RESTART/20210323.060000.fv_core.res.nc .........OK
+ Comparing RESTART/20210323.060000.fv_core.res.tile1.nc .........OK
+ Comparing RESTART/20210323.060000.fv_core.res.tile2.nc .........OK
+ Comparing RESTART/20210323.060000.fv_core.res.tile3.nc .........OK
+ Comparing RESTART/20210323.060000.fv_core.res.tile4.nc .........OK
+ Comparing RESTART/20210323.060000.fv_core.res.tile5.nc .........OK
+ Comparing RESTART/20210323.060000.fv_core.res.tile6.nc .........OK
+ Comparing RESTART/20210323.060000.fv_srf_wnd.res.tile1.nc .........OK
+ Comparing RESTART/20210323.060000.fv_srf_wnd.res.tile2.nc .........OK
+ Comparing RESTART/20210323.060000.fv_srf_wnd.res.tile3.nc .........OK
+ Comparing RESTART/20210323.060000.fv_srf_wnd.res.tile4.nc .........OK
+ Comparing RESTART/20210323.060000.fv_srf_wnd.res.tile5.nc .........OK
+ Comparing RESTART/20210323.060000.fv_srf_wnd.res.tile6.nc .........OK
+ Comparing RESTART/20210323.060000.fv_tracer.res.tile1.nc .........OK
+ Comparing RESTART/20210323.060000.fv_tracer.res.tile2.nc .........OK
+ Comparing RESTART/20210323.060000.fv_tracer.res.tile3.nc .........OK
+ Comparing RESTART/20210323.060000.fv_tracer.res.tile4.nc .........OK
+ Comparing RESTART/20210323.060000.fv_tracer.res.tile5.nc .........OK
+ Comparing RESTART/20210323.060000.fv_tracer.res.tile6.nc .........OK
+ Comparing RESTART/20210323.060000.phy_data.tile1.nc .........OK
+ Comparing RESTART/20210323.060000.phy_data.tile2.nc .........OK
+ Comparing RESTART/20210323.060000.phy_data.tile3.nc .........OK
+ Comparing RESTART/20210323.060000.phy_data.tile4.nc .........OK
+ Comparing RESTART/20210323.060000.phy_data.tile5.nc .........OK
+ Comparing RESTART/20210323.060000.phy_data.tile6.nc .........OK
+ Comparing RESTART/20210323.060000.sfc_data.tile1.nc .........OK
+ Comparing RESTART/20210323.060000.sfc_data.tile2.nc .........OK
+ Comparing RESTART/20210323.060000.sfc_data.tile3.nc .........OK
+ Comparing RESTART/20210323.060000.sfc_data.tile4.nc .........OK
+ Comparing RESTART/20210323.060000.sfc_data.tile5.nc .........OK
+ Comparing RESTART/20210323.060000.sfc_data.tile6.nc .........OK
+ Comparing RESTART/20210323.060000.MOM.res.nc .........OK
+ Comparing RESTART/iced.2021-03-23-21600.nc .........OK
+ Comparing RESTART/ufs.cpld.cpl.r.2021-03-23-21600.nc .........OK
+ Comparing 20210323.060000.out_pnt.ww3 .........OK
+ Comparing 20210323.060000.out_grd.ww3 .........OK
+
+  0: The total amount of wall time                        = 345.187051
+  0: The maximum resident set size (KB)                   = 1816396
+
+Test 002 cpld_2threads_p8_intel PASS
+
+
+baseline dir = /lustre/f2/scratch/Cameron.Book/FV3_RT/REGRESSION_TEST/cpld_control_p8_intel
+working dir  = /lustre/f2/scratch/Cameron.Book/FV3_RT/rt_27420/cpld_mpi_p8_intel
+Checking test 003 cpld_mpi_p8_intel results ....
+ Comparing sfcf024.tile1.nc .........OK
+ Comparing sfcf024.tile2.nc .........OK
+ Comparing sfcf024.tile3.nc .........OK
+ Comparing sfcf024.tile4.nc .........OK
+ Comparing sfcf024.tile5.nc .........OK
+ Comparing sfcf024.tile6.nc .........OK
+ Comparing atmf024.tile1.nc .........OK
+ Comparing atmf024.tile2.nc .........OK
+ Comparing atmf024.tile3.nc .........OK
+ Comparing atmf024.tile4.nc .........OK
+ Comparing atmf024.tile5.nc .........OK
+ Comparing atmf024.tile6.nc .........OK
+ Comparing gocart.inst_aod.20210323_0600z.nc4 .........OK
+ Comparing RESTART/20210323.060000.coupler.res .........OK
+ Comparing RESTART/20210323.060000.fv_core.res.nc .........OK
+ Comparing RESTART/20210323.060000.fv_core.res.tile1.nc .........OK
+ Comparing RESTART/20210323.060000.fv_core.res.tile2.nc .........OK
+ Comparing RESTART/20210323.060000.fv_core.res.tile3.nc .........OK
+ Comparing RESTART/20210323.060000.fv_core.res.tile4.nc .........OK
+ Comparing RESTART/20210323.060000.fv_core.res.tile5.nc .........OK
+ Comparing RESTART/20210323.060000.fv_core.res.tile6.nc .........OK
+ Comparing RESTART/20210323.060000.fv_srf_wnd.res.tile1.nc .........OK
+ Comparing RESTART/20210323.060000.fv_srf_wnd.res.tile2.nc .........OK
+ Comparing RESTART/20210323.060000.fv_srf_wnd.res.tile3.nc .........OK
+ Comparing RESTART/20210323.060000.fv_srf_wnd.res.tile4.nc .........OK
+ Comparing RESTART/20210323.060000.fv_srf_wnd.res.tile5.nc .........OK
+ Comparing RESTART/20210323.060000.fv_srf_wnd.res.tile6.nc .........OK
+ Comparing RESTART/20210323.060000.fv_tracer.res.tile1.nc .........OK
+ Comparing RESTART/20210323.060000.fv_tracer.res.tile2.nc .........OK
+ Comparing RESTART/20210323.060000.fv_tracer.res.tile3.nc .........OK
+ Comparing RESTART/20210323.060000.fv_tracer.res.tile4.nc .........OK
+ Comparing RESTART/20210323.060000.fv_tracer.res.tile5.nc .........OK
+ Comparing RESTART/20210323.060000.fv_tracer.res.tile6.nc .........OK
+ Comparing RESTART/20210323.060000.phy_data.tile1.nc .........OK
+ Comparing RESTART/20210323.060000.phy_data.tile2.nc .........OK
+ Comparing RESTART/20210323.060000.phy_data.tile3.nc .........OK
+ Comparing RESTART/20210323.060000.phy_data.tile4.nc .........OK
+ Comparing RESTART/20210323.060000.phy_data.tile5.nc .........OK
+ Comparing RESTART/20210323.060000.phy_data.tile6.nc .........OK
+ Comparing RESTART/20210323.060000.sfc_data.tile1.nc .........OK
+ Comparing RESTART/20210323.060000.sfc_data.tile2.nc .........OK
+ Comparing RESTART/20210323.060000.sfc_data.tile3.nc .........OK
+ Comparing RESTART/20210323.060000.sfc_data.tile4.nc .........OK
+ Comparing RESTART/20210323.060000.sfc_data.tile5.nc .........OK
+ Comparing RESTART/20210323.060000.sfc_data.tile6.nc .........OK
+ Comparing RESTART/20210323.060000.MOM.res.nc .........OK
+ Comparing RESTART/iced.2021-03-23-21600.nc .........OK
+ Comparing RESTART/ufs.cpld.cpl.r.2021-03-23-21600.nc .........OK
+ Comparing 20210323.060000.out_pnt.ww3 .........OK
+ Comparing 20210323.060000.out_grd.ww3 .........OK
+
+  0: The total amount of wall time                        = 310.853938
+  0: The maximum resident set size (KB)                   = 1558276
+
+Test 003 cpld_mpi_p8_intel PASS
+
+
+baseline dir = /lustre/f2/scratch/Cameron.Book/FV3_RT/REGRESSION_TEST/cpld_bmark_p8_intel
+working dir  = /lustre/f2/scratch/Cameron.Book/FV3_RT/rt_27420/cpld_bmark_p8_intel
+Checking test 004 cpld_bmark_p8_intel results ....
+ Comparing sfcf006.nc .........OK
+ Comparing atmf006.nc .........OK
+ Comparing GFSFLX.GrbF06 .........OK
+ Comparing GFSPRS.GrbF06 .........OK
+ Comparing gocart.inst_aod.20130401_0600z.nc4 .........OK
+ Comparing RESTART/20130401.060000.coupler.res .........OK
+ Comparing RESTART/20130401.060000.fv_core.res.nc .........OK
+ Comparing RESTART/20130401.060000.fv_core.res.tile1.nc .........OK
+ Comparing RESTART/20130401.060000.fv_core.res.tile2.nc .........OK
+ Comparing RESTART/20130401.060000.fv_core.res.tile3.nc .........OK
+ Comparing RESTART/20130401.060000.fv_core.res.tile4.nc .........OK
+ Comparing RESTART/20130401.060000.fv_core.res.tile5.nc .........OK
+ Comparing RESTART/20130401.060000.fv_core.res.tile6.nc .........OK
+ Comparing RESTART/20130401.060000.fv_srf_wnd.res.tile1.nc .........OK
+ Comparing RESTART/20130401.060000.fv_srf_wnd.res.tile2.nc .........OK
+ Comparing RESTART/20130401.060000.fv_srf_wnd.res.tile3.nc .........OK
+ Comparing RESTART/20130401.060000.fv_srf_wnd.res.tile4.nc .........OK
+ Comparing RESTART/20130401.060000.fv_srf_wnd.res.tile5.nc .........OK
+ Comparing RESTART/20130401.060000.fv_srf_wnd.res.tile6.nc .........OK
+ Comparing RESTART/20130401.060000.fv_tracer.res.tile1.nc .........OK
+ Comparing RESTART/20130401.060000.fv_tracer.res.tile2.nc .........OK
+ Comparing RESTART/20130401.060000.fv_tracer.res.tile3.nc .........OK
+ Comparing RESTART/20130401.060000.fv_tracer.res.tile4.nc .........OK
+ Comparing RESTART/20130401.060000.fv_tracer.res.tile5.nc .........OK
+ Comparing RESTART/20130401.060000.fv_tracer.res.tile6.nc .........OK
+ Comparing RESTART/20130401.060000.phy_data.tile1.nc .........OK
+ Comparing RESTART/20130401.060000.phy_data.tile2.nc .........OK
+ Comparing RESTART/20130401.060000.phy_data.tile3.nc .........OK
+ Comparing RESTART/20130401.060000.phy_data.tile4.nc .........OK
+ Comparing RESTART/20130401.060000.phy_data.tile5.nc .........OK
+ Comparing RESTART/20130401.060000.phy_data.tile6.nc .........OK
+ Comparing RESTART/20130401.060000.sfc_data.tile1.nc .........OK
+ Comparing RESTART/20130401.060000.sfc_data.tile2.nc .........OK
+ Comparing RESTART/20130401.060000.sfc_data.tile3.nc .........OK
+ Comparing RESTART/20130401.060000.sfc_data.tile4.nc .........OK
+ Comparing RESTART/20130401.060000.sfc_data.tile5.nc .........OK
+ Comparing RESTART/20130401.060000.sfc_data.tile6.nc .........OK
+ Comparing RESTART/20130401.060000.MOM.res.nc .........OK
+ Comparing RESTART/20130401.060000.MOM.res_1.nc .........OK
+ Comparing RESTART/20130401.060000.MOM.res_2.nc .........OK
+ Comparing RESTART/20130401.060000.MOM.res_3.nc .........OK
+ Comparing RESTART/iced.2013-04-01-21600.nc .........OK
+ Comparing RESTART/ufs.cpld.cpl.r.2013-04-01-21600.nc .........OK
+ Comparing 20130401.060000.out_pnt.ww3 .........OK
+ Comparing 20130401.060000.out_grd.ww3 .........OK
+
+   0: The total amount of wall time                        = 647.517999
+   0: The maximum resident set size (KB)                   = 2546832
+
+Test 004 cpld_bmark_p8_intel PASS
+
+
+baseline dir = /lustre/f2/scratch/Cameron.Book/FV3_RT/REGRESSION_TEST/hafs_regional_docn_oisst_intel
+working dir  = /lustre/f2/scratch/Cameron.Book/FV3_RT/rt_27420/hafs_regional_docn_oisst_intel
+Checking test 005 hafs_regional_docn_oisst_intel results ....
+ Comparing atmf006.nc .........OK
+ Comparing sfcf006.nc .........OK
+ Comparing ufs.hafs.cpl.hi.2019-08-29-21600.nc .........OK
+ Comparing ufs.hafs.cpl.r.2019-08-29-21600.nc .........OK
+ Comparing ufs.hafs.docn.r.2019-08-29-21600.nc .........OK
+
+  0: The total amount of wall time                        = 361.257785
+  0: The maximum resident set size (KB)                   = 734772
+
+Test 005 hafs_regional_docn_oisst_intel PASS
+
+
+REGRESSION TEST WAS SUCCESSFUL
+Mon 14 Aug 2023 07:37:18 PM EDT
+Elapsed time: 01h:21m:08s. Have a nice day!
