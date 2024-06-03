@@ -1,0 +1,2726 @@
+
+Currently Loaded Modules:
+  1) intel/2022.1.2                   23) crtm-fix/2.4.0_emc
+  2) stack-intel/2021.5.0             24) git-lfs/2.10.0
+  3) impi/2022.1.2                    25) crtm/2.4.0
+  4) stack-intel-oneapi-mpi/2021.5.1  26) g2/3.4.5
+  5) curl/8.1.2                       27) g2tmpl/1.10.2
+  6) cmake/3.23.1                     28) ip/4.3.0
+  7) libjpeg/2.1.0                    29) sp/2.3.3
+  8) jasper/2.0.32                    30) w3emc/2.10.0
+  9) zlib/1.2.13                      31) gftl/1.10.0
+ 10) libpng/1.6.37                    32) gftl-shared/1.6.1
+ 11) pkg-config/0.27.1                33) fargparse/1.5.0
+ 12) hdf5/1.14.0                      34) gettext/0.19.8.1
+ 13) snappy/1.1.10                    35) libxcrypt/4.4.35
+ 14) zstd/1.5.2                       36) sqlite/3.42.0
+ 15) c-blosc/1.21.4                   37) util-linux-uuid/2.38.1
+ 16) netcdf-c/4.9.2                   38) python/3.10.8
+ 17) netcdf-fortran/4.6.0             39) mapl/2.40.3-esmf-8.5.0
+ 18) parallel-netcdf/1.12.2           40) scotch/7.0.4
+ 19) parallelio/2.5.10                41) ufs_common
+ 20) esmf/8.5.0                       42) nccmp/1.9.0.1
+ 21) fms/2023.02.01                   43) modules.fv3
+ 22) bacio/2.4.1
+
+ 
+
+Model started: Thu May 30 18:32:06 UTC 2024
+  0: 
+  0: 
+  0: * . * . * . * . * . * . * . * . * . * . * . * . * . * . * . * . * . * . * . * . 
+  0:      PROGRAM ufs-weather-model HAS BEGUN. COMPILED       0.00     ORG: np23
+  0:      STARTING DATE-TIME  MAY 30,2024  18:32:15.384  151  THU   2460461
+  0: 
+  0: 
+  0: MPI Library = Intel(R) MPI Library 2021.5 for Linux* OS
+  0: 
+  0: MPI Version = 3.1
+  0:  af ufs config,quilting= T  calendar=gregorian iau_offset=           0 
+  0:   noutput_fh=           2
+  0:  af ufs config,quilting= T  write_groups=           1          12 
+  0:   isrcTermProcessing=           0
+  0:  af ufs config,dt_atmos=         360 nfhmax=   24.00000    
+  0:  in fcst comp init, fcst_ntasks=         192
+  0:  af ufs config,num_restart_interval=           1
+  0:  af ufs config,restart_interval=   48.00000    
+  0: NOTE from PE     0: MPP_DOMAINS_SET_STACK_SIZE: stack size set to    32768.
+  0:  &MPP_IO_NML
+  0:  HEADER_BUFFER_VAL       =       16384,
+  0:  GLOBAL_FIELD_ON_ROOT_PE = T,
+  0:  IO_CLOCKS_ON    = F,
+  0:  SHUFFLE =           0,
+  0:  DEFLATE_LEVEL   =          -1,
+  0:  CF_COMPLIANCE   = F
+  0:  /
+  0: NOTE from PE     0: MPP_IO_SET_STACK_SIZE: stack size set to     131072.
+  0: NOTE from PE     0: MPP_DOMAINS_SET_STACK_SIZE: stack size set to  3000000.
+  0: StartTime= 2020    7   23    0    0    0
+  0: CurrTime = 2020    7   23    0    0    0
+  0: StopTime = 2020    7   24    0    0    0
+  0: NOTE from PE     0: diag_manager_mod::diag_manager_init: diag_manager is using fms2_io
+  0:  time_init=        2020           7          23           0           0
+  0:            0 time=        2020           7          23           0           0
+  0:            0 time_end=        2020           7          24           0
+  0:            0           0 dt_atmos=         360
+  0:  frestart=          48           0           0           0           0
+  0:            0           0           0           0           0 total_inttime=
+  0:        86400
+  0: atmosphere_init: current_time_seconds =       0.0
+  0: Using n_split from the namelist: 005
+  0:  Off center implicit scheme param=   1.000000    
+  0:   p_fac=  0.1000000    
+  0: Using n_sponge : 042
+  0: Using non_ortho :       T
+  0:  Starting PEs :          192
+  0:  Starting Threads :            1
+ 32:  Cubic: cubed-sphere domain decomposition
+ 32: whalo =    3, ehalo =    3, shalo =    3, nhalo =    3
+ 32:   X-AXIS =   48  48  48  48
+ 32:   Y-AXIS =   24  24  24  24  24  24  24  24
+ 96:  Cubic: cubed-sphere domain decomposition
+ 96: whalo =    3, ehalo =    3, shalo =    3, nhalo =    3
+ 96:   X-AXIS =   48  48  48  48
+ 96:   Y-AXIS =   24  24  24  24  24  24  24  24
+ 64:  Cubic: cubed-sphere domain decomposition
+ 64: whalo =    3, ehalo =    3, shalo =    3, nhalo =    3
+ 64:   X-AXIS =   48  48  48  48
+ 64:   Y-AXIS =   24  24  24  24  24  24  24  24
+128:  Cubic: cubed-sphere domain decomposition
+128: whalo =    3, ehalo =    3, shalo =    3, nhalo =    3
+128:   X-AXIS =   48  48  48  48
+128:   Y-AXIS =   24  24  24  24  24  24  24  24
+  0:  Cubic: cubed-sphere domain decomposition
+  0: whalo =    3, ehalo =    3, shalo =    3, nhalo =    3
+  0:   X-AXIS =   48  48  48  48
+  0:   Y-AXIS =   24  24  24  24  24  24  24  24
+160:  Cubic: cubed-sphere domain decomposition
+160: whalo =    3, ehalo =    3, shalo =    3, nhalo =    3
+160:   X-AXIS =   48  48  48  48
+160:   Y-AXIS =   24  24  24  24  24  24  24  24
+ 32:  Cubic: cubed-sphere domain decomposition
+ 32: whalo =    1, ehalo =    1, shalo =    1, nhalo =    1
+ 32:   X-AXIS =   48  48  48  48
+ 32:   Y-AXIS =   24  24  24  24  24  24  24  24
+  0:  Cubic: cubed-sphere domain decomposition
+  0: whalo =    1, ehalo =    1, shalo =    1, nhalo =    1
+  0:   X-AXIS =   48  48  48  48
+  0:   Y-AXIS =   24  24  24  24  24  24  24  24
+  0:  ncnst=          10  num_prog=          10  pnats=           0  dnats=
+  0:            0  num_family=           0
+  0:  
+  0:  ==>Note from fv_grid_tools_mod(read_grid): read atmosphere grid from mosaic ver
+  0:  sion grid
+ 96:  Cubic: cubed-sphere domain decomposition
+ 96: whalo =    1, ehalo =    1, shalo =    1, nhalo =    1
+ 96:   X-AXIS =   48  48  48  48
+ 96:   Y-AXIS =   24  24  24  24  24  24  24  24
+128:  Cubic: cubed-sphere domain decomposition
+128: whalo =    1, ehalo =    1, shalo =    1, nhalo =    1
+128:   X-AXIS =   48  48  48  48
+128:   Y-AXIS =   24  24  24  24  24  24  24  24
+ 64:  Cubic: cubed-sphere domain decomposition
+ 64: whalo =    1, ehalo =    1, shalo =    1, nhalo =    1
+ 64:   X-AXIS =   48  48  48  48
+ 64:   Y-AXIS =   24  24  24  24  24  24  24  24
+160:  Cubic: cubed-sphere domain decomposition
+160: whalo =    1, ehalo =    1, shalo =    1, nhalo =    1
+160:   X-AXIS =   48  48  48  48
+160:   Y-AXIS =   24  24  24  24  24  24  24  24
+  0: MAX    AREA (m*m): 0.33369189764779E+10          MIN AREA (m*m): 0.14515359618740E+10
+  0: GLOBAL AREA (m*m): 0.51009649655351E+15 IDEAL GLOBAL AREA (m*m): 0.51009649655132E+15
+  0:  
+  0:   Radius is    6371200.00000000      , omega is   7.2921001E-05  small_fac = 
+  0:    1.000000    
+  0:   Cubed-Sphere Grid Stats :          193 x         193 x           6
+  0:    40845.3164062500        57767.6601562500        289343.176837004     
+  0:    40845.3164062500        57767.6601562500     
+  0:       Grid Length               : min:    40845.32 max:    57767.66 avg:   289343.18 min/max:        0.71
+  0:       Deviation from Orthogonal : min:  0.00000000000000E+00 max:  0.29774816846746E+02 avg:  0.53004092394505E+02
+  0:       Aspect Ratio              : min:  0.10000000000000E+01 max:  0.10630996115167E+01 avg:  0.61073199973422E+01
+  0:  
+  0:  Corner interpolation coefficient=   1.49660194538123     
+160:  Corner interpolation coefficient=   1.49659596517971     
+ 32:  Corner interpolation coefficient=   1.49659837114504     
+ 64:  Corner interpolation coefficient=   1.49659596517971     
+ 96:  Corner interpolation coefficient=   1.49659837114504     
+128:  Corner interpolation coefficient=   1.49660194538123     
+  0:  da_max/da_min=   2.29888825638862     
+  0:  da_max_c/da_min_c=   2.30414345534647     
+  0:   
+  0:  Divergence damping Coefficients
+  0:  For small dt=   36.00000    
+  0:  External mode del-2 (m**2/s)=  0.000000000000000E+000
+  0:  Internal mode del-2 SMAG dimensionless coeff=  0.1000000    
+  0:  Internal mode del-2 background diff=  0.000000000000000E+000
+  0:  Internal mode del-6 background diff=  0.1200000    
+  0:  tracer del-2 diff=  0.0000000E+00
+  0:  Vorticity del-4 (m**4/s)=   23410628.3233960     
+  0:  beta=  0.0000000E+00
+  0:   
+ 86:  enter get_nggps_ic is=  97 ie= 144 js= 121 je= 144 isd=  94 ied= 147 jsd= 118 jed= 147
+ 10:  enter get_nggps_ic is=  97 ie= 144 js=  49 je=  72 isd=  94 ied= 147 jsd=  46 jed=  75
+ 17:  enter get_nggps_ic is=  49 ie=  96 js=  97 je= 120 isd=  46 ied=  99 jsd=  94 jed= 123
+ 13:  enter get_nggps_ic is=  49 ie=  96 js=  73 je=  96 isd=  46 ied=  99 jsd=  70 jed=  99
+ 18:  enter get_nggps_ic is=  97 ie= 144 js=  97 je= 120 isd=  94 ied= 147 jsd=  94 jed= 123
+ 80:  enter get_nggps_ic is=   1 ie=  48 js=  97 je= 120 isd=  -2 ied=  51 jsd=  94 jed= 123
+ 21:  enter get_nggps_ic is=  49 ie=  96 js= 121 je= 144 isd=  46 ied=  99 jsd= 118 jed= 147
+169:  enter get_nggps_ic is=  49 ie=  96 js=  49 je=  72 isd=  46 ied=  99 jsd=  46 jed=  75
+  9:  enter get_nggps_ic is=  49 ie=  96 js=  49 je=  72 isd=  46 ied=  99 jsd=  46 jed=  75
+ 85:  enter get_nggps_ic is=  49 ie=  96 js= 121 je= 144 isd=  46 ied=  99 jsd= 118 jed= 147
+ 14:  enter get_nggps_ic is=  97 ie= 144 js=  73 je=  96 isd=  94 ied= 147 jsd=  70 jed=  99
+182:  enter get_nggps_ic is=  97 ie= 144 js= 121 je= 144 isd=  94 ied= 147 jsd= 118 jed= 147
+170:  enter get_nggps_ic is=  97 ie= 144 js=  49 je=  72 isd=  94 ied= 147 jsd=  46 jed=  75
+ 19:  enter get_nggps_ic is= 145 ie= 192 js=  97 je= 120 isd= 142 ied= 195 jsd=  94 jed= 123
+ 46:  enter get_nggps_ic is=  97 ie= 144 js=  73 je=  96 isd=  94 ied= 147 jsd=  70 jed=  99
+ 82:  enter get_nggps_ic is=  97 ie= 144 js=  97 je= 120 isd=  94 ied= 147 jsd=  94 jed= 123
+106:  enter get_nggps_ic is=  97 ie= 144 js=  49 je=  72 isd=  94 ied= 147 jsd=  46 jed=  75
+ 22:  enter get_nggps_ic is=  97 ie= 144 js= 121 je= 144 isd=  94 ied= 147 jsd= 118 jed= 147
+110:  enter get_nggps_ic is=  97 ie= 144 js=  73 je=  96 isd=  94 ied= 147 jsd=  70 jed=  99
+ 23:  enter get_nggps_ic is= 145 ie= 192 js= 121 je= 144 isd= 142 ied= 195 jsd= 118 jed= 147
+113:  enter get_nggps_ic is=  49 ie=  96 js=  97 je= 120 isd=  46 ied=  99 jsd=  94 jed= 123
+172:  enter get_nggps_ic is=   1 ie=  48 js=  73 je=  96 isd=  -2 ied=  51 jsd=  70 jed=  99
+141:  enter get_nggps_ic is=  49 ie=  96 js=  73 je=  96 isd=  46 ied=  99 jsd=  70 jed=  99
+ 11:  enter get_nggps_ic is= 145 ie= 192 js=  49 je=  72 isd= 142 ied= 195 jsd=  46 jed=  75
+ 48:  enter get_nggps_ic is=   1 ie=  48 js=  97 je= 120 isd=  -2 ied=  51 jsd=  94 jed= 123
+114:  enter get_nggps_ic is=  97 ie= 144 js=  97 je= 120 isd=  94 ied= 147 jsd=  94 jed= 123
+173:  enter get_nggps_ic is=  49 ie=  96 js=  73 je=  96 isd=  46 ied=  99 jsd=  70 jed=  99
+116:  enter get_nggps_ic is=   1 ie=  48 js= 121 je= 144 isd=  -2 ied=  51 jsd= 118 jed= 147
+174:  enter get_nggps_ic is=  97 ie= 144 js=  73 je=  96 isd=  94 ied= 147 jsd=  70 jed=  99
+117:  enter get_nggps_ic is=  49 ie=  96 js= 121 je= 144 isd=  46 ied=  99 jsd= 118 jed= 147
+178:  enter get_nggps_ic is=  97 ie= 144 js=  97 je= 120 isd=  94 ied= 147 jsd=  94 jed= 123
+ 15:  enter get_nggps_ic is= 145 ie= 192 js=  73 je=  96 isd= 142 ied= 195 jsd=  70 jed=  99
+ 49:  enter get_nggps_ic is=  49 ie=  96 js=  97 je= 120 isd=  46 ied=  99 jsd=  94 jed= 123
+118:  enter get_nggps_ic is=  97 ie= 144 js= 121 je= 144 isd=  94 ied= 147 jsd= 118 jed= 147
+181:  enter get_nggps_ic is=  49 ie=  96 js= 121 je= 144 isd=  46 ied=  99 jsd= 118 jed= 147
+142:  enter get_nggps_ic is=  97 ie= 144 js=  73 je=  96 isd=  94 ied= 147 jsd=  70 jed=  99
+ 26:  enter get_nggps_ic is=  97 ie= 144 js= 145 je= 168 isd=  94 ied= 147 jsd= 142 jed= 171
+ 52:  enter get_nggps_ic is=   1 ie=  48 js= 121 je= 144 isd=  -2 ied=  51 jsd= 118 jed= 147
+ 83:  enter get_nggps_ic is= 145 ie= 192 js=  97 je= 120 isd= 142 ied= 195 jsd=  94 jed= 123
+176:  enter get_nggps_ic is=   1 ie=  48 js=  97 je= 120 isd=  -2 ied=  51 jsd=  94 jed= 123
+ 27:  enter get_nggps_ic is= 145 ie= 192 js= 145 je= 168 isd= 142 ied= 195 jsd= 142 jed= 171
+ 53:  enter get_nggps_ic is=  49 ie=  96 js= 121 je= 144 isd=  46 ied=  99 jsd= 118 jed= 147
+ 87:  enter get_nggps_ic is= 145 ie= 192 js= 121 je= 144 isd= 142 ied= 195 jsd= 118 jed= 147
+177:  enter get_nggps_ic is=  49 ie=  96 js=  97 je= 120 isd=  46 ied=  99 jsd=  94 jed= 123
+143:  enter get_nggps_ic is= 145 ie= 192 js=  73 je=  96 isd= 142 ied= 195 jsd=  70 jed=  99
+ 16:  enter get_nggps_ic is=   1 ie=  48 js=  97 je= 120 isd=  -2 ied=  51 jsd=  94 jed= 123
+ 40:  enter get_nggps_ic is=   1 ie=  48 js=  49 je=  72 isd=  -2 ied=  51 jsd=  46 jed=  75
+104:  enter get_nggps_ic is=   1 ie=  48 js=  49 je=  72 isd=  -2 ied=  51 jsd=  46 jed=  75
+180:  enter get_nggps_ic is=   1 ie=  48 js= 121 je= 144 isd=  -2 ied=  51 jsd= 118 jed= 147
+145:  enter get_nggps_ic is=  49 ie=  96 js=  97 je= 120 isd=  46 ied=  99 jsd=  94 jed= 123
+ 30:  enter get_nggps_ic is=  97 ie= 144 js= 169 je= 192 isd=  94 ied= 147 jsd= 166 jed= 195
+ 41:  enter get_nggps_ic is=  49 ie=  96 js=  49 je=  72 isd=  46 ied=  99 jsd=  46 jed=  75
+105:  enter get_nggps_ic is=  49 ie=  96 js=  49 je=  72 isd=  46 ied=  99 jsd=  46 jed=  75
+184:  enter get_nggps_ic is=   1 ie=  48 js= 145 je= 168 isd=  -2 ied=  51 jsd= 142 jed= 171
+ 39:  enter get_nggps_ic is= 145 ie= 192 js=  25 je=  48 isd= 142 ied= 195 jsd=  22 jed=  51
+ 42:  enter get_nggps_ic is=  97 ie= 144 js=  49 je=  72 isd=  94 ied= 147 jsd=  46 jed=  75
+108:  enter get_nggps_ic is=   1 ie=  48 js=  73 je=  96 isd=  -2 ied=  51 jsd=  70 jed=  99
+171:  enter get_nggps_ic is= 145 ie= 192 js=  49 je=  72 isd= 142 ied= 195 jsd=  46 jed=  75
+146:  enter get_nggps_ic is=  97 ie= 144 js=  97 je= 120 isd=  94 ied= 147 jsd=  94 jed= 123
+  7:  enter get_nggps_ic is= 145 ie= 192 js=  25 je=  48 isd= 142 ied= 195 jsd=  22 jed=  51
+ 44:  enter get_nggps_ic is=   1 ie=  48 js=  73 je=  96 isd=  -2 ied=  51 jsd=  70 jed=  99
+109:  enter get_nggps_ic is=  49 ie=  96 js=  73 je=  96 isd=  46 ied=  99 jsd=  70 jed=  99
+185:  enter get_nggps_ic is=  49 ie=  96 js= 145 je= 168 isd=  46 ied=  99 jsd= 142 jed= 171
+147:  enter get_nggps_ic is= 145 ie= 192 js=  97 je= 120 isd= 142 ied= 195 jsd=  94 jed= 123
+  8:  enter get_nggps_ic is=   1 ie=  48 js=  49 je=  72 isd=  -2 ied=  51 jsd=  46 jed=  75
+ 45:  enter get_nggps_ic is=  49 ie=  96 js=  73 je=  96 isd=  46 ied=  99 jsd=  70 jed=  99
+112:  enter get_nggps_ic is=   1 ie=  48 js=  97 je= 120 isd=  -2 ied=  51 jsd=  94 jed= 123
+168:  enter get_nggps_ic is=   1 ie=  48 js=  49 je=  72 isd=  -2 ied=  51 jsd=  46 jed=  75
+149:  enter get_nggps_ic is=  49 ie=  96 js= 121 je= 144 isd=  46 ied=  99 jsd= 118 jed= 147
+ 12:  enter get_nggps_ic is=   1 ie=  48 js=  73 je=  96 isd=  -2 ied=  51 jsd=  70 jed=  99
+ 47:  enter get_nggps_ic is= 145 ie= 192 js=  73 je=  96 isd= 142 ied= 195 jsd=  70 jed=  99
+102:  enter get_nggps_ic is=  97 ie= 144 js=  25 je=  48 isd=  94 ied= 147 jsd=  22 jed=  51
+183:  enter get_nggps_ic is= 145 ie= 192 js= 121 je= 144 isd= 142 ied= 195 jsd= 118 jed= 147
+150:  enter get_nggps_ic is=  97 ie= 144 js= 121 je= 144 isd=  94 ied= 147 jsd= 118 jed= 147
+ 34:  enter get_nggps_ic is=  97 ie= 144 js=   1 je=  24 isd=  94 ied= 147 jsd=  -2 jed=  27
+ 50:  enter get_nggps_ic is=  97 ie= 144 js=  97 je= 120 isd=  94 ied= 147 jsd=  94 jed= 123
+ 98:  enter get_nggps_ic is=  97 ie= 144 js=   1 je=  24 isd=  94 ied= 147 jsd=  -2 jed=  27
+175:  enter get_nggps_ic is= 145 ie= 192 js=  73 je=  96 isd= 142 ied= 195 jsd=  70 jed=  99
+151:  enter get_nggps_ic is= 145 ie= 192 js= 121 je= 144 isd= 142 ied= 195 jsd= 118 jed= 147
+ 33:  enter get_nggps_ic is=  49 ie=  96 js=   1 je=  24 isd=  46 ied=  99 jsd=  -2 jed=  27
+ 54:  enter get_nggps_ic is=  97 ie= 144 js= 121 je= 144 isd=  94 ied= 147 jsd= 118 jed= 147
+111:  enter get_nggps_ic is= 145 ie= 192 js=  73 je=  96 isd= 142 ied= 195 jsd=  70 jed=  99
+179:  enter get_nggps_ic is= 145 ie= 192 js=  97 je= 120 isd= 142 ied= 195 jsd=  94 jed= 123
+137:  enter get_nggps_ic is=  49 ie=  96 js=  49 je=  72 isd=  46 ied=  99 jsd=  46 jed=  75
+ 36:  enter get_nggps_ic is=   1 ie=  48 js=  25 je=  48 isd=  -2 ied=  51 jsd=  22 jed=  51
+ 73:  enter get_nggps_ic is=  49 ie=  96 js=  49 je=  72 isd=  46 ied=  99 jsd=  46 jed=  75
+115:  enter get_nggps_ic is= 145 ie= 192 js=  97 je= 120 isd= 142 ied= 195 jsd=  94 jed= 123
+160:  enter get_nggps_ic is=   1 ie=  48 js=   1 je=  24 isd=  -2 ied=  51 jsd=  -2 jed=  27
+ 37:  enter get_nggps_ic is=  49 ie=  96 js=  25 je=  48 isd=  46 ied=  99 jsd=  22 jed=  51
+ 74:  enter get_nggps_ic is=  97 ie= 144 js=  49 je=  72 isd=  94 ied= 147 jsd=  46 jed=  75
+ 96:  enter get_nggps_ic is=   1 ie=  48 js=   1 je=  24 isd=  -2 ied=  51 jsd=  -2 jed=  27
+165:  enter get_nggps_ic is=  49 ie=  96 js=  25 je=  48 isd=  46 ied=  99 jsd=  22 jed=  51
+ 38:  enter get_nggps_ic is=  97 ie= 144 js=  25 je=  48 isd=  94 ied= 147 jsd=  22 jed=  51
+ 75:  enter get_nggps_ic is= 145 ie= 192 js=  49 je=  72 isd= 142 ied= 195 jsd=  46 jed=  75
+100:  enter get_nggps_ic is=   1 ie=  48 js=  25 je=  48 isd=  -2 ied=  51 jsd=  22 jed=  51
+186:  enter get_nggps_ic is=  97 ie= 144 js= 145 je= 168 isd=  94 ied= 147 jsd= 142 jed= 171
+155:  enter get_nggps_ic is= 145 ie= 192 js= 145 je= 168 isd= 142 ied= 195 jsd= 142 jed= 171
+  6:  enter get_nggps_ic is=  97 ie= 144 js=  25 je=  48 isd=  94 ied= 147 jsd=  22 jed=  51
+ 76:  enter get_nggps_ic is=   1 ie=  48 js=  73 je=  96 isd=  -2 ied=  51 jsd=  70 jed=  99
+101:  enter get_nggps_ic is=  49 ie=  96 js=  25 je=  48 isd=  46 ied=  99 jsd=  22 jed=  51
+190:  enter get_nggps_ic is=  97 ie= 144 js= 169 je= 192 isd=  94 ied= 147 jsd= 166 jed= 195
+158:  enter get_nggps_ic is=  97 ie= 144 js= 169 je= 192 isd=  94 ied= 147 jsd= 166 jed= 195
+ 29:  enter get_nggps_ic is=  49 ie=  96 js= 169 je= 192 isd=  46 ied=  99 jsd= 166 jed= 195
+ 77:  enter get_nggps_ic is=  49 ie=  96 js=  73 je=  96 isd=  46 ied=  99 jsd=  70 jed=  99
+ 97:  enter get_nggps_ic is=  49 ie=  96 js=   1 je=  24 isd=  46 ied=  99 jsd=  -2 jed=  27
+191:  enter get_nggps_ic is= 145 ie= 192 js= 169 je= 192 isd= 142 ied= 195 jsd= 166 jed= 195
+133:  enter get_nggps_ic is=  49 ie=  96 js=  25 je=  48 isd=  46 ied=  99 jsd=  22 jed=  51
+ 20:  enter get_nggps_ic is=   1 ie=  48 js= 121 je= 144 isd=  -2 ied=  51 jsd= 118 jed= 147
+ 78:  enter get_nggps_ic is=  97 ie= 144 js=  73 je=  96 isd=  94 ied= 147 jsd=  70 jed=  99
+ 84:  enter get_nggps_ic is=   1 ie=  48 js= 121 je= 144 isd=  -2 ied=  51 jsd= 118 jed= 147
+161:  enter get_nggps_ic is=  49 ie=  96 js=   1 je=  24 isd=  46 ied=  99 jsd=  -2 jed=  27
+139:  enter get_nggps_ic is= 145 ie= 192 js=  49 je=  72 isd= 142 ied= 195 jsd=  46 jed=  75
+ 24:  enter get_nggps_ic is=   1 ie=  48 js= 145 je= 168 isd=  -2 ied=  51 jsd= 142 jed= 171
+ 79:  enter get_nggps_ic is= 145 ie= 192 js=  73 je=  96 isd= 142 ied= 195 jsd=  70 jed=  99
+ 90:  enter get_nggps_ic is=  97 ie= 144 js= 145 je= 168 isd=  94 ied= 147 jsd= 142 jed= 171
+162:  enter get_nggps_ic is=  97 ie= 144 js=   1 je=  24 isd=  94 ied= 147 jsd=  -2 jed=  27
+154:  enter get_nggps_ic is=  97 ie= 144 js= 145 je= 168 isd=  94 ied= 147 jsd= 142 jed= 171
+ 25:  enter get_nggps_ic is=  49 ie=  96 js= 145 je= 168 isd=  46 ied=  99 jsd= 142 jed= 171
+ 43:  enter get_nggps_ic is= 145 ie= 192 js=  49 je=  72 isd= 142 ied= 195 jsd=  46 jed=  75
+119:  enter get_nggps_ic is= 145 ie= 192 js= 121 je= 144 isd= 142 ied= 195 jsd= 118 jed= 147
+164:  enter get_nggps_ic is=   1 ie=  48 js=  25 je=  48 isd=  -2 ied=  51 jsd=  22 jed=  51
+138:  enter get_nggps_ic is=  97 ie= 144 js=  49 je=  72 isd=  94 ied= 147 jsd=  46 jed=  75
+  0:  in fv_restart ncnst=          10
+ 56:  enter get_nggps_ic is=   1 ie=  48 js= 145 je= 168 isd=  -2 ied=  51 jsd= 142 jed= 171
+ 91:  enter get_nggps_ic is= 145 ie= 192 js= 145 je= 168 isd= 142 ied= 195 jsd= 142 jed= 171
+166:  enter get_nggps_ic is=  97 ie= 144 js=  25 je=  48 isd=  94 ied= 147 jsd=  22 jed=  51
+140:  enter get_nggps_ic is=   1 ie=  48 js=  73 je=  96 isd=  -2 ied=  51 jsd=  70 jed=  99
+  2:  enter get_nggps_ic is=  97 ie= 144 js=   1 je=  24 isd=  94 ied= 147 jsd=  -2 jed=  27
+ 57:  enter get_nggps_ic is=  49 ie=  96 js= 145 je= 168 isd=  46 ied=  99 jsd= 142 jed= 171
+ 94:  enter get_nggps_ic is=  97 ie= 144 js= 169 je= 192 isd=  94 ied= 147 jsd= 166 jed= 195
+167:  enter get_nggps_ic is= 145 ie= 192 js=  25 je=  48 isd= 142 ied= 195 jsd=  22 jed=  51
+144:  enter get_nggps_ic is=   1 ie=  48 js=  97 je= 120 isd=  -2 ied=  51 jsd=  94 jed= 123
+  3:  enter get_nggps_ic is= 145 ie= 192 js=   1 je=  24 isd= 142 ied= 195 jsd=  -2 jed=  27
+ 58:  enter get_nggps_ic is=  97 ie= 144 js= 145 je= 168 isd=  94 ied= 147 jsd= 142 jed= 171
+ 95:  enter get_nggps_ic is= 145 ie= 192 js= 169 je= 192 isd= 142 ied= 195 jsd= 166 jed= 195
+187:  enter get_nggps_ic is= 145 ie= 192 js= 145 je= 168 isd= 142 ied= 195 jsd= 142 jed= 171
+125:  enter get_nggps_ic is=  49 ie=  96 js= 169 je= 192 isd=  46 ied=  99 jsd= 166 jed= 195
+ 32:  enter get_nggps_ic is=   1 ie=  48 js=   1 je=  24 isd=  -2 ied=  51 jsd=  -2 jed=  27
+ 72:  enter get_nggps_ic is=   1 ie=  48 js=  49 je=  72 isd=  -2 ied=  51 jsd=  46 jed=  75
+ 88:  enter get_nggps_ic is=   1 ie=  48 js= 145 je= 168 isd=  -2 ied=  51 jsd= 142 jed= 171
+163:  enter get_nggps_ic is= 145 ie= 192 js=   1 je=  24 isd= 142 ied= 195 jsd=  -2 jed=  27
+129:  enter get_nggps_ic is=  49 ie=  96 js=   1 je=  24 isd=  46 ied=  99 jsd=  -2 jed=  27
+  0:  FV_RESTART:            1 F F
+  0:  Calling get_external_ic
+ 62:  enter get_nggps_ic is=  97 ie= 144 js= 169 je= 192 isd=  94 ied= 147 jsd= 166 jed= 195
+ 92:  enter get_nggps_ic is=   1 ie=  48 js= 169 je= 192 isd=  -2 ied=  51 jsd= 166 jed= 195
+189:  enter get_nggps_ic is=  49 ie=  96 js= 169 je= 192 isd=  46 ied=  99 jsd= 166 jed= 195
+121:  enter get_nggps_ic is=  49 ie=  96 js= 145 je= 168 isd=  46 ied=  99 jsd= 142 jed= 171
+ 28:  enter get_nggps_ic is=   1 ie=  48 js= 169 je= 192 isd=  -2 ied=  51 jsd= 166 jed= 195
+ 66:  enter get_nggps_ic is=  97 ie= 144 js=   1 je=  24 isd=  94 ied= 147 jsd=  -2 jed=  27
+ 93:  enter get_nggps_ic is=  49 ie=  96 js= 169 je= 192 isd=  46 ied=  99 jsd= 166 jed= 195
+188:  enter get_nggps_ic is=   1 ie=  48 js= 169 je= 192 isd=  -2 ied=  51 jsd= 166 jed= 195
+128:  enter get_nggps_ic is=   1 ie=  48 js=   1 je=  24 isd=  -2 ied=  51 jsd=  -2 jed=  27
+ 31:  enter get_nggps_ic is= 145 ie= 192 js= 169 je= 192 isd= 142 ied= 195 jsd= 166 jed= 195
+ 70:  enter get_nggps_ic is=  97 ie= 144 js=  25 je=  48 isd=  94 ied= 147 jsd=  22 jed=  51
+ 89:  enter get_nggps_ic is=  49 ie=  96 js= 145 je= 168 isd=  46 ied=  99 jsd= 142 jed= 171
+122:  enter get_nggps_ic is=  97 ie= 144 js= 145 je= 168 isd=  94 ied= 147 jsd= 142 jed= 171
+ 35:  enter get_nggps_ic is= 145 ie= 192 js=   1 je=  24 isd= 142 ied= 195 jsd=  -2 jed=  27
+ 59:  enter get_nggps_ic is= 145 ie= 192 js= 145 je= 168 isd= 142 ied= 195 jsd= 142 jed= 171
+ 99:  enter get_nggps_ic is= 145 ie= 192 js=   1 je=  24 isd= 142 ied= 195 jsd=  -2 jed=  27
+153:  enter get_nggps_ic is=  49 ie=  96 js= 145 je= 168 isd=  46 ied=  99 jsd= 142 jed= 171
+  0: NOTE from PE     0: Using external_IC::get_nggps_ic which is valid only for data which has been horizontally interpolated to the current cubed-sphere grid
+ 63:  enter get_nggps_ic is= 145 ie= 192 js= 169 je= 192 isd= 142 ied= 195 jsd= 166 jed= 195
+103:  enter get_nggps_ic is= 145 ie= 192 js=  25 je=  48 isd= 142 ied= 195 jsd=  22 jed=  51
+157:  enter get_nggps_ic is=  49 ie=  96 js= 169 je= 192 isd=  46 ied=  99 jsd= 166 jed= 195
+  4:  enter get_nggps_ic is=   1 ie=  48 js=  25 je=  48 isd=  -2 ied=  51 jsd=  22 jed=  51
+ 67:  enter get_nggps_ic is= 145 ie= 192 js=   1 je=  24 isd= 142 ied= 195 jsd=  -2 jed=  27
+107:  enter get_nggps_ic is= 145 ie= 192 js=  49 je=  72 isd= 142 ied= 195 jsd=  46 jed=  75
+120:  enter get_nggps_ic is=   1 ie=  48 js= 145 je= 168 isd=  -2 ied=  51 jsd= 142 jed= 171
+  5:  enter get_nggps_ic is=  49 ie=  96 js=  25 je=  48 isd=  46 ied=  99 jsd=  22 jed=  51
+ 71:  enter get_nggps_ic is= 145 ie= 192 js=  25 je=  48 isd= 142 ied= 195 jsd=  22 jed=  51
+ 81:  enter get_nggps_ic is=  49 ie=  96 js=  97 je= 120 isd=  46 ied=  99 jsd=  94 jed= 123
+123:  enter get_nggps_ic is= 145 ie= 192 js= 145 je= 168 isd= 142 ied= 195 jsd= 142 jed= 171
+  1:  enter get_nggps_ic is=  49 ie=  96 js=   1 je=  24 isd=  46 ied=  99 jsd=  -2 jed=  27
+ 55:  enter get_nggps_ic is= 145 ie= 192 js= 121 je= 144 isd= 142 ied= 195 jsd= 118 jed= 147
+124:  enter get_nggps_ic is=   1 ie=  48 js= 169 je= 192 isd=  -2 ied=  51 jsd= 166 jed= 195
+ 64:  enter get_nggps_ic is=   1 ie=  48 js=   1 je=  24 isd=  -2 ied=  51 jsd=  -2 jed=  27
+132:  enter get_nggps_ic is=   1 ie=  48 js=  25 je=  48 isd=  -2 ied=  51 jsd=  22 jed=  51
+ 65:  enter get_nggps_ic is=  49 ie=  96 js=   1 je=  24 isd=  46 ied=  99 jsd=  -2 jed=  27
+136:  enter get_nggps_ic is=   1 ie=  48 js=  49 je=  72 isd=  -2 ied=  51 jsd=  46 jed=  75
+ 61:  enter get_nggps_ic is=  49 ie=  96 js= 169 je= 192 isd=  46 ied=  99 jsd= 166 jed= 195
+127:  enter get_nggps_ic is= 145 ie= 192 js= 169 je= 192 isd= 142 ied= 195 jsd= 166 jed= 195
+ 60:  enter get_nggps_ic is=   1 ie=  48 js= 169 je= 192 isd=  -2 ied=  51 jsd= 166 jed= 195
+130:  enter get_nggps_ic is=  97 ie= 144 js=   1 je=  24 isd=  94 ied= 147 jsd=  -2 jed=  27
+ 68:  enter get_nggps_ic is=   1 ie=  48 js=  25 je=  48 isd=  -2 ied=  51 jsd=  22 jed=  51
+134:  enter get_nggps_ic is=  97 ie= 144 js=  25 je=  48 isd=  94 ied= 147 jsd=  22 jed=  51
+ 69:  enter get_nggps_ic is=  49 ie=  96 js=  25 je=  48 isd=  46 ied=  99 jsd=  22 jed=  51
+135:  enter get_nggps_ic is= 145 ie= 192 js=  25 je=  48 isd= 142 ied= 195 jsd=  22 jed=  51
+ 51:  enter get_nggps_ic is= 145 ie= 192 js=  97 je= 120 isd= 142 ied= 195 jsd=  94 jed= 123
+148:  enter get_nggps_ic is=   1 ie=  48 js= 121 je= 144 isd=  -2 ied=  51 jsd= 118 jed= 147
+152:  enter get_nggps_ic is=   1 ie=  48 js= 145 je= 168 isd=  -2 ied=  51 jsd= 142 jed= 171
+156:  enter get_nggps_ic is=   1 ie=  48 js= 169 je= 192 isd=  -2 ied=  51 jsd= 166 jed= 195
+126:  enter get_nggps_ic is=  97 ie= 144 js= 169 je= 192 isd=  94 ied= 147 jsd= 166 jed= 195
+131:  enter get_nggps_ic is= 145 ie= 192 js=   1 je=  24 isd= 142 ied= 195 jsd=  -2 jed=  27
+159:  enter get_nggps_ic is= 145 ie= 192 js= 169 je= 192 isd= 142 ied= 195 jsd= 166 jed= 195
+  0: NOTE from PE     0: External_IC::get_nggps_ic -  use externally-generated, filtered terrain and NCEP pressure levels (no vertical remapping)
+  0:  enter get_nggps_ic is=   1 ie=  48 js=   1 je=  24 isd=  -2 ied=  51 jsd=  -2 jed=  27
+  0: NOTE from PE     0: ==> External_ic::get_nggps_ic: using control file INPUT/gfs_ctrl.nc for NGGPS IC
+  0: NOTE from PE     0: INPUT gfs_data source string: FV3GFS TILED RESTART FILE
+  0: NOTE from PE     0: ==> External_ic::get_nggps_ic: Reading processed IC
+  0: NOTE from PE     0: ==> External_ic::get_nggps_ic: IC has 128 levels
+  0: NOTE from PE     0: ==> External_ic::get_nggps_ic: using tiled data file INPUT/gfs_data.nc for NGGPS IC
+  0: NOTE from PE     0: ==> External_ic::get_nggps_ic: using tiled data file INPUT/sfc_data.nc for NGGPS IC
+  0: NOTE from PE     0: ==> External_ic::get_nggps_ic: using tiled data file INPUT/oro_data.nc for NGGPS IC
+  0: Tracer sphum initialized with surface value of  0.300000E-05 and vertical multiplier of      1.000000
+  0: Tracer liq_wat initialized with surface value of  0.100000E+31 and vertical multiplier of      1.000000
+  0: Tracer ice_wat initialized with surface value of  0.100000E+31 and vertical multiplier of      1.000000
+  0: Tracer rainwat initialized with surface value of  0.100000E+31 and vertical multiplier of      1.000000
+  0: Tracer snowwat initialized with surface value of  0.100000E+31 and vertical multiplier of      1.000000
+  0: Tracer graupel initialized with surface value of  0.100000E+31 and vertical multiplier of      1.000000
+  0: Tracer ice_nc initialized with surface value of  0.000000E+00 and vertical multiplier of      1.000000
+  0: Tracer rain_nc initialized with surface value of  0.000000E+00 and vertical multiplier of      1.000000
+  0: Tracer o3mr initialized with surface value of  0.100000E+31 and vertical multiplier of      1.000000
+  0: Tracer sgs_tke initialized with surface value of  0.000000E+00 and vertical multiplier of      1.000000
+  0:   ptop & ks   0.9990000              39
+  0:  GFS ak(1)=  0.0000000E+00  ak(2)=  0.9990000    
+  1:  In remap_scalar:
+  1:  ncnst =           10
+  1:  nwat =            6
+  1:  sphum    =            1
+  1:  clwmr    =            2
+  1:  liq_wat  =            2
+  1:   o3mr    =            9
+  1:  rainwat =            4
+  1:  ice_wat =            3
+  1:  snowwat =            5
+  1:  graupel =            6
+  1:  sgs_tke =           10
+  1:  cld_amt =  -2147483646
+  0:  delz_model  -15.58261      -3812.406    
+  0:  sphum_model  2.7096221E-02  9.2975077E-09
+  0:  liq_wat_model  1.2795624E-03 -1.5449046E-20
+  0:  ice_wat_model  5.6252151E-04 -4.7350129E-21
+  0:  PS_model (mb)   1036.052       508.0435    
+  0:  PT_model   315.0402       178.0472    
+  0:  Global Area=   510096496553507.     
+  0:  ZS_model   5702.785      -75.15992       232.1787    
+  0:  ZS_data   5892.015      -83.98404       234.6315    
+  0:  ZS_diff (m)   720.7910      -1009.107      -2.452738    
+  0:  DATA_IC Z500   5700.477       5787.476       5464.829       5860.894    
+  0:  fv3_IC Z500   5700.465       5787.457       5464.823       5860.885    
+  0:  PS_diff (mb)   127.9470      -69.59687      0.2732726    
+  0:  done remap_scalar
+  0:  done remap_dwinds
+  0:  PS max =    1036.052      min =    508.0435    
+  0:  T max =    315.0402      min =    178.0472    
+  0:  W max =   0.0000000E+00  min =   0.0000000E+00
+  0:  SPHUM max =   2.7096221E-02  min =   9.2975077E-09
+  0:  TS max =    307.2000      min =  -1.0000000E+20
+  0:  liq_wat max =   1.2779271E-03  min =  -1.5449046E-20
+  0:  ice_wat max =   5.6220527E-04  min =  -4.7350129E-21
+  0:  rainwat max =   0.0000000E+00  min =   0.0000000E+00
+  0:  snowwat max =   0.0000000E+00  min =   0.0000000E+00
+  0:  graupel max =   0.0000000E+00  min =   0.0000000E+00
+  0:  O3MR max =   1.7127124E-05  min =   2.8530367E-09
+  0:  sgs_tke max =   0.0000000E+00  min =   0.0000000E+00
+  0:  IC generated from the specified external source
+  0:  in fv_restart ncnst=          10
+  0:  
+  0:  fv_restart u    =      -2275405934154027
+  0:  fv_restart v    =      -1948918852654361
+  0:  fv_restart w    =     -60323605946302464
+  0:  fv_restart delp =      31948987404617905
+  0:  fv_restart phis =         84190048187465
+  0:  fv_restart pt   =      31791921216841831
+  0:  fv_restart q(prog) nq   =          10     52894835889206683
+  0:  fv_restart sphum =      26824180638573286
+  0:  fv_restart liq_wat =        993270861772066
+  0:  fv_restart ice_wat =        235803413433039
+  0:  fv_restart rainwat =                      0
+  0:  fv_restart snowwat =                      0
+  0:  fv_restart graupel =                      0
+  0:  fv_restart ice_nc =                      0
+  0:  fv_restart rain_nc =                      0
+  0:  fv_restart o3mr =      24841580975428292
+  0:  fv_restart sgs_tke =                      0
+  0:  ZS   5702.785      -75.15992       232.1787    
+  0:  PS   1036.052       508.0435       985.4931    
+  0:  T    315.0402       178.0472       289.3343    
+  0:  sphum  2.7096221E-02  9.2975077E-09  1.0073435E-02
+  0:  liq_wat  1.2779271E-03 -1.5449046E-20  1.4956489E-06
+  0:  ice_wat  5.6220527E-04 -4.7350129E-21  2.1922750E-08
+  0:  rainwat  0.0000000E+00  0.0000000E+00  0.0000000E+00
+  0:  snowwat  0.0000000E+00  0.0000000E+00  0.0000000E+00
+  0:  graupel  0.0000000E+00  0.0000000E+00  0.0000000E+00
+  0:  ice_nc  0.0000000E+00  0.0000000E+00  0.0000000E+00
+  0:  rain_nc  0.0000000E+00  0.0000000E+00  0.0000000E+00
+  0:  o3mr  1.7127124E-05  2.8530367E-09  5.6663904E-08
+  0:  sgs_tke  0.0000000E+00  0.0000000E+00  0.0000000E+00
+  0:  U  max =    140.1146      min =   -164.5310    
+  0:  V  max =    160.1445      min =   -131.6142    
+  0:  W   0.0000000E+00  0.0000000E+00  0.0000000E+00
+  0:  
+  0:  mp_top=           1 pfull=  1.2781459E-02
+  0:  Mean specific humidity (mg/kg) above 75 mb=   3.144147    
+  0:  Total surface pressure (mb) =    985.4932    
+  0:  mean dry surface pressure =    982.8333    
+  0:  Total Water Vapor (kg/m**2) =   27.07551    
+  0:  --- Micro Phys water substances (kg/m**2) ---
+  0:  Total cloud water=  4.6934254E-02
+  0:  Total rain  water=  0.0000000E+00
+  0:  Total cloud ice  =  1.2138919E-03
+  0:  Total snow       =  0.0000000E+00
+  0:  Total graupel    =  0.0000000E+00
+  0:  ---------------------------------------------
+  0: NOTE from PE     0: READING FROM SST_restart DISABLED
+  0:  Before adi: W max =   0.0000000E+00  min =   0.0000000E+00
+  0: NOTE from PE     0: Performing adiabatic init   1 times
+  0:  After adi: W max =    2.299552      min =   -2.601505    
+  0:  na_ini Z500   5700.463       5787.456       5464.822       5860.884    
+  0:  NO FLAG: gwd is generic
+  0:  FLAG: satmedmf and isatedmf=1 so pbl not generic
+  0:  NO FLAG: scnv is generic
+  0:  NO FLAG: dcnv is generic
+  0:   model init,iaufhrs=  -1.00000000000000       -1.00000000000000     
+  0:   -1.00000000000000       -1.00000000000000       -1.00000000000000     
+  0:   -1.00000000000000       -1.00000000000000     
+  0:  Reading in o3data from global_o3prdlos.f77 
+  0:        oz_coeff =            6
+  0:         latsozp =           71
+  0:          levozp =           53
+  0:          timeoz =           12
+  0:   dxmax=   18.1991080870045       dxmin=   24.5164135836650       dxinv=
+  0:  -0.158295336600173      max_lon=        5000  max_lat=        2000  min_lon=
+  0:          192  min_lat=          94  rhc_max=  0.999999900000000       huge=
+  0:   9.969209968386869E+036
+  0:  New Noah MP Land Surface Model will be used
+  0:  The Physics options are
+  0:  iopt_dveg  =             4
+  0:  iopt_crs   =             2
+  0:  iopt_btr   =             1
+  0:  iopt_run   =             1
+  0:  iopt_sfc   =             3
+  0:  iopt_frz   =             1
+  0:  iopt_inf   =             1
+  0:  iopt_rad   =             3
+  0:  iopt_alb   =             1
+  0:  iopt_snf   =             4
+  0:  iopt_tbot   =             2
+  0:  iopt_stc   =             3
+  0:  iopt_trs   =             2
+  0:  iopt_diag  =             2
+  0:   nst_anl= T  use_ufo= T  frac_grid= T  ignore_lake= T  frac_ice= T
+  0:   min_lakeice=  0.150000000000000       min_seaice=  0.150000000000000      
+  0:  min_lake_height=   250.000000000000     
+  0:  lake model parameters
+  0:   lake master flag lkm   :            0
+  0:   NSSTM is active 
+  0:   nstf_name(1)=           2
+  0:   nstf_name(2)=           1
+  0:   nstf_name(3)=           0
+  0:   nstf_name(4)=           0
+  0:   nstf_name(5)=           0
+  0:   scale & aerosol-aware mass-flux deep conv scheme
+  0:   update version (May 2019) of sale-aware TKE-based moist EDMF scheme used
+  0:   scale- & aerosol-aware mass-flux shallow conv scheme (2017)
+  0:  GSL unified oragraphic gravity wave drag parameterization used
+  0:   do_gwd= T
+  0:   exponential-decorr cloud overlap for Radiation IOVR=           3
+  0:   sub-grid cloud for Shortwave ISUBC_SW=           2
+  0:   sub-grid cloud for Longwave ISUBC_LW=           2
+  0:   Using Thompson double moment microphysics ltaerosol =  F  mraerosol =  F 
+  0:   ttendlim =  -999.000000000000       ext_diag_thompson = F  dt_inner =
+  0:    360.000000000000       sedi_semi= T  decfl=          10  effr_in = T  lradar 
+  0:  = F  nsfullradar_diag =  -999.000000000000       num_p3d =           3 
+  0:   num_p2d =           1
+  0:   num_p3d=           3  num_p2d=           1  crtrh=  0.900000000000000     
+  0:   0.900000000000000       0.900000000000000       npdf3d=           0  pdfcld= F
+  0:   shcnvcw= F  cnvcld= T  ncnvcld3d=           1  do_shoc= F  nshoc3d=
+  0:            0  nshoc_2d=           0  shoc_cld= F  nkbfshoc=        -999 
+  0:   nahdshoc=        -999  nscfshoc=        -999  xr_cnvcld= T  uni_cld= F  ntot3d
+  0:  =           4  ntot2d=           1  shocaftcnv= F  indcld=          -1 
+  0:   shoc_parm=   7000.00000000000        1.00000000000000     
+  0:    4.28571430000000       0.700000000000000       -999.000000000000       ncnvw=
+  0:            4  ncnvc=        -999
+  0:   
+  0:  basic control parameters
+  0:   me                :            0
+  0:   master            :            0
+  0:   communicator      :  -1006632941
+  0:   nlunit            :         9999
+  0:   fn_nml            : using internal file
+  0:   fhzero            :    6.00000000000000     
+  0:   ldiag3d           :  F
+  0:   qdiag3d           :  F
+  0:   lssav             :  F
+  0:   naux2d            :            0
+  0:   naux3d            :            0
+  0:   fhcyc             :    24.0000000000000     
+  0:   thermodyn_id      :            1
+  0:   sfcpress_id       :            1
+  0:   gen_coord_hybrid  :  F
+  0:   hydrostatic       :  F
+  0:   
+  0:  grid extent parameters
+  0:   isc               :            1
+  0:   jsc               :            1
+  0:   nx                :           48
+  0:   ny                :           24
+  0:   levs              :          127
+  0:   cnx               :          192
+  0:   cny               :          192
+  0:   lonr              :          768
+  0:   latr              :          384
+  0:   blksz(1)          :           32
+  0:   blksz(nblks)      :           32
+  0:   Model%ncols       :         1152
+  0:   
+  0:  coupling parameters
+  0:   cplflx            :  F
+  0:   cplice            :  F
+  0:   cplocn2atm        :  T
+  0:   cplwav            :  F
+  0:   cplwav2atm        :  F
+  0:   cplaqm            :  F
+  0:   cplchm            :  F
+  0:   cpllnd            :  F
+  0:   cpllnd2atm        :  F
+  0:   rrfs_sd           :  F
+  0:   use_cice_alb      :  F
+  0:   cpl_imp_mrg       :  F
+  0:   cpl_imp_dbg       :  F
+  0:   use_med_flux      :  F
+  0:   
+  0:   lsidea            :  F
+  0:   
+  0:  calendars and time parameters and activation triggers
+  0:   dtp               :    360.000000000000     
+  0:   dtf               :    360.000000000000     
+  0:   nscyc             :          240
+  0:   nszero            :           60
+  0:   idat              :         2020           7          23           0
+  0:            0           0           0           0
+  0:   idate             :            0           7          23        2020
+  0:   
+  0:  radiation control parameters
+  0:   fhswr             :    3600.00000000000     
+  0:   fhlwr             :    3600.00000000000     
+  0:   nsswr             :           10
+  0:   nslwr             :           10
+  0:   nhfrad            :            0
+  0:   levr              :          127
+  0:   nfxr              :           45
+  0:   ntrcaer           :            1
+  0:   lmfshal           :  T
+  0:   lmfdeep2          :  T
+  0:   nrcm              :            2
+  0:   iflip             :            1
+  0:   isol              :            2
+  0:   ico2              :            2
+  0:   ialb              :            2
+  0:   iems              :            2
+  0:   iaer              :         5111
+  0:   iaermdl           :            0
+  0:   iaerflg           :            0
+  0:   lalw1bd           :  F
+  0:   aeros_file        : aerosol.dat               
+  0:   solar_file        : solarconstant_noaa_a0.txt 
+  0:   semis_file        : sfc_emissivity_idx.txt    
+  0:   icliq_sw          :            2
+  0:   icice_sw          :            3
+  0:   icliq_lw          :            1
+  0:   icice_lw          :            3
+  0:   iovr              :            3
+  0:   idcor             :            1
+  0:   dcorr_con         :    2.50000000000000     
+  0:   ictm              :            1
+  0:   isubc_sw          :            2
+  0:   isubc_lw          :            2
+  0:   iswmode           :            2
+  0:   lcrick            :  F
+  0:   lcnorm            :  F
+  0:   lnoprec           :  F
+  0:   lwhtr             :  T
+  0:   swhtr             :  T
+  0:   rad_hr_units      :            2
+  0:   inc_minor_gas     :  T
+  0:   ipsd0             :            0
+  0:   ipsdlim           :    100000000
+  0:   lrseeds           :  F
+  0:   nrstreams         :            2
+  0:   lextop            :  F
+  0:   
+  0:  microphysical switch
+  0:   imp_physics       :            8
+  0:   
+  0:   Thompson microphysical parameters
+  0:   ltaerosol         :  F
+  0:   mraerosol         :  F
+  0:   lradar            :  F
+  0:   nsfullradar_diag  :   -999.000000000000     
+  0:   lrefres           :  F
+  0:   ttendlim          :   -999.000000000000     
+  0:   ext_diag_thompson :  F
+  0:   dt_inner          :    360.000000000000     
+  0:   sedi_semi         :  T
+  0:   decfl             :           10
+  0:   
+  0:  land/surface model parameters
+  0:   lsm               :            2
+  0:   lsoil             :            4
+  0:   rdlai             :  F
+  0:   lsoil_lsm         :            4
+  0:   lsnow_lsm         :            3
+  0:   lsnow_lsm_lbound  :           -2
+  0:   lsnow_lsm_ubound  :            0
+  0:   zs  (may be unset):  -0.100000000000000      -0.400000000000000     
+  0:   -1.00000000000000       -2.00000000000000     
+  0:   dzs (may be unset):   0.100000000000000       0.300000000000000     
+  0:   0.600000000000000        1.00000000000000     
+  0:   iopt_thcnd        :            1
+  0:   ua_phys           :  F
+  0:   usemonalb         :  T
+  0:   aoasis            :    1.00000000000000     
+  0:   fasdas            :            0
+  0:   kice              :            2
+  0:   shape(pores)      :           30
+  0:   shape(resid)      :           30
+  0:   ivegsrc           :            1
+  0:   nvegcat           :           20
+  0:   isot              :            1
+  0:   nsoilcat          :           16
+  0:   Noah MP LSM is used, the options are
+  0:   iopt_dveg         :            4
+  0:   iopt_crs          :            2
+  0:   iopt_btr          :            1
+  0:   iopt_run          :            1
+  0:   iopt_sfc          :            3
+  0:   iopt_frz          :            1
+  0:   iopt_inf          :            1
+  0:   iopt_rad          :            3
+  0:   iopt_alb          :            1
+  0:   iopt_snf          :            4
+  0:   iopt_tbot         :            2
+  0:   iopt_stc          :            3
+  0:   iopt_trs          :            2
+  0:   iopt_diag         :            2
+  0:   use_ufo           :  T
+  0:   lcurr_sf          :  F
+  0:   pert_cd           :  F
+  0:   ntsflg            :            0
+  0:   sfenth            :   0.000000000000000E+000
+  0:   
+  0:  flake model parameters
+  0:  lkm                :            0
+  0:   
+  0:  tuning parameters for physical parameterizations
+  0:   ras               :  F
+  0:   flipv             :  T
+  0:   trans_trac        :  T
+  0:   old_monin         :  F
+  0:   do_gwd            :  T
+  0:   cnvgwd            :  T
+  0:   do_cnvgwd         :  F
+  0:   mstrat            :  F
+  0:   moist_adj         :  F
+  0:   cscnv             :  F
+  0:   cal_pre           :  F
+  0:   do_aw             :  F
+  0:   flx_form          :  F
+  0:   do_shoc           :  F
+  0:   shoc_parm         :    7000.00000000000        1.00000000000000     
+  0:    4.28571430000000       0.700000000000000       -999.000000000000     
+  0:   shocaftcnv        :  F
+  0:   shoc_cld          :  F
+  0:   uni_cld           :  F
+  0:   oz_phys           :  F
+  0:   oz_phys_2015      :  T
+  0:   h2o_phys          :  T
+  0:   pdfcld            :  F
+  0:   shcnvcw           :  F
+  0:   redrag            :  T
+  0:   hybedmf           :  F
+  0:   satmedmf          :  T
+  0:   isatmedmf         :            1
+  0:   shinhong          :  F
+  0:   do_ysu            :  F
+  0:   dspheat           :  T
+  0:   lheatstrg         :  F
+  0:   lseaspray         :  T
+  0:   cnvcld            :  T
+  0:   random_clds       :  F
+  0:   shal_cnv          :  T
+  0:   imfshalcnv        :            2
+  0:   imfdeepcnv        :            2
+  0:   do_deep           :  T
+  0:   nmtvr             :           24
+  0:   jcap              :            1
+  0:   cs_parm           :    8.00000000000000        4.00000000000000     
+  0:    1000.00000000000        3500.00000000000        20.0000000000000     
+  0:    1.00000000000000       -999.000000000000        1.00000000000000     
+  0:   0.600000000000000       0.000000000000000E+000
+  0:   flgmin            :   0.180000000000000       0.220000000000000     
+  0:   cgwf              :   0.500000000000000       5.000000000000000E-002
+  0:   ccwf              :    1.00000000000000        1.00000000000000     
+  0:   cdmbgwd           :   0.230000000000000        1.50000000000000     
+  0:    1.00000000000000        1.00000000000000     
+  0:   sup               :    1.00000000000000     
+  0:   ctei_rm           :    10.0000000000000        10.0000000000000     
+  0:   crtrh             :   0.900000000000000       0.900000000000000     
+  0:   0.900000000000000     
+  0:   dlqf              :   0.150000000000000       0.150000000000000     
+  0:   seed0             :            0
+  0:   rbcr              :   0.250000000000000     
+  0:   do_mynnedmf       :  F
+  0:   do_mynnsfclay     :  F
+  0:   diag_flux         :  F
+  0:   diag_log          :  F
+  0:   do_myjsfc         :  F
+  0:   do_myjpbl         :  F
+  0:   do_ugwp           :  F
+  0:   gwd_opt           :            2
+  0:   do_ugwp_v0           :  T
+  0:   do_ugwp_v0_orog_only :  F
+  0:   do_ugwp_v0_nst_only  :  F
+  0:   do_gsl_drag_ls_bl    :  F
+  0:   do_gsl_drag_ss       :  T
+  0:   do_gsl_drag_tofd     :  F
+  0:   do_ugwp_v1           :  F
+  0:   do_ugwp_v1_orog_only :  F
+  0:   do_ugwp_v1_w_gsldrag :  F
+  0:   hurr_pbl          :  F
+  0:   var_ric           :    1.00000000000000     
+  0:   coef_ric_l        :   0.160000000000000     
+  0:   coef_ric_s        :   0.250000000000000     
+  0:   
+  0:  Rayleigh friction
+  0:   prslrd0           :   0.000000000000000E+000
+  0:   ral_ts            :   0.000000000000000E+000
+  0:   
+  0:  mass flux deep convection
+  0:   clam_deep         :   0.100000000000000     
+  0:   c0s_deep          :   2.000000000000000E-003
+  0:   c1_deep           :   2.000000000000000E-003
+  0:   betal_deep        :   5.000000000000000E-002
+  0:   betas_deep        :   5.000000000000000E-002
+  0:   evef              :   9.000000000000000E-002
+  0:   evfact_deep       :   0.300000000000000     
+  0:   evfactl_deep      :   0.300000000000000     
+  0:   pgcon_deep        :   0.550000000000000     
+  0:   asolfac_deep      :   0.958000000000000     
+  0:   
+  0:  mass flux shallow convection
+  0:   clam_shal         :   0.300000000000000     
+  0:   c0s_shal          :   2.000000000000000E-003
+  0:   c1_shal           :   5.000000000000000E-004
+  0:   pgcon_shal        :   0.550000000000000     
+  0:   asolfac_shal      :   0.958000000000000     
+  0:   
+  0:  near surface sea temperature model
+  0:   nst_anl           :  T
+  0:   nstf_name         :            2           1           0           0
+  0:            0
+  0:   lsea              :            0
+  0:   
+  0:  surface layer options
+  0:   sfc_z0_type       :            0
+  0:   icplocn2atm       :            0
+  0:   
+  0:  vertical diffusion coefficients
+  0:   xkzm_m            :    1.00000000000000     
+  0:   xkzm_h            :    1.00000000000000     
+  0:   xkzm_s            :    1.00000000000000     
+  0:   xkzminv           :   0.300000000000000     
+  0:   moninq_fac        :    1.00000000000000     
+  0:   dspfac            :    1.00000000000000     
+  0:   bl_upfr           :   0.130000000000000     
+  0:   bl_dnfr           :   0.100000000000000     
+  0:   rlmx              :    300.000000000000     
+  0:   elmx              :    300.000000000000     
+  0:   sfc_rlm           :            0
+  0:   tc_pbl            :            0
+  0:   
+  0:  parameters for canopy heat storage parametrization
+  0:   h0facu            :   0.250000000000000     
+  0:   h0facs            :    1.00000000000000     
+  0:   
+  0:  stochastic physics
+  0:   do_sppt           :  F
+  0:   pert_mp         :  F
+  0:   pert_clds       :  F
+  0:   pert_radtend    :  T
+  0:   do_shum           :  F
+  0:   do_skeb           :  F
+  0:   lndp_type         :            0
+  0:   n_var_lndp        :            0
+  0:   lndp_each_step    :  F
+  0:   do_spp            :  F
+  0:   n_var_spp         :            0
+  0:   
+  0:  convection
+  0:  betascu            :    8.00000000000000     
+  0:  betamcu            :    1.00000000000000     
+  0:  betadcu            :    2.00000000000000     
+  0:   
+  0:  cellular automata
+  0:   nca               :            1
+  0:   ncells            :            5
+  0:   nlives            :           12
+  0:   nca_g             :            0
+  0:   ncells_g          :            1
+  0:   nlives_g          :          100
+  0:   nfracseed         :   0.500000000000000     
+  0:   nseed_g           :          100
+  0:   nseed             :            1
+  0:   ca_global         :  F
+  0:   ca_sgs            :  T
+  0:   do_ca             :  T
+  0:   ca_advect         :  F
+  0:   iseed_ca          :                  12345
+  0:   ca_smooth         :  F
+  0:   nspinup           :            1
+  0:   nthresh           :    18.0000000000000     
+  0:   ca_amplitude      :   0.350000000000000     
+  0:   nsmooth           :          100
+  0:   ca_closure        :  F
+  0:   ca_entr           :  F
+  0:   ca_trigger        :  T
+  0:   
+  0:  tracers
+  0:   tracer_names      : sphum                           
+  0:  liq_wat                         ice_wat                         
+  0:  rainwat                         snowwat                         
+  0:  graupel                         ice_nc                          
+  0:  rain_nc                         o3mr                            
+  0:  sgs_tke                         
+  0:   ntrac             :           10
+  0:   nqrimef           :          -99
+  0:   ntqv              :            1
+  0:   ntoz              :            9
+  0:   ntcw              :            2
+  0:   ntiw              :            3
+  0:   ntrw              :            4
+  0:   ntsw              :            5
+  0:   ntgl              :            6
+  0:   nthl              :          -99
+  0:   ntclamt           :          -99
+  0:   ntlnc             :          -99
+  0:   ntinc             :            7
+  0:   ntrnc             :            8
+  0:   ntsnc             :          -99
+  0:   ntgnc             :          -99
+  0:   nthnc             :          -99
+  0:   ntccn             :          -99
+  0:   ntccna            :          -99
+  0:   ntgv              :          -99
+  0:   nthv              :          -99
+  0:   ntrz              :          -99
+  0:   ntgz              :          -99
+  0:   nthz              :          -99
+  0:   ntke              :           10
+  0:   ntsigma           :          -99
+  0:   nto               :            0
+  0:   nto2              :            0
+  0:   ntwa              :          -99
+  0:   ntia              :          -99
+  0:   ntsmoke           :            0
+  0:   ntdust            :            0
+  0:   ntcoarsepm        :            0
+  0:   nchem             :            0
+  0:   ndvel             :            0
+  0:   ntchm             :            0
+  0:   ntchs             :          -99
+  0:   ntche             :          -99
+  0:   ndchm             :            0
+  0:   ndchs             :          -99
+  0:   ndche             :          -99
+  0:   fscav             : 
+  0:   
+  0:  derived totals for phy_f*d
+  0:   ntot2d            :            1
+  0:   ntot3d            :            4
+  0:   num_p2d           :            1
+  0:   num_p3d           :            3
+  0:   nshoc_2d          :            0
+  0:   nshoc_3d          :            0
+  0:   ncnvcld3d         :            1
+  0:   npdf3d            :            0
+  0:   nctp              :            0
+  0:   nkbfshoc          :         -999
+  0:   nahdshoc          :         -999
+  0:   nscfshoc          :         -999
+  0:   
+  0:  debug flags
+  0:   debug             :  F
+  0:   pre_rad           :  F
+  0:   
+  0:  variables modified at each time step
+  0:   ipt               :            1
+  0:   lprnt             :  F
+  0:   lsswr             :  F
+  0:   lslwr             :  F
+  0:   solhr             :   -9999.00000000000     
+  0:   solcon            :   -9999.00000000000     
+  0:   slag              :   -9999.00000000000     
+  0:   sdec              :   -9999.00000000000     
+  0:   cdec              :   -9999.00000000000     
+  0:   clstp             :   -9999.00000000000     
+  0:   phour             :   0.000000000000000E+000
+  0:   fhour             :   0.100000000000000     
+  0:   zhour             :   0.000000000000000E+000
+  0:   kdt               :            1
+  0:   jdat              :         2020           7          23           0
+  0:            0           0           0           0
+  0:   si                :    1.00000000000000       0.997528171010504     
+  0:   0.994907626966057       0.992130130528982       0.989187277888729     
+  0:   0.986070383444211       0.982770282805349       0.979277571744755     
+  0:   0.975582427258355       0.971674739897534       0.967544080871402     
+  0:   0.963179800751764       0.958571080053299       0.953706779906056     
+  0:   0.948575631307435       0.943166274950776       0.937467231927173     
+  0:   0.931467132373091       0.925154478299479       0.918517999566635     
+  0:   0.911546617229852       0.904229462936050       0.896556126320339     
+  0:   0.888516559529414       0.880101520601538       0.871302203727619     
+  0:   0.862110777445435       0.852520262357281       0.842524899544132     
+  0:   0.832119939161636       0.821302161165424       0.810069634420674     
+  0:   0.798422142312000       0.786361140517125       0.773889911095153     
+  0:   0.761013778589588       0.747739934134509       0.734077857510209     
+  0:   0.720039061223354       0.705637335524051       0.690888729129813     
+  0:   0.675811399323914       0.660425735984860       0.644754308064926     
+  0:   0.628821639626245       0.612654154542217       0.596280069078379     
+  0:   0.579729127086930       0.563032506156064       0.546222460730961     
+  0:   0.529332266815185       0.512395738020321       0.495447185100595     
+  0:   0.478520973220262       0.461651322837136       0.444872004567912     
+  0:   0.428216151486840       0.411715854945179       0.395402067166287     
+  0:   0.379304325913558       0.363450561593891       0.347866945510831     
+  0:   0.332577674205834       0.317604929949544       0.302968779030236     
+  0:   0.288687104219600       0.274775566220676       0.261247552812069     
+  0:   0.248114324785109       0.235384825585279       0.223065665348516     
+  0:   0.211161213389435       0.199674016520641       0.188604751580140     
+  0:   0.177952399462064       0.167714393958685       0.157886658757076     
+  0:   0.148463882139208       0.139439513478345       0.130805950252988     
+  0:   0.122554716465002       0.114676466757733       0.107161230480356     
+  0:   9.999847522115983E-002  9.317715263642486E-002  8.668591030561897E-002
+  0:   8.051311555395080E-002  7.464694005795250E-002  6.907545034653749E-002
+  0:   6.378414497784386E-002  5.875063248360210E-002  5.395580549401686E-002
+  0:   4.938608886136722E-002  4.503258669545338E-002  4.089026313210482E-002
+  0:   3.695715683474986E-002  3.323362681954228E-002  2.972159587098355E-002
+  0:   2.642387829019864E-002  2.334346186262844E-002  2.048296571954249E-002
+  0:   1.784403434768548E-002  1.542694724956638E-002  1.323022137523451E-002
+  0:   1.125036535283193E-002  9.481810817718400E-003  7.916831091698315E-003
+  0:   6.545705029319050E-003  5.356904356837127E-003  4.337392751950344E-003
+  0:   3.472967993420848E-003  2.748677600582032E-003  2.149224232451783E-003
+  0:   1.659389609910713E-003  1.264369738000113E-003  9.501203686135573E-004
+  0:   7.036240037018729E-004  5.130571299370617E-004  3.678990228948089E-004
+  0:   2.590106959716909E-004  1.786052710109070E-004  1.201887007294877E-004
+  0:   7.844143005162349E-005  4.911965348939734E-005  2.886779028713346E-005
+  0:   1.512968336076114E-005  5.980814024497118E-006  0.000000000000000E+000
+  0:   sec               :   0.000000000000000E+000
+  0:   first_time_step   :  T
+  0:   restart           :  F
+  0:   lsm_cold_start    :  T
+  0:   
+  0:  lightning threat indexes
+  0:   lightning_threat  :  F
+  0:  in iau_init  -1.00000000000000     
+  0:  nfiles =            0
+  0:  in fv3atm_diag_register, nrgst_bl=          59  nrgst_nb=         228 
+  0:   nrgst_vctbl=           2 hist%isco=           1          48 hist%jsco=
+  0:            1          24  hist%num_axes_phys=           3
+  0: NOTE from PE     0: reading topographic/orographic information from INPUT/oro_data.tile*.nc
+  0: NOTE from PE     0: reading topographic/orographic information from INPUT/oro_data_ss.tile*.nc
+  0: NOTE from PE     0: reading surface properties data from INPUT/sfc_data.tile*.nc
+  0: NOTE from PE     0: gfs_driver:: - after put to container
+  0: NOTE from PE     0: gfs_driver::surface_props_input - set init soil color
+  0: NOTE from PE     0: gfs_driver::surface_props_input - computing snowd
+  0: NOTE from PE     0: gfs_driver::surface_props_input - computing weasd
+  0: NOTE from PE     0: gfs_driver::surface_props_input - computing zorll
+  0: NOTE from PE     0: gfs_driver::surface_props_input - computing zorl
+  0: NOTE from PE     0: gfs_driver::surface_props_input - computing emis_ice
+  0: NOTE from PE     0: gfs_driver::surface_props_input - computing sncovr_ice
+  0: NOTE from PE     0: gfs_driver::surface_props_input - computing composite tsfc
+  0: NOTE from PE     0: gfs_driver::surface_props_input - computing zorlwav
+  0: NOTE from PE     0: No physics restarts - cold starting physical parameterizations
+  0:   In rad_initialize (GFS_rrtmg_setup_init), before calling RRTMG initialization
+  0:   si =   1.00000000000000       0.997528171010504       0.994907626966057     
+  0:   0.992130130528982       0.989187277888729       0.986070383444211     
+  0:   0.982770282805349       0.979277571744755       0.975582427258355     
+  0:   0.971674739897534       0.967544080871402       0.963179800751764     
+  0:   0.958571080053299       0.953706779906056       0.948575631307435     
+  0:   0.943166274950776       0.937467231927173       0.931467132373091     
+  0:   0.925154478299479       0.918517999566635       0.911546617229852     
+  0:   0.904229462936050       0.896556126320339       0.888516559529414     
+  0:   0.880101520601538       0.871302203727619       0.862110777445435     
+  0:   0.852520262357281       0.842524899544132       0.832119939161636     
+  0:   0.821302161165424       0.810069634420674       0.798422142312000     
+  0:   0.786361140517125       0.773889911095153       0.761013778589588     
+  0:   0.747739934134509       0.734077857510209       0.720039061223354     
+  0:   0.705637335524051       0.690888729129813       0.675811399323914     
+  0:   0.660425735984860       0.644754308064926       0.628821639626245     
+  0:   0.612654154542217       0.596280069078379       0.579729127086930     
+  0:   0.563032506156064       0.546222460730961       0.529332266815185     
+  0:   0.512395738020321       0.495447185100595       0.478520973220262     
+  0:   0.461651322837136       0.444872004567912       0.428216151486840     
+  0:   0.411715854945179       0.395402067166287       0.379304325913558     
+  0:   0.363450561593891       0.347866945510831       0.332577674205834     
+  0:   0.317604929949544       0.302968779030236       0.288687104219600     
+  0:   0.274775566220676       0.261247552812069       0.248114324785109     
+  0:   0.235384825585279       0.223065665348516       0.211161213389435     
+  0:   0.199674016520641       0.188604751580140       0.177952399462064     
+  0:   0.167714393958685       0.157886658757076       0.148463882139208     
+  0:   0.139439513478345       0.130805950252988       0.122554716465002     
+  0:   0.114676466757733       0.107161230480356       9.999847522115983E-002
+  0:   9.317715263642486E-002  8.668591030561897E-002  8.051311555395080E-002
+  0:   7.464694005795250E-002  6.907545034653749E-002  6.378414497784386E-002
+  0:   5.875063248360210E-002  5.395580549401686E-002  4.938608886136722E-002
+  0:   4.503258669545338E-002  4.089026313210482E-002  3.695715683474986E-002
+  0:   3.323362681954228E-002  2.972159587098355E-002  2.642387829019864E-002
+  0:   2.334346186262844E-002  2.048296571954249E-002  1.784403434768548E-002
+  0:   1.542694724956638E-002  1.323022137523451E-002  1.125036535283193E-002
+  0:   9.481810817718400E-003  7.916831091698315E-003  6.545705029319050E-003
+  0:   5.356904356837127E-003  4.337392751950344E-003  3.472967993420848E-003
+  0:   2.748677600582032E-003  2.149224232451783E-003  1.659389609910713E-003
+  0:   1.264369738000113E-003  9.501203686135573E-004  7.036240037018729E-004
+  0:   5.130571299370617E-004  3.678990228948089E-004  2.590106959716909E-004
+  0:   1.786052710109070E-004  1.201887007294877E-004  7.844143005162349E-005
+  0:   4.911965348939734E-005  2.886779028713346E-005  1.512968336076114E-005
+  0:   5.980814024497118E-006  0.000000000000000E+000
+  0:   levr=         127  ictm=           1  isol=           2  ico2=           2 
+  0:   iaermdl=           5  iaerflg=         111
+  0:   np3d=           3  ntoz=           9  iovr=           3  isubcsw=           2 
+  0:   isubclw=           2  icliq_sw=           2  iflip=           1   me=
+  0:            0
+  0:   lcrick= F  lcnorm= F  lnoprec= F
+  0:  lextop= F  ltp=           0
+  0:  NCEP-Radiation_astronomy v5.2  Jan 2013 
+  0:   - Using NOAA annual mean TSI table in TIM scale
+  0:   with cycle approximation (new values)!
+  0:  NCEP-Radiation_aerosols  v5.2  Jan 2013 
+  0:   - Using OPAC-seasonal climatology for tropospheric aerosol effect
+  0:     IAER=         111   LW-trop-aer= T   SW-trop-aer= T   Volc-aer= T
+  0:   - Include stratospheric volcanic aerosol effect
+  0:     - Compute multi-band aerosol optical properties for SW input parameters
+  0:     - Compute multi-band aerosol optical properties for LW input parameters
+  0:  NCEP-Radiation_gases     v5.1  Nov 2012 
+  0:   - Using observed co2 monthly 2-d data
+  0:  NCEP-Radiation_clouds    v5.1  Nov 2012 
+  0:   - Using Prognostic Cloud Method
+  0:     --- Thompson cloud microphysics
+  0:   - Using AER Longwave Radiation, Version: 
+  0:  NCEP LW v5.1  Nov 2012 -RRTMG-LW v4.82  
+  0:     --- Include rare gases N2O, CH4, O2, CFCs absorptions in LW
+  0:     --- Using MCICA sub-colum clouds approximation 
+  0:  with provided input array of permutation seeds
+  0:   - Using AER Shortwave Radiation, Version: 
+  0:  NCEP SW v5.1  Nov 2012 -RRTMG-SW v3.8   
+  0:     --- PIFM 2-stream transfer scheme
+  0:     --- Include rare gases N2O, CH4, O2, absorptions in SW
+  0:     --- Using MCICA sub-colum clouds approximation 
+  0:  with provided input array of permutation seeds
+  0:    Radiation sub-cloud initial seed =       47612  IC-idate =           0
+  0:            7          23        2020
+  0:   return from rad_initialize (GFS_rrtmg_setup_init) - after calling RRTMG initia
+  0:  lization
+  0:  Reading in h2odata from global_h2oprdlos.f77 
+  0:       h2o_coeff =            3
+  0:         latsh2o =           73
+  0:          levh2o =           72
+  0:         timeh2o =           12
+  0: GFS_phys_time_vary_init: compute sncovr from weasd and soil vegetation parameters
+  0: GFS_phys_time_vary_init: initialize albedo for land and ice
+  0:  In GFS_radiation_surface_init, before calling sfc_init
+  0:  ialb=           2  iems=           2
+  0:  NCEP-Radiation_surface   v5.1  Nov 2012 
+  0:   - Using Albedo From Land Model
+  0:   - Using Surface Emissivity From Land Model
+  0:  ugwp_v0: init_gw_wmsdis_control 
+  0:  ugwp_v0: WMSDIS launch layer           54
+  0:  ugwp_v0: WMSDID tot_mflux in mpa   30.0000000000000     
+  0:  
+  0:  ugwp_v0: zcimin=  0.500000000000000     
+  0:  ugwp_v0: zcimax=   125.000000000000     
+  0:  ugwp_v0: cd_crit=  0.250000000000000     
+  0:  ugwp_v0: launch_level          54
+  0:   ugwp_v0 zms_l=   2000.00000000000     
+  0:   ugwp_vgw  nslope=   1.00000000000000     
+  0:  
+  0: Using non-aerosol-aware version of Thompson microphysics
+  0:  creating microphysics lookup tables ... 
+  0:  using: mu_c_o=15.00 mu_i= 0.00 mu_r= 0.00 mu_g= 0.00
+  0:    calling table_ccnAct routine
+  0:    creating qc collision eff tables
+  0:    creating rain evap table
+  0:    creating ice converting to snow table
+  0: Calculating Thompson tables part 1 took      0.278 seconds.
+  0: Calling radar_init took      0.000 seconds.
+  0:    creating rain collecting graupel table
+  0: Computing rain collecting graupel table took      0.137 seconds.
+  0:    creating rain collecting snow table
+  0: Computing rain collecting snow table took      0.067 seconds.
+  0:    creating freezing of water drops table
+  0: Computing freezing of water drops table took      0.201 seconds.
+  0: Calculating Thompson tables part 2 took      0.201 seconds.
+  0:   ... DONE microphysical lookup tables
+  0: NOTE from PE     0: before create fcst grid
+  0:  dateS=hours since 2020-07-23 00:00:00date_init=        2020           7
+  0:           23           0           0           0
+  0:  in fv_phys bundle,nbdl=           2
+  0:  add 3D field to after nearest_stod, fld=cldfra
+  0:  fcst_initialize total time:    11.9546420499682     
+  0:  fv3_cap: field bundles in fcstComp export state, FBCount=            8
+  0:  af allco wrtComp,write_groups=           1
+192: NOTE from PE     0: MPP_DOMAINS_SET_STACK_SIZE: stack size set to    32768.
+192:  &MPP_IO_NML
+192:  HEADER_BUFFER_VAL       =       16384,
+192:  GLOBAL_FIELD_ON_ROOT_PE = T,
+192:  IO_CLOCKS_ON    = F,
+192:  SHUFFLE =           0,
+192:  DEFLATE_LEVEL   =          -1,
+192:  CF_COMPLIANCE   = F
+192:  /
+192: NOTE from PE     0: MPP_IO_SET_STACK_SIZE: stack size set to     131072.
+192: NOTE from PE     0: MPP_DOMAINS_SET_STACK_SIZE: stack size set to  3000000.
+192:  num_files=           2
+192:  num_file=           1 filename_base= atm output_file= netcdf
+192:  num_file=           2 filename_base= sfc output_file= netcdf
+192:  grid_id=            1  output_grid= gaussian_grid
+192:  imo=         768 jmo=         384
+192:  ideflate=           0
+192:  quantize_mode=quantize_bitround quantize_nsd=           0
+192:  zstandard_level=           0
+  0:  af wrtState reconcile, FBcount=           8
+  0:  af get wrtfb=output_atm_bilinear rc=           0
+  0:  af get wrtfb=output_restart_fv_core.res rc=           0
+  0:  af get wrtfb=output_restart_fv_srf_wnd.res rc=           0
+  0:  af get wrtfb=output_restart_fv_tracer.res rc=           0
+  0:  af get wrtfb=output_restart_phy_data rc=           0
+  0:  af get wrtfb=output_restart_sfc_data rc=           0
+  0:  af get wrtfb=output_sfc_bilinear rc=           0
+  0:  af get wrtfb=output_sfc_nearest_stod rc=           0
+  0:  in fv3cap init, time wrtcrt/regrdst   3.31714015454054     
+  0:  in fv3 cap init, output_startfh=  0.0000000E+00  iau_offset=           0
+  0:  output_fh=  0.1000000       12.00000       24.00000     lflname_fulltime= F
+  0:  fcst_advertise, cpl_grid_id=           1
+  0:  fcst_realize, cpl_grid_id=           1
+192:   aft fcst run output time=         360 FBcount=           8 na=           1
+  0:    Updating solar constant with cycle approx
+  0:     Opened solar constant data file: solarconstant_noaa_an.txt 
+  0:   CHECK: Solar constant data used for year        2020   1361.04000000000     
+  0:    1361.04000000000     
+  0: 0 FORECAST DATE          23 JULY  2020 AT  0 HRS  0.00 MINS
+  0:   JULIAN DAY             2459053  PLUS   0.500000
+  0:   RADIUS VECTOR          1.0159177
+  0:   RIGHT ASCENSION OF SUN   8.1890728 HRS, OR   8 HRS  11 MINS  20.7 SECS
+  0:   DECLINATION OF THE SUN  20.0134144 DEGS, OR   20 DEGS   0 MINS  48.3 SECS
+  0:   EQUATION OF TIME        -6.5313326 MINS, OR   -391.88 SECS, OR-0.028576 RADIANS
+  0:   SOLAR CONSTANT        1318.7237892 (DISTANCE AJUSTED)
+  0: 
+  0: 
+  0:     for cosz calculations: nswr,deltim,deltsw,dtswh =          10
+  0:    360.000000000000        3600.00000000000        1.00000000000000      
+  0:    anginc,nstp =  2.617993877991494E-002          10
+  0:     Opened aerosol data file: aerosol.dat               
+  0:    --- Reading 
+  0:   MONTH OF JULY      CLIMATOLOGICAL AEROSOL GLOBAL DISTRIBUTION                 
+  0:   
+  0:     Request volcanic date out of range, optical depth set to lowest value
+  0:   CHECK: Sample Volcanic data used for month, year:           7        2020
+  0:            1           1           1           1
+  0:     Opened co2 data file: co2historicaldata_2020.txt
+  0:         2020 
+  0:   MONTHLY CO2 (PPMV)   24  12  LON/LAT (N-S/0-360E) IN 15 DEGREE RESOLUTION,  GL
+  0:  B ANNUAL MEAN =   412.810000000000        GROWTH RATE =   2.52000000000000     
+  0:     Global annual mean CO2 data for year        2020  4.128100000000000E-004
+  0:   CHECK: Sample of selected months of CO2 data used for year:        2020
+  0:          Month =           1
+  0:   4.189500000000000E-004  4.187300000000000E-004  4.170900000000000E-004
+  0:   4.153800000000000E-004  4.134100000000000E-004  4.117300000000000E-004
+  0:   4.100500000000000E-004  4.092300000000000E-004  4.092100000000000E-004
+  0:   4.091300000000000E-004  4.089200000000000E-004  4.086300000000000E-004
+  0:          Month =           4
+  0:   4.214800000000000E-004  4.196100000000000E-004  4.184100000000000E-004
+  0:   4.183200000000000E-004  4.177900000000000E-004  4.154000000000000E-004
+  0:   4.125600000000000E-004  4.101800000000000E-004  4.100200000000000E-004
+  0:   4.097000000000000E-004  4.093700000000000E-004  4.092400000000000E-004
+  0:          Month =           7
+  0:   4.085299999999999E-004  4.084800000000000E-004  4.086100000000000E-004
+  0:   4.097100000000000E-004  4.114400000000000E-004  4.117799999999999E-004
+  0:   4.116100000000000E-004  4.110000000000000E-004  4.107800000000000E-004
+  0:   4.104700000000000E-004  4.101400000000000E-004  4.100100000000000E-004
+  0:          Month =          10
+  0:   4.117200000000000E-004  4.111499999999999E-004  4.123800000000000E-004
+  0:   4.121000000000000E-004  4.107800000000000E-004  4.111000000000000E-004
+  0:   4.117599999999999E-004  4.121300000000000E-004  4.116499999999999E-004
+  0:   4.112100000000000E-004  4.110500000000000E-004  4.109000000000000E-004
+  0:   ftsfl,falbl,faisl,fsnol,fzorl=   99999.0000000000       0.000000000000000E+000
+  0:    99999.0000000000        99999.0000000000       0.000000000000000E+000
+  0:   fsmcl=   99999.0000000000        99999.0000000000        99999.0000000000     
+  0:    99999.0000000000     
+  0:   fstcl=   99999.0000000000        99999.0000000000        99999.0000000000     
+  0:    99999.0000000000     
+  0:   ftsfs,falbs,faiss,fsnos,fzors=   90.0000000000000       0.000000000000000E+000
+  0:    99999.0000000000        99999.0000000000        99999.0000000000     
+  0:   fsmcs=  0.000000000000000E+000  0.000000000000000E+000  0.000000000000000E+000
+  0:   0.000000000000000E+000
+  0:   fstcs=  0.000000000000000E+000  0.000000000000000E+000  0.000000000000000E+000
+  0:   0.000000000000000E+000
+  0:   aislim=  0.150000000000000       sihnew=  0.200000000000000     
+  0:   isot=           1  ivegsrc=           1
+  0:   fnsotc =
+  0:  C192.soil_type.tileX.nc                                                        
+  0:                                                                                 
+  0:                                                                                 
+  0:                                                                                 
+  0:                                                                                 
+  0:                                                                                 
+  0:                            
+  0:   imsk=        7200  jmsk=        3600  xdata=        7200  ydata=        3600
+  0:   file global_slmask.t1534.3072.1536.grb opened. unit=        9998
+  0:   first grib record.
+  0:   kpds( 1-10)=           7          78         255         128          81
+  0:            1           0         212           1           1
+  0:   kpds(11-20)=           0           0           4           0           1
+  0:           51           1           1           1           0
+  0:   kpds(21-  )=          20           1
+  0:  idim,jdim=        3072        1536  gaus= T  blno=  0.000000000000000E+000 
+  0:   blto=   89.9100000000000     
+  0:   
+  0:   lugb=        9998  len=        1152  lsoil=           4
+  0:  iy=        2020  im=           7  id=          23  ih=           0  fh=
+  0:   0.000000000000000E+000  sig1t(1)=  0.000000000000000E+000  gausm= T  blnmsk=
+  0:   0.000000000000000E+000  bltmsk=   89.9100000000000     
+  0:   
+  0:   in fixrdc for mon=          -1  fngrib=global_glacier.2x2.grb
+  0:   file global_glacier.2x2.grb opened. unit=        9998
+  0:   first grib record.
+  0:   kpds( 1-10)=           7          80         255         128         238
+  0:            1           0           0           1           1
+  0:   kpds(11-20)=           0           0           4           0           1
+  0:           51           1           1           2           0
+  0:   kpds(21-  )=          20           1
+  0:   input grib file dates=           0           1           1           0
+  0:  imax,jmax,ijmax=         180          91       16380
+  0:   kgds( 1-12)=           0         180          91       90000           0
+  0:          128      -90000       -2000        2000        2000           0
+  0:            0
+  0:   kgds(13-22)= -1431655766 -1431655766 -1431655766 -1431655766 -1431655766
+  0:  -1431655766           0         255 -1431655766 -1431655766
+  0:  lat/lon grid
+  0:  imax,jmax,ijmax,dlon,dlat,ijordr,wlon,rnlat=
+  0:          180          91       16380   2.00000000000000     
+  0:   -2.00000000000000      T  0.000000000000000E+000   90.0000000000000     
+  0:   in fixrdc for mon=          -1  fngrib=global_maxice.2x2.grb
+  0:   file global_maxice.2x2.grb opened. unit=        9998
+  0:   first grib record.
+  0:   kpds( 1-10)=           7          80         255         128          91
+  0:            1           0           0           1           1
+  0:   kpds(11-20)=           0           0           4           0           1
+  0:           51           1           1           2           0
+  0:   kpds(21-  )=          20           1
+  0:   input grib file dates=           0           1           1           0
+  0:  imax,jmax,ijmax=         180          91       16380
+  0:   kgds( 1-12)=           0         180          91       90000           0
+  0:          128      -90000       -2000        2000        2000           0
+  0:            0
+  0:   kgds(13-22)= -1431655766 -1431655766 -1431655766 -1431655766 -1431655766
+  0:  -1431655766           0         255 -1431655766 -1431655766
+  0:  lat/lon grid
+  0:  imax,jmax,ijmax,dlon,dlat,ijordr,wlon,rnlat=
+  0:          180          91       16380   2.00000000000000     
+  0:   -2.00000000000000      T  0.000000000000000E+000   90.0000000000000     
+  0:  qc of maximum ice extent
+  0:  ==============
+  0:  climatology
+  0:  ==============
+  0:   forecast jy,jm,jd,jh,rjday=        2020           7          23           0
+  0:    205.000000000000     
+  0:  forecast jy,jm,jd,jh=        2020           7          23           0
+  0:  rjday,mon1,mon2,wei1m,wei2m=   205.000000000000                7           8
+  0:   0.725806451612903       0.274193548387097     
+  0:  rjday,sea1,sea2,wei1s,wei2s=   205.000000000000                7          10
+  0:   0.907608695652174       9.239130434782605E-002
+  0:  rjday,hyr1,hyr2,wei1y,wei2y=   205.000000000000                7           1
+  0:   0.953804347826087       4.619565217391308E-002
+  0:  bosu first time thru
+  0:   in fixrdc_tile for mon=           1  filename=C192.facsf.tile1.nc
+  0:   in fixrdc_tile for mon=           1  filename=
+  0:  C192.substrate_temperature.tile1.nc
+  0:   in fixrdc_tile for mon=           1  filename=C192.vegetation_type.tile1.nc
+  0:  climatological vegetation type read in.
+  0:   in fixrdc_tile for mon=           1  filename=C192.soil_type.tile1.nc
+  0:  climatological soil type read in.
+  0:   in fixrdc_tile for mon=           1  filename=C192.soil_color.tile1.nc
+  0:  Soil color data name is
+  0:  C192.soil_color.tileX.nc                                                       
+  0:                                                                                 
+  0:                                                                                 
+  0:                                                                                 
+  0:                                                                                 
+  0:                                                                                 
+  0:                            
+  0:  climatological soil color read in.
+  0:   in fixrdc_tile for mon=          99  filename=
+  0:  C192.vegetation_greenness.tile1.nc
+  0:  climatological shdmin read in.
+  0:   in fixrdc_tile for mon=          99  filename=
+  0:  C192.vegetation_greenness.tile1.nc
+  0:  climatological shdmax read in.
+  0:   in fixrdc_tile for mon=           1  filename=C192.slope_type.tile1.nc
+  0:  climatological slope read in.
+  0:   in fixrdc_tile for mon=           1  filename=
+  0:  C192.maximum_snow_albedo.tile1.nc
+  0:  climatological snoalb read in.
+  0:   in fixrdc_tile for mon=           7  filename=C192.snowfree_albedo.tile1.nc
+  0:   in fixrdc_tile for mon=           7  filename=C192.snowfree_albedo.tile1.nc
+  0:   in fixrdc_tile for mon=           7  filename=C192.snowfree_albedo.tile1.nc
+  0:   in fixrdc_tile for mon=           7  filename=C192.snowfree_albedo.tile1.nc
+  0:   in fixrdc for mon=           7  fngrib=RTGSST.1982.2012.monthly.clim.grb
+  0:   file RTGSST.1982.2012.monthly.clim.grb opened. unit=        9998
+  0:   first grib record.
+  0:   kpds( 1-10)=           7         120         173         128          11
+  0:            1           0          96           1          15
+  0:   kpds(11-20)=           0           0           1           0           0
+  0:           10           0           1           1           0
+  0:   kpds(21-  )=          20           2
+  0:   input grib file dates=          96           7          15           0
+  0:  imax,jmax,ijmax=        4320        2160     9331200
+  0:   kgds( 1-12)=           0        4320        2160       89958          42
+  0:          128      -89958         -42          83          83           0
+  0:            0
+  0:   kgds(13-22)=           0       32767           2           0           0
+  0:            0           0         255          28    16777216
+  0:  lat/lon grid
+  0:  imax,jmax,ijmax,dlon,dlat,ijordr,wlon,rnlat=
+  0:         4320        2160     9331200  8.300000000000000E-002
+  0:  -8.300000000000000E-002 T  4.200000000000000E-002   89.9580000000000     
+  0:  i1,i2,j1,j2=        3662        3663        1498        1499
+  0:  rslmsk=   1.00000000000000        1.00000000000000        1.00000000000000     
+  0:    1.00000000000000     
+  0:  i=          49  slmask(i)=  0.000000000000000E+000  outlon=
+  0:    305.195036168490       outlat=  -34.8044257092705     
+  0:  i1,i2,j1,j2=        3667        3668        1495        1496
+  0:  rslmsk=   1.00000000000000        1.00000000000000        1.00000000000000     
+  0:    1.00000000000000     
+  0:  i=          98  slmask(i)=  0.000000000000000E+000  outlon=
+  0:    305.586427110870       outlat=  -34.6169296008278     
+  0:   unable to interpolate.  filled with nearest point value at           72  point
+  0:  s
+  0:   in fixrdc for mon=           7  fngrib=
+  0:  global_soilmgldas.statsgo.t1534.3072.1536.grb
+  0:   file global_soilmgldas.statsgo.t1534.3072.1536.grb opened. unit=        9998
+  0:   first grib record.
+  0:   kpds( 1-10)=           7          82         255         192         144
+  0:          112          10          18           1           1
+  0:   kpds(11-20)=           0           0           3           0           1
+  0:            3          30           1           2           0
+  0:   kpds(21-  )=          21           4
+  0:   input grib file dates=          18           7           1           0
+  0:  imax,jmax,ijmax=        3072        1536     4718592
+  0:   kgds( 1-12)=           4        3072        1536       89910           0
+  0:          128      -89910        -117         117         768           0
+  0:            0
+  0:   kgds(13-22)=           0       32767           2           0           0
+  0:            0           0         255          28    16777216
+  0:  gaussian grid
+  0:  imax,jmax,ijmax,dlon,dlat,ijordr,wlon,rnlat=
+  0:         3072        1536     4718592  0.117000000000000     
+  0:   -99.0000000000000      T  0.000000000000000E+000   99.0000000000000     
+  0:  i1,i2,j1,j2=        2605        2606        1068        1069
+  0:  rslmsk=  0.000000000000000E+000  0.000000000000000E+000  0.000000000000000E+000
+  0:   0.000000000000000E+000
+  0:  i=           1  slmask(i)=   1.00000000000000       outlon=
+  0:    305.195032183032       outlat=  -35.1721890060881     
+  0:  i1,i2,j1,j2=        2608        2609        1067        1068
+  0:  rslmsk=  0.000000000000000E+000  0.000000000000000E+000  0.000000000000000E+000
+  0:   0.000000000000000E+000
+  0:  i=          50  slmask(i)=   1.00000000000000       outlon=
+  0:    305.586423145820       outlat=  -34.9855817437601     
+  0:   unable to interpolate.  filled with nearest point value at           13  point
+  0:  s
+  0:   in fixrdc for mon=           7  fngrib=
+  0:  global_soilmgldas.statsgo.t1534.3072.1536.grb
+  0:   file global_soilmgldas.statsgo.t1534.3072.1536.grb opened. unit=        9998
+  0:   first grib record.
+  0:   kpds( 1-10)=           7          82         255         192         144
+  0:          112        2600          18           1           1
+  0:   kpds(11-20)=           0           0           3           0           1
+  0:            3          30           1           2           0
+  0:   kpds(21-  )=          21           4
+  0:   input grib file dates=          18           7           1           0
+  0:  imax,jmax,ijmax=        3072        1536     4718592
+  0:   kgds( 1-12)=           4        3072        1536       89910           0
+  0:          128      -89910        -117         117         768           0
+  0:            0
+  0:   kgds(13-22)=           0       32767           2           0           0
+  0:            0           0         255          28    16777216
+  0:  gaussian grid
+  0:  imax,jmax,ijmax,dlon,dlat,ijordr,wlon,rnlat=
+  0:         3072        1536     4718592  0.117000000000000     
+  0:   -99.0000000000000      T  0.000000000000000E+000   99.0000000000000     
+  0:  i1,i2,j1,j2=        2605        2606        1068        1069
+  0:  rslmsk=  0.000000000000000E+000  0.000000000000000E+000  0.000000000000000E+000
+  0:   0.000000000000000E+000
+  0:  i=           1  slmask(i)=   1.00000000000000       outlon=
+  0:    305.195032183032       outlat=  -35.1721890060881     
+  0:  i1,i2,j1,j2=        2608        2609        1067        1068
+  0:  rslmsk=  0.000000000000000E+000  0.000000000000000E+000  0.000000000000000E+000
+  0:   0.000000000000000E+000
+  0:  i=          50  slmask(i)=   1.00000000000000       outlon=
+  0:    305.586423145820       outlat=  -34.9855817437601     
+  0:   unable to interpolate.  filled with nearest point value at           13  point
+  0:  s
+  0:   in fixrdc for mon=           7  fngrib=
+  0:  global_soilmgldas.statsgo.t1534.3072.1536.grb
+  0:   file global_soilmgldas.statsgo.t1534.3072.1536.grb opened. unit=        9998
+  0:   first grib record.
+  0:   kpds( 1-10)=           7          82         255         192         144
+  0:          112       10340          18           1           1
+  0:   kpds(11-20)=           0           0           3           0           1
+  0:            3          30           1           2           0
+  0:   kpds(21-  )=          21           4
+  0:   input grib file dates=          18           7           1           0
+  0:  imax,jmax,ijmax=        3072        1536     4718592
+  0:   kgds( 1-12)=           4        3072        1536       89910           0
+  0:          128      -89910        -117         117         768           0
+  0:            0
+  0:   kgds(13-22)=           0       32767           2           0           0
+  0:            0           0         255          28    16777216
+  0:  gaussian grid
+  0:  imax,jmax,ijmax,dlon,dlat,ijordr,wlon,rnlat=
+  0:         3072        1536     4718592  0.117000000000000     
+  0:   -99.0000000000000      T  0.000000000000000E+000   99.0000000000000     
+  0:  i1,i2,j1,j2=        2605        2606        1068        1069
+  0:  rslmsk=  0.000000000000000E+000  0.000000000000000E+000  0.000000000000000E+000
+  0:   0.000000000000000E+000
+  0:  i=           1  slmask(i)=   1.00000000000000       outlon=
+  0:    305.195032183032       outlat=  -35.1721890060881     
+  0:  i1,i2,j1,j2=        2608        2609        1067        1068
+  0:  rslmsk=  0.000000000000000E+000  0.000000000000000E+000  0.000000000000000E+000
+  0:   0.000000000000000E+000
+  0:  i=          50  slmask(i)=   1.00000000000000       outlon=
+  0:    305.586423145820       outlat=  -34.9855817437601     
+  0:   unable to interpolate.  filled with nearest point value at           13  point
+  0:  s
+  0:   in fixrdc for mon=           7  fngrib=
+  0:  global_soilmgldas.statsgo.t1534.3072.1536.grb
+  0:   file global_soilmgldas.statsgo.t1534.3072.1536.grb opened. unit=        9998
+  0:   first grib record.
+  0:   kpds( 1-10)=           7          82         255         192         144
+  0:          112       25800          18           1           1
+  0:   kpds(11-20)=           0           0           3           0           1
+  0:            3          30           1           2           0
+  0:   kpds(21-  )=          21           4
+  0:   input grib file dates=          18           7           1           0
+  0:  imax,jmax,ijmax=        3072        1536     4718592
+  0:   kgds( 1-12)=           4        3072        1536       89910           0
+  0:          128      -89910        -117         117         768           0
+  0:            0
+  0:   kgds(13-22)=           0       32767           2           0           0
+  0:            0           0         255          28    16777216
+  0:  gaussian grid
+  0:  imax,jmax,ijmax,dlon,dlat,ijordr,wlon,rnlat=
+  0:         3072        1536     4718592  0.117000000000000     
+  0:   -99.0000000000000      T  0.000000000000000E+000   99.0000000000000     
+  0:  i1,i2,j1,j2=        2605        2606        1068        1069
+  0:  rslmsk=  0.000000000000000E+000  0.000000000000000E+000  0.000000000000000E+000
+  0:   0.000000000000000E+000
+  0:  i=           1  slmask(i)=   1.00000000000000       outlon=
+  0:    305.195032183032       outlat=  -35.1721890060881     
+  0:  i1,i2,j1,j2=        2608        2609        1067        1068
+  0:  rslmsk=  0.000000000000000E+000  0.000000000000000E+000  0.000000000000000E+000
+  0:   0.000000000000000E+000
+  0:  i=          50  slmask(i)=   1.00000000000000       outlon=
+  0:    305.586423145820       outlat=  -34.9855817437601     
+  0:   unable to interpolate.  filled with nearest point value at           13  point
+  0:  s
+  0:   in fixrdc for mon=           7  fngrib=IMS-NIC.blended.ice.monthly.clim.grb
+  0:   file IMS-NIC.blended.ice.monthly.clim.grb opened. unit=        9998
+  0:   first grib record.
+  0:   kpds( 1-10)=           7         120         255         192          91
+  0:          102           0          20           1           1
+  0:   kpds(11-20)=           0           0           1           0           0
+  0:           10          31           1           2           0
+  0:   kpds(21-  )=          21           2
+  0:   input grib file dates=          20           7           1           0
+  0:  imax,jmax,ijmax=        7200        3600    25920000
+  0:   kgds( 1-12)=           0        7200        3600       89975          25
+  0:          192      -89975      359975          50          50           0
+  0:            0
+  0:   kgds(13-22)=           0       32767           2           0           0
+  0:            0           0         255          28    16777216
+  0:  lat/lon grid
+  0:  imax,jmax,ijmax,dlon,dlat,ijordr,wlon,rnlat=
+  0:         7200        3600    25920000  5.000000000000000E-002
+  0:  -5.000000000000000E-002 T  2.500000000000000E-002   89.9750000000000     
+  0:   in fixrdc for mon=           7  fngrib=global_snoclim.1.875.grb
+  0:   file global_snoclim.1.875.grb opened. unit=        9998
+  0:   first grib record.
+  0:   kpds( 1-10)=           7          80         255         128          65
+  0:            1           0           0           1           1
+  0:   kpds(11-20)=           0           0           3           0           1
+  0:           51           1           1           2           0
+  0:   kpds(21-  )=          20           1
+  0:   input grib file dates=           0           7           1           0
+  0:  imax,jmax,ijmax=         192          95       18240
+  0:   kgds( 1-12)=           0         192          95       88125           0
+  0:          128      -88125       -1875        1875        1875           0
+  0:            0
+  0:   kgds(13-22)=           0       32767           2           0           0
+  0:            0           0         255          28    16777216
+  0:  lat/lon grid
+  0:  imax,jmax,ijmax,dlon,dlat,ijordr,wlon,rnlat=
+  0:          192          95       18240   1.87500000000000     
+  0:   -1.87500000000000      T  0.000000000000000E+000   88.1250000000000     
+  0:  roughness length to be set from igbp veg type
+  0:   in fixrdc_tile for mon=           7  filename=
+  0:  C192.vegetation_greenness.tile1.nc
+  0:  climatological vegetation cover read in for mon=           7
+  0:   in fixrdc_tile for mon=           8  filename=C192.snowfree_albedo.tile1.nc
+  0:   in fixrdc_tile for mon=           8  filename=C192.snowfree_albedo.tile1.nc
+  0:   in fixrdc_tile for mon=           8  filename=C192.snowfree_albedo.tile1.nc
+  0:   in fixrdc_tile for mon=           8  filename=C192.snowfree_albedo.tile1.nc
+  0:   in fixrdc for mon=           8  fngrib=RTGSST.1982.2012.monthly.clim.grb
+  0:   file RTGSST.1982.2012.monthly.clim.grb opened. unit=        9998
+  0:   first grib record.
+  0:   kpds( 1-10)=           7         120         173         128          11
+  0:            1           0          96           1          15
+  0:   kpds(11-20)=           0           0           1           0           0
+  0:           10           0           1           1           0
+  0:   kpds(21-  )=          20           2
+  0:   input grib file dates=          96           8          15           0
+  0:  imax,jmax,ijmax=        4320        2160     9331200
+  0:   kgds( 1-12)=           0        4320        2160       89958          42
+  0:          128      -89958         -42          83          83           0
+  0:            0
+  0:   kgds(13-22)=           0       32767           2           0           0
+  0:            0           0         255          33    16777216
+  0:  lat/lon grid
+  0:  imax,jmax,ijmax,dlon,dlat,ijordr,wlon,rnlat=
+  0:         4320        2160     9331200  8.300000000000000E-002
+  0:  -8.300000000000000E-002 T  4.200000000000000E-002   89.9580000000000     
+  0:  i1,i2,j1,j2=        3662        3663        1498        1499
+  0:  rslmsk=   1.00000000000000        1.00000000000000        1.00000000000000     
+  0:    1.00000000000000     
+  0:  i=          49  slmask(i)=  0.000000000000000E+000  outlon=
+  0:    305.195036168490       outlat=  -34.8044257092705     
+  0:  i1,i2,j1,j2=        3667        3668        1495        1496
+  0:  rslmsk=   1.00000000000000        1.00000000000000        1.00000000000000     
+  0:    1.00000000000000     
+  0:  i=          98  slmask(i)=  0.000000000000000E+000  outlon=
+  0:    305.586427110870       outlat=  -34.6169296008278     
+  0:   unable to interpolate.  filled with nearest point value at           72  point
+  0:  s
+  0:   in fixrdc for mon=           8  fngrib=
+  0:  global_soilmgldas.statsgo.t1534.3072.1536.grb
+  0:   file global_soilmgldas.statsgo.t1534.3072.1536.grb opened. unit=        9998
+  0:   first grib record.
+  0:   kpds( 1-10)=           7          82         255         192         144
+  0:          112          10          18           1           1
+  0:   kpds(11-20)=           0           0           3           0           1
+  0:            3          30           1           2           0
+  0:   kpds(21-  )=          21           4
+  0:   input grib file dates=          18           8           1           0
+  0:  imax,jmax,ijmax=        3072        1536     4718592
+  0:   kgds( 1-12)=           4        3072        1536       89910           0
+  0:          128      -89910        -117         117         768           0
+  0:            0
+  0:   kgds(13-22)=           0       32767           2           0           0
+  0:            0           0         255          33    16777216
+  0:  gaussian grid
+  0:  imax,jmax,ijmax,dlon,dlat,ijordr,wlon,rnlat=
+  0:         3072        1536     4718592  0.117000000000000     
+  0:   -99.0000000000000      T  0.000000000000000E+000   99.0000000000000     
+  0:  i1,i2,j1,j2=        2605        2606        1068        1069
+  0:  rslmsk=  0.000000000000000E+000  0.000000000000000E+000  0.000000000000000E+000
+  0:   0.000000000000000E+000
+  0:  i=           1  slmask(i)=   1.00000000000000       outlon=
+  0:    305.195032183032       outlat=  -35.1721890060881     
+  0:  i1,i2,j1,j2=        2608        2609        1067        1068
+  0:  rslmsk=  0.000000000000000E+000  0.000000000000000E+000  0.000000000000000E+000
+  0:   0.000000000000000E+000
+  0:  i=          50  slmask(i)=   1.00000000000000       outlon=
+  0:    305.586423145820       outlat=  -34.9855817437601     
+  0:   unable to interpolate.  filled with nearest point value at           13  point
+  0:  s
+  0:   in fixrdc for mon=           8  fngrib=
+  0:  global_soilmgldas.statsgo.t1534.3072.1536.grb
+  0:   file global_soilmgldas.statsgo.t1534.3072.1536.grb opened. unit=        9998
+  0:   first grib record.
+  0:   kpds( 1-10)=           7          82         255         192         144
+  0:          112        2600          18           1           1
+  0:   kpds(11-20)=           0           0           3           0           1
+  0:            3          30           1           2           0
+  0:   kpds(21-  )=          21           4
+  0:   input grib file dates=          18           8           1           0
+  0:  imax,jmax,ijmax=        3072        1536     4718592
+  0:   kgds( 1-12)=           4        3072        1536       89910           0
+  0:          128      -89910        -117         117         768           0
+  0:            0
+  0:   kgds(13-22)=           0       32767           2           0           0
+  0:            0           0         255          33    16777216
+  0:  gaussian grid
+  0:  imax,jmax,ijmax,dlon,dlat,ijordr,wlon,rnlat=
+  0:         3072        1536     4718592  0.117000000000000     
+  0:   -99.0000000000000      T  0.000000000000000E+000   99.0000000000000     
+  0:  i1,i2,j1,j2=        2605        2606        1068        1069
+  0:  rslmsk=  0.000000000000000E+000  0.000000000000000E+000  0.000000000000000E+000
+  0:   0.000000000000000E+000
+  0:  i=           1  slmask(i)=   1.00000000000000       outlon=
+  0:    305.195032183032       outlat=  -35.1721890060881     
+  0:  i1,i2,j1,j2=        2608        2609        1067        1068
+  0:  rslmsk=  0.000000000000000E+000  0.000000000000000E+000  0.000000000000000E+000
+  0:   0.000000000000000E+000
+  0:  i=          50  slmask(i)=   1.00000000000000       outlon=
+  0:    305.586423145820       outlat=  -34.9855817437601     
+  0:   unable to interpolate.  filled with nearest point value at           13  point
+  0:  s
+  0:   in fixrdc for mon=           8  fngrib=
+  0:  global_soilmgldas.statsgo.t1534.3072.1536.grb
+  0:   file global_soilmgldas.statsgo.t1534.3072.1536.grb opened. unit=        9998
+  0:   first grib record.
+  0:   kpds( 1-10)=           7          82         255         192         144
+  0:          112       10340          18           1           1
+  0:   kpds(11-20)=           0           0           3           0           1
+  0:            3          30           1           2           0
+  0:   kpds(21-  )=          21           4
+  0:   input grib file dates=          18           8           1           0
+  0:  imax,jmax,ijmax=        3072        1536     4718592
+  0:   kgds( 1-12)=           4        3072        1536       89910           0
+  0:          128      -89910        -117         117         768           0
+  0:            0
+  0:   kgds(13-22)=           0       32767           2           0           0
+  0:            0           0         255          33    16777216
+  0:  gaussian grid
+  0:  imax,jmax,ijmax,dlon,dlat,ijordr,wlon,rnlat=
+  0:         3072        1536     4718592  0.117000000000000     
+  0:   -99.0000000000000      T  0.000000000000000E+000   99.0000000000000     
+  0:  i1,i2,j1,j2=        2605        2606        1068        1069
+  0:  rslmsk=  0.000000000000000E+000  0.000000000000000E+000  0.000000000000000E+000
+  0:   0.000000000000000E+000
+  0:  i=           1  slmask(i)=   1.00000000000000       outlon=
+  0:    305.195032183032       outlat=  -35.1721890060881     
+  0:  i1,i2,j1,j2=        2608        2609        1067        1068
+  0:  rslmsk=  0.000000000000000E+000  0.000000000000000E+000  0.000000000000000E+000
+  0:   0.000000000000000E+000
+  0:  i=          50  slmask(i)=   1.00000000000000       outlon=
+  0:    305.586423145820       outlat=  -34.9855817437601     
+  0:   unable to interpolate.  filled with nearest point value at           13  point
+  0:  s
+  0:   in fixrdc for mon=           8  fngrib=
+  0:  global_soilmgldas.statsgo.t1534.3072.1536.grb
+  0:   file global_soilmgldas.statsgo.t1534.3072.1536.grb opened. unit=        9998
+  0:   first grib record.
+  0:   kpds( 1-10)=           7          82         255         192         144
+  0:          112       25800          18           1           1
+  0:   kpds(11-20)=           0           0           3           0           1
+  0:            3          30           1           2           0
+  0:   kpds(21-  )=          21           4
+  0:   input grib file dates=          18           8           1           0
+  0:  imax,jmax,ijmax=        3072        1536     4718592
+  0:   kgds( 1-12)=           4        3072        1536       89910           0
+  0:          128      -89910        -117         117         768           0
+  0:            0
+  0:   kgds(13-22)=           0       32767           2           0           0
+  0:            0           0         255          33    16777216
+  0:  gaussian grid
+  0:  imax,jmax,ijmax,dlon,dlat,ijordr,wlon,rnlat=
+  0:         3072        1536     4718592  0.117000000000000     
+  0:   -99.0000000000000      T  0.000000000000000E+000   99.0000000000000     
+  0:  i1,i2,j1,j2=        2605        2606        1068        1069
+  0:  rslmsk=  0.000000000000000E+000  0.000000000000000E+000  0.000000000000000E+000
+  0:   0.000000000000000E+000
+  0:  i=           1  slmask(i)=   1.00000000000000       outlon=
+  0:    305.195032183032       outlat=  -35.1721890060881     
+  0:  i1,i2,j1,j2=        2608        2609        1067        1068
+  0:  rslmsk=  0.000000000000000E+000  0.000000000000000E+000  0.000000000000000E+000
+  0:   0.000000000000000E+000
+  0:  i=          50  slmask(i)=   1.00000000000000       outlon=
+  0:    305.586423145820       outlat=  -34.9855817437601     
+  0:   unable to interpolate.  filled with nearest point value at           13  point
+  0:  s
+  0:   in fixrdc for mon=           8  fngrib=IMS-NIC.blended.ice.monthly.clim.grb
+  0:   file IMS-NIC.blended.ice.monthly.clim.grb opened. unit=        9998
+  0:   first grib record.
+  0:   kpds( 1-10)=           7         120         255         192          91
+  0:          102           0          20           1           1
+  0:   kpds(11-20)=           0           0           1           0           0
+  0:           10          31           1           2           0
+  0:   kpds(21-  )=          21           2
+ 81:  dbgx --scale snwdph from sheleg          32  0.000000000000000E+000
+ 81:   0.100000000000000     
+ 81:  dbgx --scale snwdph from sheleg          33  0.000000000000000E+000
+ 81:   0.100000000000000     
+ 81:  dbgx --scale snwdph from sheleg          79  0.000000000000000E+000
+ 81:   0.100000000000000     
+ 81:  dbgx --scale snwdph from sheleg          81  0.000000000000000E+000
+ 81:   0.100000000000000     
+ 81:  dbgx --scale snwdph from sheleg         123  0.000000000000000E+000
+ 81:   0.100000000000000     
+ 81:  dbgx --scale snwdph from sheleg         124  0.000000000000000E+000
+ 81:   0.100000000000000     
+ 81:  dbgx --scale snwdph from sheleg         125  0.000000000000000E+000
+ 81:   0.100000000000000     
+ 81:  dbgx --scale snwdph from sheleg         129  0.000000000000000E+000
+ 81:   0.100000000000000     
+ 81:  dbgx --scale snwdph from sheleg         130  0.000000000000000E+000
+ 81:   0.100000000000000     
+ 81:  dbgx --scale snwdph from sheleg         131  0.000000000000000E+000
+ 81:   0.100000000000000     
+ 81:  dbgx --scale snwdph from sheleg         164  0.000000000000000E+000
+ 81:   0.100000000000000     
+ 81:  dbgx --scale snwdph from sheleg         168  0.000000000000000E+000
+ 81:   0.100000000000000     
+ 81:  dbgx --scale snwdph from sheleg         169  0.000000000000000E+000
+ 81:   0.100000000000000     
+ 81:  dbgx --scale snwdph from sheleg         170  0.000000000000000E+000
+ 81:   0.100000000000000     
+ 81:  dbgx --scale snwdph from sheleg         171  0.000000000000000E+000
+ 81:   0.100000000000000     
+ 81:  dbgx --scale snwdph from sheleg         172  0.000000000000000E+000
+ 81:   0.100000000000000     
+ 81:  dbgx --scale snwdph from sheleg         176  0.000000000000000E+000
+ 81:   0.100000000000000     
+ 81:  dbgx --scale snwdph from sheleg         211  0.000000000000000E+000
+ 81:   0.100000000000000     
+ 81:  dbgx --scale snwdph from sheleg         214  0.000000000000000E+000
+ 81:   0.100000000000000     
+ 81:  dbgx --scale snwdph from sheleg         215  0.000000000000000E+000
+ 81:   0.100000000000000     
+ 81:  dbgx --scale snwdph from sheleg         218  0.000000000000000E+000
+ 81:   0.100000000000000     
+ 81:  dbgx --scale snwdph from sheleg         229  0.000000000000000E+000
+ 81:   0.100000000000000     
+ 81:  dbgx --scale snwdph from sheleg         258  0.000000000000000E+000
+ 81:   0.100000000000000     
+ 81:  dbgx --scale snwdph from sheleg         260  0.000000000000000E+000
+ 81:   0.100000000000000     
+ 81:  dbgx --scale snwdph from sheleg         325  0.000000000000000E+000
+ 81:   0.100000000000000     
+ 81:  dbgx --scale snwdph from sheleg         326  0.000000000000000E+000
+ 81:   0.100000000000000     
+ 81:  dbgx --scale snwdph from sheleg         347  0.000000000000000E+000
+ 81:   0.100000000000000     
+ 81:  dbgx --scale snwdph from sheleg         348  0.000000000000000E+000
+ 81:   0.100000000000000     
+ 81:  dbgx --scale snwdph from sheleg         349  0.000000000000000E+000
+ 81:   0.100000000000000     
+ 81:  dbgx --scale snwdph from sheleg         350  0.000000000000000E+000
+ 81:   0.100000000000000     
+ 81:  dbgx --scale snwdph from sheleg         374  0.000000000000000E+000
+ 81:   0.100000000000000     
+ 81:  dbgx --scale snwdph from sheleg         394  0.000000000000000E+000
+ 81:   0.100000000000000     
+ 81:  dbgx --scale snwdph from sheleg         422  0.000000000000000E+000
+ 81:   0.100000000000000     
+ 81:  dbgx --scale snwdph from sheleg         443  0.000000000000000E+000
+ 81:   0.100000000000000     
+ 81:  dbgx --scale snwdph from sheleg         470  0.000000000000000E+000
+ 81:   0.100000000000000     
+ 81:  dbgx --scale snwdph from sheleg         489  0.000000000000000E+000
+ 81:   0.100000000000000     
+ 81:  dbgx --scale snwdph from sheleg         517  0.000000000000000E+000
+ 81:   0.100000000000000     
+ 81:  dbgx --scale snwdph from sheleg         518  0.000000000000000E+000
+ 81:   0.100000000000000     
+ 81:  dbgx --scale snwdph from sheleg         536  0.000000000000000E+000
+ 81:   0.100000000000000     
+ 81:  dbgx --scale snwdph from sheleg         567  0.000000000000000E+000
+ 81:   0.100000000000000     
+ 81:  dbgx --scale snwdph from sheleg         569  0.000000000000000E+000
+ 81:   0.100000000000000     
+ 81:  dbgx --scale snwdph from sheleg         570  0.000000000000000E+000
+ 81:   0.100000000000000     
+ 81:  dbgx --scale snwdph from sheleg         584  0.000000000000000E+000
+ 81:   0.100000000000000     
+ 81:  dbgx --scale snwdph from sheleg         615  0.000000000000000E+000
+ 81:   0.100000000000000     
+ 81:  dbgx --scale snwdph from sheleg         620  0.000000000000000E+000
+ 81:   0.100000000000000     
+ 81:  dbgx --scale snwdph from sheleg         632  0.000000000000000E+000
+ 81:   0.100000000000000     
+ 81:  dbgx --scale snwdph from sheleg         680  0.000000000000000E+000
+ 81:   0.100000000000000     
+ 81:  dbgx --scale snwdph from sheleg         716  0.000000000000000E+000
+ 81:   0.100000000000000     
+ 81:  dbgx --scale snwdph from sheleg         717  0.000000000000000E+000
+ 81:   0.100000000000000     
+ 81:  dbgx --scale snwdph from sheleg         766  0.000000000000000E+000
+ 81:   0.100000000000000     
+ 81:  dbgx --scale snwdph from sheleg         776  0.000000000000000E+000
+ 81:   0.100000000000000     
+ 81:  dbgx --scale snwdph from sheleg         805  0.000000000000000E+000
+ 81:   0.100000000000000     
+ 81:  dbgx --scale snwdph from sheleg         814  0.000000000000000E+000
+ 81:   0.100000000000000     
+ 81:  dbgx --scale snwdph from sheleg         823  0.000000000000000E+000
+ 81:   0.100000000000000     
+ 81:  dbgx --scale snwdph from sheleg         871  0.000000000000000E+000
+ 81:   0.100000000000000     
+ 81:  dbgx --scale snwdph from sheleg         903  0.000000000000000E+000
+ 81:   0.100000000000000     
+ 81:  dbgx --scale snwdph from sheleg         951  0.000000000000000E+000
+ 81:   0.100000000000000     
+ 81:  dbgx --scale snwdph from sheleg         960  0.000000000000000E+000
+ 81:   0.100000000000000     
+ 81:  dbgx --scale snwdph from sheleg         992  0.000000000000000E+000
+ 81:   0.100000000000000     
+ 81:  dbgx --scale snwdph from sheleg         999  0.000000000000000E+000
+ 81:   0.100000000000000     
+ 81:  dbgx --scale snwdph from sheleg        1007  0.000000000000000E+000
+ 81:   0.100000000000000     
+ 81:  dbgx --scale snwdph from sheleg        1038  0.000000000000000E+000
+ 81:   0.100000000000000     
+ 81:  dbgx --scale snwdph from sheleg        1040  0.000000000000000E+000
+ 81:   0.100000000000000     
+ 81:  dbgx --scale snwdph from sheleg        1047  0.000000000000000E+000
+ 81:   0.100000000000000     
+ 81:  dbgx --scale snwdph from sheleg        1056  0.000000000000000E+000
+ 81:   0.100000000000000     
+ 81:  dbgx --scale snwdph from sheleg        1083  0.000000000000000E+000
+ 81:   0.100000000000000     
+ 81:  dbgx --scale snwdph from sheleg        1089  0.000000000000000E+000
+ 81:   0.100000000000000     
+ 81:  dbgx --scale snwdph from sheleg        1095  0.000000000000000E+000
+ 81:   0.100000000000000     
+ 81:  dbgx --scale snwdph from sheleg        1102  0.000000000000000E+000
+ 81:   0.100000000000000     
+ 81:  dbgx --scale snwdph from sheleg        1104  0.000000000000000E+000
+ 81:   0.100000000000000     
+ 81:  dbgx --scale snwdph from sheleg        1144  0.000000000000000E+000
+ 81:   0.100000000000000     
+ 86:  dbgx --scale snwdph from sheleg           2  0.000000000000000E+000
+ 86:   0.100000000000000     
+ 86:  dbgx --scale snwdph from sheleg          11  0.000000000000000E+000
+ 86:   0.100000000000000     
+ 86:  dbgx --scale snwdph from sheleg          49  0.000000000000000E+000
+ 86:   0.100000000000000     
+ 86:  dbgx --scale snwdph from sheleg         102  0.000000000000000E+000
+ 86:   0.100000000000000     
+ 86:  dbgx --scale snwdph from sheleg         339  0.000000000000000E+000
+ 86:   0.100000000000000     
+ 86:  dbgx --scale snwdph from sheleg         340  0.000000000000000E+000
+ 86:   0.100000000000000     
+ 86:  dbgx --scale snwdph from sheleg         341  0.000000000000000E+000
+ 86:   0.100000000000000     
+ 86:  dbgx --scale snwdph from sheleg         387  0.000000000000000E+000
+ 86:   0.100000000000000     
+ 86:  dbgx --scale snwdph from sheleg         388  0.000000000000000E+000
+ 86:   0.100000000000000     
+ 86:  dbgx --scale snwdph from sheleg         482  0.000000000000000E+000
+ 86:   0.100000000000000     
+ 86:  dbgx --scale snwdph from sheleg         673  0.000000000000000E+000
+ 86:   0.100000000000000     
+ 82:  dbgx --scale snwdph from sheleg         962  0.000000000000000E+000
+ 82:   0.100000000000000     
+ 82:  dbgx --scale snwdph from sheleg         963  0.000000000000000E+000
+ 82:   0.100000000000000     
+ 82:  dbgx --scale snwdph from sheleg        1010  0.000000000000000E+000
+ 82:   0.100000000000000     
+ 82:  dbgx --scale snwdph from sheleg        1013  0.000000000000000E+000
+ 82:   0.100000000000000     
+ 82:  dbgx --scale snwdph from sheleg        1014  0.000000000000000E+000
+ 82:   0.100000000000000     
+ 82:  dbgx --scale snwdph from sheleg        1063  0.000000000000000E+000
+ 82:   0.100000000000000     
+ 82:  dbgx --scale snwdph from sheleg        1111  0.000000000000000E+000
+ 82:   0.100000000000000     
+ 82:  dbgx --scale snwdph from sheleg        1112  0.000000000000000E+000
+ 82:   0.100000000000000     
+ 82:  dbgx --scale snwdph from sheleg        1113  0.000000000000000E+000
+ 82:   0.100000000000000     
+ 85:  dbgx --scale snwdph from sheleg           5  0.000000000000000E+000
+ 85:   0.100000000000000     
+ 85:  dbgx --scale snwdph from sheleg           6  0.000000000000000E+000
+ 85:   0.100000000000000     
+ 85:  dbgx --scale snwdph from sheleg          53  0.000000000000000E+000
+ 85:   0.100000000000000     
+ 85:  dbgx --scale snwdph from sheleg          89  0.000000000000000E+000
+ 85:   0.100000000000000     
+ 85:  dbgx --scale snwdph from sheleg          95  0.000000000000000E+000
+ 85:   0.100000000000000     
+ 85:  dbgx --scale snwdph from sheleg          96  0.000000000000000E+000
+ 85:   0.100000000000000     
+ 85:  dbgx --scale snwdph from sheleg         139  0.000000000000000E+000
+ 85:   0.100000000000000     
+ 85:  dbgx --scale snwdph from sheleg         142  0.000000000000000E+000
+ 85:   0.100000000000000     
+ 85:  dbgx --scale snwdph from sheleg         182  0.000000000000000E+000
+ 85:   0.100000000000000     
+ 85:  dbgx --scale snwdph from sheleg         194  0.000000000000000E+000
+ 85:   0.100000000000000     
+ 85:  dbgx --scale snwdph from sheleg         237  0.000000000000000E+000
+ 85:   0.100000000000000     
+ 85:  dbgx --scale snwdph from sheleg         328  0.000000000000000E+000
+ 85:   0.100000000000000     
+ 85:  dbgx --scale snwdph from sheleg         332  0.000000000000000E+000
+ 85:   0.100000000000000     
+ 85:  dbgx --scale snwdph from sheleg         333  0.000000000000000E+000
+ 85:   0.100000000000000     
+ 85:  dbgx --scale snwdph from sheleg         334  0.000000000000000E+000
+ 85:   0.100000000000000     
+ 85:  dbgx --scale snwdph from sheleg         336  0.000000000000000E+000
+ 85:   0.100000000000000     
+ 85:  dbgx --scale snwdph from sheleg         379  0.000000000000000E+000
+ 85:   0.100000000000000     
+ 85:  dbgx --scale snwdph from sheleg         416  0.000000000000000E+000
+ 85:   0.100000000000000     
+ 85:  dbgx --scale snwdph from sheleg         417  0.000000000000000E+000
+ 85:   0.100000000000000     
+ 85:  dbgx --scale snwdph from sheleg         507  0.000000000000000E+000
+ 85:   0.100000000000000     
+ 85:  dbgx --scale snwdph from sheleg         553  0.000000000000000E+000
+ 85:   0.100000000000000     
+ 85:  dbgx --scale snwdph from sheleg         554  0.000000000000000E+000
+ 85:   0.100000000000000     
+ 85:  dbgx --scale snwdph from sheleg         599  0.000000000000000E+000
+ 85:   0.100000000000000     
+ 85:  dbgx --scale snwdph from sheleg         690  0.000000000000000E+000
+ 85:   0.100000000000000     
+ 85:  dbgx --scale snwdph from sheleg         909  0.000000000000000E+000
+ 85:   0.100000000000000     
+ 85:  dbgx --scale snwdph from sheleg         912  0.000000000000000E+000
+ 85:   0.100000000000000     
+ 96:  CA cubic mosaic domain decomposition
+ 96: whalo =    3, ehalo =    3, shalo =    3, nhalo =    3
+ 96:   X-AXIS =  240 240 240 240
+ 96:   Y-AXIS =  120 120 120 120 120 120 120 120
+128:  CA cubic mosaic domain decomposition
+128: whalo =    3, ehalo =    3, shalo =    3, nhalo =    3
+128:   X-AXIS =  240 240 240 240
+128:   Y-AXIS =  120 120 120 120 120 120 120 120
+160:  CA cubic mosaic domain decomposition
+160: whalo =    3, ehalo =    3, shalo =    3, nhalo =    3
+160:   X-AXIS =  240 240 240 240
+160:   Y-AXIS =  120 120 120 120 120 120 120 120
+ 61:  dbgx --scale snwdph from sheleg         464  0.000000000000000E+000
+ 61:   0.100000000000000     
+ 61:  dbgx --scale snwdph from sheleg         558  0.000000000000000E+000
+ 61:   0.100000000000000     
+ 61:  dbgx --scale snwdph from sheleg         560  0.000000000000000E+000
+ 61:   0.100000000000000     
+ 77:  dbgx --scale snwdph from sheleg         327  0.000000000000000E+000
+ 77:   0.100000000000000     
+ 77:  dbgx --scale snwdph from sheleg         330  0.000000000000000E+000
+ 77:   0.100000000000000     
+ 77:  dbgx --scale snwdph from sheleg         331  0.000000000000000E+000
+ 77:   0.100000000000000     
+ 77:  dbgx --scale snwdph from sheleg         376  0.000000000000000E+000
+ 77:   0.100000000000000     
+ 77:  dbgx --scale snwdph from sheleg         377  0.000000000000000E+000
+ 77:   0.100000000000000     
+ 77:  dbgx --scale snwdph from sheleg         379  0.000000000000000E+000
+ 77:   0.100000000000000     
+ 77:  dbgx --scale snwdph from sheleg         426  0.000000000000000E+000
+ 77:   0.100000000000000     
+ 77:  dbgx --scale snwdph from sheleg         427  0.000000000000000E+000
+ 77:   0.100000000000000     
+ 77:  dbgx --scale snwdph from sheleg         428  0.000000000000000E+000
+ 77:   0.100000000000000     
+ 77:  dbgx --scale snwdph from sheleg         508  0.000000000000000E+000
+ 77:   0.100000000000000     
+ 77:  dbgx --scale snwdph from sheleg         509  0.000000000000000E+000
+ 77:   0.100000000000000     
+ 77:  dbgx --scale snwdph from sheleg         606  0.000000000000000E+000
+ 77:   0.100000000000000     
+ 77:  dbgx --scale snwdph from sheleg         705  0.000000000000000E+000
+ 77:   0.100000000000000     
+ 78:  dbgx --scale snwdph from sheleg           5  0.000000000000000E+000
+ 78:   0.100000000000000     
+ 78:  dbgx --scale snwdph from sheleg         150  0.000000000000000E+000
+ 78:   0.100000000000000     
+ 78:  dbgx --scale snwdph from sheleg         196  0.000000000000000E+000
+ 78:   0.100000000000000     
+ 78:  dbgx --scale snwdph from sheleg         197  0.000000000000000E+000
+ 78:   0.100000000000000     
+ 78:  dbgx --scale snwdph from sheleg         200  0.000000000000000E+000
+ 78:   0.100000000000000     
+ 78:  dbgx --scale snwdph from sheleg         294  0.000000000000000E+000
+ 78:   0.100000000000000     
+ 78:  dbgx --scale snwdph from sheleg         697  0.000000000000000E+000
+ 78:   0.100000000000000     
+ 64:  CA cubic mosaic domain decomposition
+ 64: whalo =    3, ehalo =    3, shalo =    3, nhalo =    3
+ 64:   X-AXIS =  240 240 240 240
+ 64:   Y-AXIS =  120 120 120 120 120 120 120 120
+ 74:  dbgx --scale snwdph from sheleg         914  0.000000000000000E+000
+ 74:   0.100000000000000     
+ 74:  dbgx --scale snwdph from sheleg        1108  0.000000000000000E+000
+ 74:   0.100000000000000     
+ 74:  dbgx --scale snwdph from sheleg        1109  0.000000000000000E+000
+ 74:   0.100000000000000     
+  0:   input grib file dates=          20           8           1           0
+  0:  imax,jmax,ijmax=        7200        3600    25920000
+  0:   kgds( 1-12)=           0        7200        3600       89975          25
+  0:          192      -89975      359975          50          50           0
+  0:            0
+  0:   kgds(13-22)=           0       32767           2           0           0
+  0:            0           0         255          33    16777216
+  0:  lat/lon grid
+  0:  imax,jmax,ijmax,dlon,dlat,ijordr,wlon,rnlat=
+  0:         7200        3600    25920000  5.000000000000000E-002
+  0:  -5.000000000000000E-002 T  2.500000000000000E-002   89.9750000000000     
+ 32:  CA cubic mosaic domain decomposition
+ 32: whalo =    3, ehalo =    3, shalo =    3, nhalo =    3
+ 32:   X-AXIS =  240 240 240 240
+ 32:   Y-AXIS =  120 120 120 120 120 120 120 120
+  1:  ncells=           5
+  1:  nlives=          12
+  1:  nthresh=   18.0000000000000     
+ 57:  dbgx --scale snwdph from sheleg         812  0.000000000000000E+000
+ 57:   0.100000000000000     
+  0:   in fixrdc for mon=           8  fngrib=global_snoclim.1.875.grb
+  0:   file global_snoclim.1.875.grb opened. unit=        9998
+  0:   first grib record.
+  0:   kpds( 1-10)=           7          80         255         128          65
+  0:            1           0           0           1           1
+  0:   kpds(11-20)=           0           0           3           0           1
+  0:           51           1           1           2           0
+  0:   kpds(21-  )=          20           1
+  0:   input grib file dates=           0           8           1           0
+  0:  imax,jmax,ijmax=         192          95       18240
+  0:   kgds( 1-12)=           0         192          95       88125           0
+  0:          128      -88125       -1875        1875        1875           0
+  0:            0
+  0:   kgds(13-22)=           0       32767           2           0           0
+  0:            0           0         255          33    16777216
+  0:  lat/lon grid
+  0:  imax,jmax,ijmax,dlon,dlat,ijordr,wlon,rnlat=
+  0:          192          95       18240   1.87500000000000     
+  0:   -1.87500000000000      T  0.000000000000000E+000   88.1250000000000     
+  0:  roughness length to be set from igbp veg type
+  0:   in fixrdc_tile for mon=           8  filename=
+  0:  C192.vegetation_greenness.tile1.nc
+  0:  climatological vegetation cover read in for mon=           8
+  0:   mon1s=           7  mon2s=           8  sea1s=           7  sea2s=          10
+  0:  monthly albedo weights are   0.725806451612903       for k           1
+  0:   0.274193548387097       for k           2
+  0:  qc of sea ice
+  0:   
+  0:  qc of snow
+  0:  snow set to zero over open sea at          963  points (
+  0:    83.5937500000000      percent)
+  0:  performing qc of snow     mode=           1 (0=count only, 1=replace)
+  0:  set snow temp to tsfsmx if greater
+  0:  performing qc of tsfc     mode=           1 (0=count only, 1=replace)
+  0:  performing qc of tsf2     mode=           1 (0=count only, 1=replace)
+  0:  performing qc of albc     mode=           1 (0=count only, 1=replace)
+  0:  performing qc of albc     mode=           1 (0=count only, 1=replace)
+  0:  performing qc of albc     mode=           1 (0=count only, 1=replace)
+  0:  performing qc of albc     mode=           1 (0=count only, 1=replace)
+  0:  performing qc of zorc     mode=           1 (0=count only, 1=replace)
+  0:  open ocean min. check. lat=-35.4 lon= 305.6 fld= 0.0000E+00 to  0.1000E-04
+  0:  open ocean min. check. lat=-35.5 lon= 306.0 fld= 0.0000E+00 to  0.1000E-04
+  0:  open ocean max. check. lat=-29.8 lon= 310.4 fld= 0.8560E+02 to  0.1000E+01
+  0:  open ocean min check.  modified to      0.0 at   962 points  83.5percent
+  0:  open sea max check. modified to      1.0 at     1 points   0.1percent
+  0:  performing qc of tg3c     mode=           1 (0=count only, 1=replace)
+  0:  open ocean min. check. lat=-35.4 lon= 305.6 fld=-0.9990E+03 to  0.2000E+03
+  0:  open ocean min. check. lat=-35.5 lon= 306.0 fld=-0.9990E+03 to  0.2000E+03
+  0:  open ocean min check.  modified to    200.0 at   962 points  83.5percent
+  0:  performing qc of stc-1            mode=           1 (0=count only, 1=replace)
+  0:  open ocean min. check. lat=-35.4 lon= 305.6 fld= 0.0000E+00 to  0.1000E+01
+  0:  open ocean min. check. lat=-35.5 lon= 306.0 fld= 0.0000E+00 to  0.1000E+01
+  0:  open ocean min check.  modified to      1.0 at   963 points  83.6percent
+  0:  performing qc of stc-2            mode=           1 (0=count only, 1=replace)
+  0:  open ocean min. check. lat=-35.4 lon= 305.6 fld= 0.0000E+00 to  0.1000E+01
+  0:  open ocean min. check. lat=-35.5 lon= 306.0 fld= 0.0000E+00 to  0.1000E+01
+  0:  open ocean min check.  modified to      1.0 at   963 points  83.6percent
+  0:  performing qc of stc-3            mode=           1 (0=count only, 1=replace)
+  0:  open ocean min. check. lat=-35.4 lon= 305.6 fld= 0.0000E+00 to  0.1000E+01
+  0:  open ocean min. check. lat=-35.5 lon= 306.0 fld= 0.0000E+00 to  0.1000E+01
+  0:  open ocean min check.  modified to      1.0 at   963 points  83.6percent
+  0:  performing qc of stc-4            mode=           1 (0=count only, 1=replace)
+  0:  open ocean min. check. lat=-35.4 lon= 305.6 fld= 0.0000E+00 to  0.1000E+01
+  0:  open ocean min. check. lat=-35.5 lon= 306.0 fld= 0.0000E+00 to  0.1000E+01
+  0:  open ocean min check.  modified to      1.0 at   963 points  83.6percent
+  0:  performing qc of stc-1            mode=           1 (0=count only, 1=replace)
+  0:  performing qc of stc-2            mode=           1 (0=count only, 1=replace)
+  0:  performing qc of stc-3            mode=           1 (0=count only, 1=replace)
+  0:  performing qc of stc-4            mode=           1 (0=count only, 1=replace)
+  0:  performing qc of vegc     mode=           1 (0=count only, 1=replace)
+  0:  open ocean min. check. lat=-35.4 lon= 305.6 fld=-0.9990E+03 to  0.0000E+00
+  0:  open ocean min. check. lat=-35.5 lon= 306.0 fld=-0.9990E+03 to  0.0000E+00
+  0:  open ocean max. check. lat=-29.8 lon= 310.4 fld= 0.6613E+00 to  0.0000E+00
+  0:  open ocean min check.  modified to      0.0 at   962 points  83.5percent
+  0:  open sea max check. modified to      0.0 at     1 points   0.1percent
+  0:  performing qc of vetc     mode=           1 (0=count only, 1=replace)
+  0:  open ocean min. check. lat=-35.4 lon= 305.6 fld=-0.9990E+03 to  0.0000E+00
+  0:  open ocean min. check. lat=-35.5 lon= 306.0 fld=-0.9990E+03 to  0.0000E+00
+  0:  open ocean max. check. lat=-29.8 lon= 310.4 fld= 0.9000E+01 to  0.0000E+00
+  0:  open ocean min check.  modified to      0.0 at   962 points  83.5percent
+  0:  open sea max check. modified to      0.0 at     1 points   0.1percent
+  0:  performing qc of sotc     mode=           1 (0=count only, 1=replace)
+  0:  open ocean min. check. lat=-35.4 lon= 305.6 fld=-0.9990E+03 to  0.0000E+00
+  0:  open ocean min. check. lat=-35.5 lon= 306.0 fld=-0.9990E+03 to  0.0000E+00
+  0:  open ocean max. check. lat=-29.8 lon= 310.4 fld= 0.3000E+01 to  0.0000E+00
+  0:  open ocean min check.  modified to      0.0 at   962 points  83.5percent
+  0:  open sea max check. modified to      0.0 at     1 points   0.1percent
+  0:  performing qc of socc     mode=           1 (0=count only, 1=replace)
+  0:  open ocean min. check. lat=-35.4 lon= 305.6 fld=-0.9990E+03 to  0.0000E+00
+  0:  open ocean min. check. lat=-35.5 lon= 306.0 fld=-0.9990E+03 to  0.0000E+00
+  0:  open ocean max. check. lat=-29.8 lon= 310.4 fld= 0.1000E+02 to  0.0000E+00
+  0:  open ocean min check.  modified to      0.0 at   962 points  83.5percent
+  0:  open sea max check. modified to      0.0 at     1 points   0.1percent
+  0:  performing qc of sihc     mode=           1 (0=count only, 1=replace)
+  0:  performing qc of vmnc     mode=           1 (0=count only, 1=replace)
+  0:  open ocean min. check. lat=-35.4 lon= 305.6 fld=-0.9990E+03 to  0.0000E+00
+  0:  open ocean min. check. lat=-35.5 lon= 306.0 fld=-0.9990E+03 to  0.0000E+00
+  0:  open ocean max. check. lat=-29.8 lon= 310.4 fld= 0.6000E+00 to  0.0000E+00
+  0:  open ocean min check.  modified to      0.0 at   962 points  83.5percent
+  0:  open sea max check. modified to      0.0 at     1 points   0.1percent
+  0:  performing qc of vmxc     mode=           1 (0=count only, 1=replace)
+  0:  open ocean min. check. lat=-35.4 lon= 305.6 fld=-0.9990E+03 to  0.0000E+00
+  0:  open ocean min. check. lat=-35.5 lon= 306.0 fld=-0.9990E+03 to  0.0000E+00
+  0:  open ocean max. check. lat=-29.8 lon= 310.4 fld= 0.9049E+00 to  0.0000E+00
+  0:  open ocean min check.  modified to      0.0 at   962 points  83.5percent
+  0:  open sea max check. modified to      0.0 at     1 points   0.1percent
+  0:  performing qc of slpc     mode=           1 (0=count only, 1=replace)
+  0:  open ocean min. check. lat=-35.4 lon= 305.6 fld=-0.9990E+03 to  0.0000E+00
+  0:  open ocean min. check. lat=-35.5 lon= 306.0 fld=-0.9990E+03 to  0.0000E+00
+  0:  open ocean max. check. lat=-29.8 lon= 310.4 fld= 0.1000E+01 to  0.0000E+00
+  0:  open ocean min check.  modified to      0.0 at   962 points  83.5percent
+  0:  open sea max check. modified to      0.0 at     1 points   0.1percent
+  0:  performing qc of absc     mode=           1 (0=count only, 1=replace)
+  0:  open ocean min. check. lat=-35.4 lon= 305.6 fld=-0.9990E+03 to  0.0000E+00
+  0:  open ocean min. check. lat=-35.5 lon= 306.0 fld=-0.9990E+03 to  0.0000E+00
+  0:  open ocean max. check. lat=-29.8 lon= 310.4 fld= 0.4313E+00 to  0.0000E+00
+  0:  open ocean min check.  modified to      0.0 at   962 points  83.5percent
+  0:  open sea max check. modified to      0.0 at     1 points   0.1percent
+  0:  ==============
+  0:     analysis
+  0:  ==============
+  0:  no tsf analysis available.  climatology used
+  0:  no albedo analysis available.  climatology used
+  0:  no vegfalbedo analysis available.  climatology used
+  0:  no soil wetness analysis available.  climatology used
+  0:  no snow/snocov analysis available.  climatology used
+  0:  no sea-ice analysis available.  climatology used
+  0:  no srfc roughness analysis available. climatology used
+  0:  no deep soil temp analy available.  climatology used
+  0:  no vegetation cover anly available. climatology used
+  0:  no vegetation type anly available. climatology used
+  0:  no soil type anly available. climatology used
+  0:  no soil color anly available. climatology used
+  0:  no shdmin anly available. climatology used
+  0:  no shdmax anly available. climatology used
+  0:  no slope type anly available. climatology used
+  0:  no snoalb anly available. climatology used
+  0:  qc of sea ice
+  0:  performing qc of siha     mode=           1 (0=count only, 1=replace)
+  0:   
+  0:  qc of snow
+  0:  snow set to zero over open sea at          963  points (
+  0:    83.5937500000000      percent)
+  0:  performing qc of sncva    mode=           1 (0=count only, 1=replace)
+  0:  snodpth
+  0:   
+  0:  qc of snow
+  0:  snow set to zero over open sea at          963  points (
+  0:    83.5937500000000      percent)
+  0:  set snow temp to tsfsmx if greater
+  0:  performing qc of snowa    mode=           1 (0=count only, 1=replace)
+  0:  performing qc of tsfa     mode=           1 (0=count only, 1=replace)
+  0:  performing qc of alba     mode=           1 (0=count only, 1=replace)
+  0:  performing qc of alba     mode=           1 (0=count only, 1=replace)
+  0:  performing qc of alba     mode=           1 (0=count only, 1=replace)
+  0:  performing qc of alba     mode=           1 (0=count only, 1=replace)
+  0:  performing qc of zora     mode=           1 (0=count only, 1=replace)
+  0:  performing qc of tg3a     mode=           1 (0=count only, 1=replace)
+  0:  performing qc of smca-1           mode=           1 (0=count only, 1=replace)
+  0:  performing qc of smca-2           mode=           1 (0=count only, 1=replace)
+  0:  performing qc of smca-3           mode=           1 (0=count only, 1=replace)
+  0:  performing qc of smca-4           mode=           1 (0=count only, 1=replace)
+  0:  performing qc of stca-1           mode=           1 (0=count only, 1=replace)
+  0:  performing qc of stca-2           mode=           1 (0=count only, 1=replace)
+  0:  performing qc of stca-3           mode=           1 (0=count only, 1=replace)
+  0:  performing qc of stca-4           mode=           1 (0=count only, 1=replace)
+  0:  performing qc of vega     mode=           1 (0=count only, 1=replace)
+  0:  performing qc of veta     mode=           1 (0=count only, 1=replace)
+  0:  performing qc of sota     mode=           1 (0=count only, 1=replace)
+  0:  performing qc of soca     mode=           1 (0=count only, 1=replace)
+  0:  performing qc of vmna     mode=           1 (0=count only, 1=replace)
+  0:  performing qc of vmxa     mode=           1 (0=count only, 1=replace)
+  0:  performing qc of slpa     mode=           1 (0=count only, 1=replace)
+  0:  performing qc of absa     mode=           1 (0=count only, 1=replace)
+  0:  ==============
+  0:    fcst guess
+  0:  ==============
+  0:   
+  0:  qcsli
+  0:  performing qc of snof     mode=           1 (0=count only, 1=replace)
+  0:  performing qc of tsff     mode=           1 (0=count only, 1=replace)
+  0:  bare land min. check. lat=-34.8 lon= 305.2 fld=-0.100000E+21 to  0.173000E+03
+  0:  bare land min. check. lat=-34.4 lon= 305.2 fld=-0.100000E+21 to  0.173000E+03
+  0:  bare land min check.  modified to    173.0 at   151 points     13.1percent
+  0:  performing qc of albf     mode=           1 (0=count only, 1=replace)
+  0:  performing qc of albf     mode=           1 (0=count only, 1=replace)
+  0:  performing qc of albf     mode=           1 (0=count only, 1=replace)
+  0:  performing qc of albf     mode=           1 (0=count only, 1=replace)
+  0:  performing qc of zorf     mode=           1 (0=count only, 1=replace)
+  0:  performing qc of tg3f     mode=           1 (0=count only, 1=replace)
+  0:  open ocean min. check. lat=-35.4 lon= 305.6 fld=-0.1000E+21 to  0.2000E+03
+  0:  open ocean min. check. lat=-35.5 lon= 306.0 fld=-0.1000E+21 to  0.2000E+03
+  0:  open ocean min check.  modified to    200.0 at   962 points  83.5percent
+  0:  performing qc of sihf     mode=           1 (0=count only, 1=replace)
+  0:  performing qc of smcfcw-1         mode=           1 (0=count only, 1=replace)
+  0:  open ocean min. check. lat=-29.8 lon= 310.4 fld= 0.2664E+00 to  0.1000E+01
+  0:  open ocean min check.  modified to      1.0 at     1 points   0.1percent
+  0:  performing qc of smcfcw-2         mode=           1 (0=count only, 1=replace)
+  0:  open ocean min. check. lat=-29.8 lon= 310.4 fld= 0.2820E+00 to  0.1000E+01
+  0:  open ocean min check.  modified to      1.0 at     1 points   0.1percent
+  0:  performing qc of smcfcw-3         mode=           1 (0=count only, 1=replace)
+  0:  open ocean min. check. lat=-29.8 lon= 310.4 fld= 0.2942E+00 to  0.1000E+01
+  0:  open ocean min check.  modified to      1.0 at     1 points   0.1percent
+  0:  performing qc of smcfcw-4         mode=           1 (0=count only, 1=replace)
+  0:  open ocean min. check. lat=-29.8 lon= 310.4 fld= 0.3050E+00 to  0.1000E+01
+  0:  open ocean min check.  modified to      1.0 at     1 points   0.1percent
+  0:  performing qc of stcf-1           mode=           1 (0=count only, 1=replace)
+  0:  open ocean min. check. lat=-35.4 lon= 305.6 fld=-0.1000E+21 to  0.2000E+03
+  0:  open ocean min. check. lat=-35.5 lon= 306.0 fld=-0.1000E+21 to  0.2000E+03
+  0:  open ocean min check.  modified to    200.0 at   962 points  83.5percent
+  0:  performing qc of stcf-2           mode=           1 (0=count only, 1=replace)
+  0:  open ocean min. check. lat=-35.4 lon= 305.6 fld=-0.1000E+21 to  0.2000E+03
+  0:  open ocean min. check. lat=-35.5 lon= 306.0 fld=-0.1000E+21 to  0.2000E+03
+  0:  open ocean min check.  modified to    200.0 at   962 points  83.5percent
+  0:  performing qc of stcf-3           mode=           1 (0=count only, 1=replace)
+  0:  open ocean min. check. lat=-35.4 lon= 305.6 fld=-0.1000E+21 to  0.2000E+03
+  0:  open ocean min. check. lat=-35.5 lon= 306.0 fld=-0.1000E+21 to  0.2000E+03
+  0:  open ocean min check.  modified to    200.0 at   962 points  83.5percent
+  0:  performing qc of stcf-4           mode=           1 (0=count only, 1=replace)
+  0:  open ocean min. check. lat=-35.4 lon= 305.6 fld=-0.1000E+21 to  0.2000E+03
+  0:  open ocean min. check. lat=-35.5 lon= 306.0 fld=-0.1000E+21 to  0.2000E+03
+  0:  open ocean min check.  modified to    200.0 at   962 points  83.5percent
+  0:  performing qc of vegf     mode=           1 (0=count only, 1=replace)
+  0:  open ocean max. check. lat=-29.8 lon= 310.4 fld= 0.6621E+00 to  0.0000E+00
+  0:  open sea max check. modified to      0.0 at     1 points   0.1percent
+  0:  performing qc of vetf     mode=           1 (0=count only, 1=replace)
+  0:  open ocean max. check. lat=-29.8 lon= 310.4 fld= 0.1300E+02 to  0.0000E+00
+  0:  open sea max check. modified to      0.0 at     1 points   0.1percent
+  0:  performing qc of sotf     mode=           1 (0=count only, 1=replace)
+  0:  open ocean max. check. lat=-29.8 lon= 310.4 fld= 0.7000E+01 to  0.0000E+00
+  0:  open sea max check. modified to      0.0 at     1 points   0.1percent
+  0:  performing qc of socf     mode=           1 (0=count only, 1=replace)
+  0:  performing qc of vmnf     mode=           1 (0=count only, 1=replace)
+  0:  open ocean max. check. lat=-29.8 lon= 310.4 fld= 0.6000E+00 to  0.0000E+00
+  0:  open sea max check. modified to      0.0 at     1 points   0.1percent
+  0:  performing qc of vmxf     mode=           1 (0=count only, 1=replace)
+  0:  open ocean max. check. lat=-29.8 lon= 310.4 fld= 0.9049E+00 to  0.0000E+00
+  0:  open sea max check. modified to      0.0 at     1 points   0.1percent
+  0:  performing qc of slpf     mode=           1 (0=count only, 1=replace)
+  0:  open ocean max. check. lat=-29.8 lon= 310.4 fld= 0.1000E+01 to  0.0000E+00
+  0:  open sea max check. modified to      0.0 at     1 points   0.1percent
+  0:  performing qc of absf     mode=           1 (0=count only, 1=replace)
+  0:  open ocean max. check. lat=-29.8 lon= 310.4 fld= 0.4313E+00 to  0.0000E+00
+  0:  open sea max check. modified to      0.0 at     1 points   0.1percent
+  0:  qc of snow and sea-ice analysis
+  0:  ==============
+  0:     merging
+  0:  ==============
+  0:  use forecast land-sea-ice mask
+  0: rtsfl,ralbl,raisl,rsnol,rsmcl,rzorl,rvegl=  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  0.000  0.000
+  0: rtsfs,ralbs,raiss,rsnos,rsmcs,rzors,rvegs,rsics=  1.000  0.000  1.000  1.000  0.000  0.000  0.000  0.000  1.000  1.000  0.000
+  0: rsoc1, rsocs =  0.000  0.000
+  0:  dbgx-- csmcl:   1.00000000000000        1.00000000000000     
+  0:    1.00000000000000        1.00000000000000     
+  0:  dbgx-- rsmcl:   1.00000000000000        1.00000000000000     
+  0:    1.00000000000000        1.00000000000000     
+  0:  dbgx-- csnol, csnos:   1.00000000000000        1.00000000000000     
+  0:  dbgx-- rsnol, rsnos:   1.00000000000000        1.00000000000000     
+  0:  newice
+  0:  set snow temp to tsfsmx if greater
+  0:  performing qc of snowm    mode=           0 (0=count only, 1=replace)
+  0:  performing qc of tsfm     mode=           0 (0=count only, 1=replace)
+  0:  performing qc of albm     mode=           0 (0=count only, 1=replace)
+  0:  performing qc of albm     mode=           0 (0=count only, 1=replace)
+  0:  performing qc of albm     mode=           0 (0=count only, 1=replace)
+  0:  performing qc of albm     mode=           0 (0=count only, 1=replace)
+  0:  performing qc of zorm     mode=           0 (0=count only, 1=replace)
+  0:  performing qc of stcm-1           mode=           0 (0=count only, 1=replace)
+  0:  performing qc of stcm-2           mode=           0 (0=count only, 1=replace)
+  0:  performing qc of stcm-3           mode=           0 (0=count only, 1=replace)
+  0:  performing qc of stcm-4           mode=           0 (0=count only, 1=replace)
+  0:  performing qc of smcm-1           mode=           0 (0=count only, 1=replace)
+  0:  performing qc of smcm-2           mode=           0 (0=count only, 1=replace)
+  0:  performing qc of smcm-3           mode=           0 (0=count only, 1=replace)
+  0:  performing qc of smcm-4           mode=           0 (0=count only, 1=replace)
+  0:  performing qc of vegm     mode=           1 (0=count only, 1=replace)
+  0:  performing qc of vetm     mode=           1 (0=count only, 1=replace)
+  0:  performing qc of sotm     mode=           1 (0=count only, 1=replace)
+  0:  performing qc of socm     mode=           1 (0=count only, 1=replace)
+  0:  performing qc of sihm     mode=           1 (0=count only, 1=replace)
+  0:  performing qc of vmnm     mode=           1 (0=count only, 1=replace)
+  0:  performing qc of vmxm     mode=           1 (0=count only, 1=replace)
+  0:  performing qc of slpm     mode=           1 (0=count only, 1=replace)
+  0:  performing qc of absm     mode=           1 (0=count only, 1=replace)
+  0:  ==============
+  0:  final results
+  0:  ==============
+  0:  dbgx --fixratio: F F F F
+  0:  CA cubic mosaic domain decomposition
+  0: whalo =    3, ehalo =    3, shalo =    3, nhalo =    3
+  0:   X-AXIS =  240 240 240 240
+  0:   Y-AXIS =  120 120 120 120 120 120 120 120
+  0:  in radiation_clouds_prop=           8 F           4 F F           2           1
+  0:  in radiation_clouds_prop=           8 F           4 F F           2           1
+  0:  in radiation_clouds_prop=           8 F           4 F F           2           1
+  0:  in radiation_clouds_prop=           8 F           4 F F           2           1
+  0:  in radiation_clouds_prop=           8 F           4 F F           2           1
+  0:  in radiation_clouds_prop=           8 F           4 F F           2           1
+  0:  in radiation_clouds_prop=           8 F           4 F F           2           1
+  0:  in radiation_clouds_prop=           8 F           4 F F           2           1
+  0:  in radiation_clouds_prop=           8 F           4 F F           2           1
+  0:  in radiation_clouds_prop=           8 F           4 F F           2           1
+  0:  in radiation_clouds_prop=           8 F           4 F F           2           1
+  0:  in radiation_clouds_prop=           8 F           4 F F           2           1
+  0:  in radiation_clouds_prop=           8 F           4 F F           2           1
+  0:  in radiation_clouds_prop=           8 F           4 F F           2           1
+  0:  in radiation_clouds_prop=           8 F           4 F F           2           1
+  0:  in radiation_clouds_prop=           8 F           4 F F           2           1
+  0:  in radiation_clouds_prop=           8 F           4 F F           2           1
+  0:  in radiation_clouds_prop=           8 F           4 F F           2           1
+  0:  in radiation_clouds_prop=           8 F           4 F F           2           1
+  0:  in radiation_clouds_prop=           8 F           4 F F           2           1
+  0:  in radiation_clouds_prop=           8 F           4 F F           2           1
+  0:  in radiation_clouds_prop=           8 F           4 F F           2           1
+  0:  in radiation_clouds_prop=           8 F           4 F F           2           1
+  0:  in radiation_clouds_prop=           8 F           4 F F           2           1
+173:  warning: snow/ice temperature is too low: -8.702338798226739E+018
+173:  fix snow/ice temperature: reset it to:   173.000000000000     
+173:  warning: layer 1 ice temp is too low:  -8663.15252203754     
+173:  fix layer 1 ice temp: reset it to:   173.000000000000     
+173:  warning: layer 2 ice temp is too low:  -2606.76448672511     
+173:  fix layer 2 ice temp: reset it to:   173.000000000000     
+173:  warning: snow/ice temperature is too low: -9.033776269017580E+018
+173:  fix snow/ice temperature: reset it to:   173.000000000000     
+173:  warning: layer 1 ice temp is too low:  -8601.37986339798     
+173:  fix layer 1 ice temp: reset it to:   173.000000000000     
+173:  warning: layer 2 ice temp is too low:  -2586.25749739010     
+173:  fix layer 2 ice temp: reset it to:   173.000000000000     
+173:  warning: snow/ice temperature is too low: -7.972008915742478E+018
+173:  fix snow/ice temperature: reset it to:   173.000000000000     
+173:  warning: layer 1 ice temp is too low:  -9371.27427389355     
+173:  fix layer 1 ice temp: reset it to:   173.000000000000     
+173:  warning: layer 2 ice temp is too low:  -2841.88850679015     
+173:  fix layer 2 ice temp: reset it to:   173.000000000000     
+  0:  in radiation_clouds_prop=           8 F           4 F F           2           1
+  0:  in radiation_clouds_prop=           8 F           4 F F           2           1
+  0:  in radiation_clouds_prop=           8 F           4 F F           2           1
+  0:  in radiation_clouds_prop=           8 F           4 F F           2           1
+  0:  in radiation_clouds_prop=           8 F           4 F F           2           1
+  0:  in radiation_clouds_prop=           8 F           4 F F           2           1
+  0:  in radiation_clouds_prop=           8 F           4 F F           2           1
+  0:  in radiation_clouds_prop=           8 F           4 F F           2           1
+  0:  in radiation_clouds_prop=           8 F           4 F F           2           1
+  0:  in radiation_clouds_prop=           8 F           4 F F           2           1
+  0:  in radiation_clouds_prop=           8 F           4 F F           2           1
+  0:  in radiation_clouds_prop=           8 F           4 F F           2           1
+  0: PASS: fcstRUN phase 1, n_atmsteps =                0 time is        12.727999
+ 81:  warning: snow/ice temperature is too low: -1.642206919421355E+019
+ 81:  fix snow/ice temperature: reset it to:   173.000000000000     
+ 81:  warning: layer 1 ice temp is too low:  -9015.94896139834     
+ 81:  fix layer 1 ice temp: reset it to:   173.000000000000     
+ 81:  warning: layer 2 ice temp is too low:  -2723.57951563810     
+ 81:  fix layer 2 ice temp: reset it to:   173.000000000000     
+ 81:  warning: snow/ice temperature is too low: -8.134395634708472E+018
+ 81:  fix snow/ice temperature: reset it to:   173.000000000000     
+ 81:  warning: layer 1 ice temp is too low:  -14647.2517795069     
+ 81:  fix layer 1 ice temp: reset it to:   173.000000000000     
+ 81:  warning: layer 2 ice temp is too low:  -4597.33030699716     
+ 81:  fix layer 2 ice temp: reset it to:   173.000000000000     
+ 81:  warning: snow/ice temperature is too low: -1.334918273941345E+019
+ 81:  fix snow/ice temperature: reset it to:   173.000000000000     
+ 81:  warning: layer 1 ice temp is too low:  -10162.5628537257     
+ 81:  fix layer 1 ice temp: reset it to:   173.000000000000     
+ 81:  warning: layer 2 ice temp is too low:  -3104.69740494568     
+ 81:  fix layer 2 ice temp: reset it to:   173.000000000000     
+ 81:  warning: snow/ice temperature is too low: -1.588160265626941E+019
+ 81:  fix snow/ice temperature: reset it to:   173.000000000000     
+ 81:  warning: layer 1 ice temp is too low:  -9107.97410291154     
+ 81:  fix layer 1 ice temp: reset it to:   173.000000000000     
+ 81:  warning: layer 2 ice temp is too low:  -2754.15995446852     
+ 81:  fix layer 2 ice temp: reset it to:   173.000000000000     
+ 81:  warning: snow/ice temperature is too low: -1.729250063495100E+019
+ 81:  fix snow/ice temperature: reset it to:   173.000000000000     
+ 81:  warning: layer 1 ice temp is too low:  -8813.12012747735     
+ 81:  fix layer 1 ice temp: reset it to:   173.000000000000     
+ 81:  warning: layer 2 ice temp is too low:  -2656.20383443264     
+ 81:  fix layer 2 ice temp: reset it to:   173.000000000000     
+ 81:  warning: snow/ice temperature is too low: -1.558018975632267E+019
+ 81:  fix snow/ice temperature: reset it to:   173.000000000000     
+ 81:  warning: layer 1 ice temp is too low:  -9445.84609371067     
+ 81:  fix layer 1 ice temp: reset it to:   173.000000000000     
+ 81:  warning: layer 2 ice temp is too low:  -2866.40836257324     
+ 81:  fix layer 2 ice temp: reset it to:   173.000000000000     
+ 81:  warning: snow/ice temperature is too low: -1.941077311963298E+019
+ 81:  fix snow/ice temperature: reset it to:   173.000000000000     
+ 81:  warning: layer 1 ice temp is too low:  -8422.09843447651     
+ 81:  fix layer 1 ice temp: reset it to:   173.000000000000     
+ 81:  warning: layer 2 ice temp is too low:  -2526.36139673178     
+ 81:  fix layer 2 ice temp: reset it to:   173.000000000000     
+ 81:  warning: snow/ice temperature is too low: -8.187499844210372E+019
+ 81:  fix snow/ice temperature: reset it to:   173.000000000000     
+ 81:  warning: layer 1 ice temp is too low:  -6346.16362531708     
+ 81:  fix layer 1 ice temp: reset it to:   173.000000000000     
+ 81:  warning: layer 2 ice temp is too low:  -1846.64823773946     
+ 81:  fix layer 2 ice temp: reset it to:   173.000000000000     
+ 81:  warning: snow/ice temperature is too low: -1.168989711343839E+019
+ 81:  fix snow/ice temperature: reset it to:   173.000000000000     
+ 81:  warning: layer 1 ice temp is too low:  -11401.5804687377     
+ 81:  fix layer 1 ice temp: reset it to:   173.000000000000     
+ 81:  warning: layer 2 ice temp is too low:  -3516.84565653033     
+ 81:  fix layer 2 ice temp: reset it to:   173.000000000000     
+ 81:  warning: snow/ice temperature is too low: -8.595007633589663E+018
+ 81:  fix snow/ice temperature: reset it to:   173.000000000000     
+ 81:  warning: layer 1 ice temp is too low:  -13912.8986905054     
+ 81:  fix layer 1 ice temp: reset it to:   173.000000000000     
+ 81:  warning: layer 2 ice temp is too low:  -4352.80130132140     
+ 81:  fix layer 2 ice temp: reset it to:   173.000000000000     
+ 81:  warning: snow/ice temperature is too low: -9.618525873450969E+018
+ 81:  fix snow/ice temperature: reset it to:   173.000000000000     
+ 81:  warning: layer 1 ice temp is too low:  -13195.6486830809     
+ 81:  fix layer 1 ice temp: reset it to:   173.000000000000     
+ 81:  warning: layer 2 ice temp is too low:  -4113.98804049376     
+ 81:  fix layer 2 ice temp: reset it to:   173.000000000000     
+ 81:  warning: snow/ice temperature is too low: -1.223772554294252E+019
+ 81:  fix snow/ice temperature: reset it to:   173.000000000000     
+ 81:  warning: layer 1 ice temp is too low:  -11101.3444869526     
+ 81:  fix layer 1 ice temp: reset it to:   173.000000000000     
+ 81:  warning: layer 2 ice temp is too low:  -3416.94633736530     
+ 81:  fix layer 2 ice temp: reset it to:   173.000000000000     
+ 81:  warning: snow/ice temperature is too low: -1.632219079822004E+019
+ 81:  fix snow/ice temperature: reset it to:   173.000000000000     
+ 81:  warning: layer 1 ice temp is too low:  -9244.59252225144     
+ 81:  fix layer 1 ice temp: reset it to:   173.000000000000     
+ 81:  warning: layer 2 ice temp is too low:  -2799.52226936677     
+ 81:  fix layer 2 ice temp: reset it to:   173.000000000000     
+ 81:  warning: snow/ice temperature is too low: -8.883966685897176E+018
+ 81:  fix snow/ice temperature: reset it to:   173.000000000000     
+ 81:  warning: layer 1 ice temp is too low:  -9890.07055149588     
+ 81:  fix layer 1 ice temp: reset it to:   173.000000000000     
+ 81:  warning: layer 2 ice temp is too low:  -3014.24774606411     
+ 81:  fix layer 2 ice temp: reset it to:   173.000000000000     
+ 81:  warning: snow/ice temperature is too low: -2.284027151279111E+019
+ 81:  fix snow/ice temperature: reset it to:   173.000000000000     
+ 81:  warning: layer 1 ice temp is too low:  -7880.80273486864     
+ 81:  fix layer 1 ice temp: reset it to:   173.000000000000     
+ 81:  warning: layer 2 ice temp is too low:  -2346.78985937832     
+ 81:  fix layer 2 ice temp: reset it to:   173.000000000000     
+ 81:  warning: snow/ice temperature is too low: -2.262521143169120E+019
+ 81:  fix snow/ice temperature: reset it to:   173.000000000000     
+ 81:  warning: layer 1 ice temp is too low:  -7947.37930990991     
+ 81:  fix layer 1 ice temp: reset it to:   173.000000000000     
+ 81:  warning: layer 2 ice temp is too low:  -2368.85040827370     
+ 81:  fix layer 2 ice temp: reset it to:   173.000000000000     
+ 81:  warning: snow/ice temperature is too low: -3.227093990844297E+019
+ 81:  fix snow/ice temperature: reset it to:   173.000000000000     
+ 81:  warning: layer 1 ice temp is too low:  -6714.86282146262     
+ 81:  fix layer 1 ice temp: reset it to:   173.000000000000     
+ 81:  warning: layer 2 ice temp is too low:  -1961.83029664885     
+ 81:  fix layer 2 ice temp: reset it to:   173.000000000000     
+ 81:  warning: snow/ice temperature is too low: -3.330731000426477E+019
+ 81:  fix snow/ice temperature: reset it to:   173.000000000000     
+ 81:  warning: layer 1 ice temp is too low:  -6895.50334770548     
+ 81:  fix layer 1 ice temp: reset it to:   173.000000000000     
+ 81:  warning: layer 2 ice temp is too low:  -2020.89615526636     
+ 81:  fix layer 2 ice temp: reset it to:   173.000000000000     
+ 81:  warning: snow/ice temperature is too low: -8.055037652990621E+018
+ 81:  fix snow/ice temperature: reset it to:   173.000000000000     
+ 81:  warning: layer 1 ice temp is too low:  -14414.2612206947     
+ 81:  fix layer 1 ice temp: reset it to:   173.000000000000     
+ 81:  warning: layer 2 ice temp is too low:  -4519.74898262814     
+ 81:  fix layer 2 ice temp: reset it to:   173.000000000000     
+ 85:  warning: snow/ice temperature is too low:   168.496385387095     
+ 85:  fix snow/ice temperature: reset it to:   173.000000000000     
+ 85:  warning: snow/ice temperature is too low: -8.659736419123539E+018
+ 85:  fix snow/ice temperature: reset it to:   173.000000000000     
+ 85:  warning: layer 1 ice temp is too low:  -12856.9196480434     
+ 85:  fix layer 1 ice temp: reset it to:   173.000000000000     
+ 85:  warning: layer 2 ice temp is too low:  -4001.25078151430     
+ 85:  fix layer 2 ice temp: reset it to:   173.000000000000     
+ 85:  warning: snow/ice temperature is too low: -1.335857036280773E+019
+ 85:  fix snow/ice temperature: reset it to:   173.000000000000     
+ 85:  warning: layer 1 ice temp is too low:  -10436.9049468373     
+ 85:  fix layer 1 ice temp: reset it to:   173.000000000000     
+ 85:  warning: layer 2 ice temp is too low:  -3195.91854556712     
+ 85:  fix layer 2 ice temp: reset it to:   173.000000000000     
+ 85:  warning: snow/ice temperature is too low: -7.785409802367549E+019
+ 85:  fix snow/ice temperature: reset it to:   173.000000000000     
+ 85:  warning: layer 1 ice temp is too low:  -6320.88680294558     
+ 85:  fix layer 1 ice temp: reset it to:   173.000000000000     
+ 85:  warning: layer 2 ice temp is too low:  -1846.64823773946     
+ 85:  fix layer 2 ice temp: reset it to:   173.000000000000     
+ 85:  warning: snow/ice temperature is too low: -1.222916244942847E+019
+ 85:  fix snow/ice temperature: reset it to:   173.000000000000     
+ 85:  warning: layer 1 ice temp is too low:  -8439.57981854774     
+ 85:  fix layer 1 ice temp: reset it to:   173.000000000000     
+ 85:  warning: layer 2 ice temp is too low:  -2532.45958049961     
+ 85:  fix layer 2 ice temp: reset it to:   173.000000000000     
+ 85:  warning: snow/ice temperature is too low: -2.311603311029466E+019
+ 85:  fix snow/ice temperature: reset it to:   173.000000000000     
+ 85:  warning: layer 1 ice temp is too low:  -6953.52396382933     
+ 85:  fix layer 1 ice temp: reset it to:   173.000000000000     
+ 85:  warning: layer 2 ice temp is too low:  -2040.75518076401     
+ 85:  fix layer 2 ice temp: reset it to:   173.000000000000     
+ 85:  warning: snow/ice temperature is too low: -1.374147428161051E+019
+ 85:  fix snow/ice temperature: reset it to:   173.000000000000     
+ 85:  warning: layer 1 ice temp is too low:  -8926.59506985738     
+ 85:  fix layer 1 ice temp: reset it to:   173.000000000000     
+ 85:  warning: layer 2 ice temp is too low:  -2694.00863760600     
+ 85:  fix layer 2 ice temp: reset it to:   173.000000000000     
+ 85:  warning: snow/ice temperature is too low: -8.718759519160672E+018
+ 85:  fix snow/ice temperature: reset it to:   173.000000000000     
+ 85:  warning: layer 1 ice temp is too low:  -10666.1096532824     
+ 85:  fix layer 1 ice temp: reset it to:   173.000000000000     
+ 85:  warning: layer 2 ice temp is too low:  -3272.27213135760     
+ 85:  fix layer 2 ice temp: reset it to:   173.000000000000     
+ 85:  warning: snow/ice temperature is too low: -6.045462161691346E+018
+ 85:  fix snow/ice temperature: reset it to:   173.000000000000     
+ 85:  warning: layer 1 ice temp is too low:  -12358.0755265212     
+ 85:  fix layer 1 ice temp: reset it to:   173.000000000000     
+ 85:  warning: layer 2 ice temp is too low:  -3835.27203346329     
+ 85:  fix layer 2 ice temp: reset it to:   173.000000000000     
+ 85:  warning: snow/ice temperature is too low: -7.474613546421579E+019
+ 85:  fix snow/ice temperature: reset it to:   173.000000000000     
+ 85:  warning: layer 1 ice temp is too low:  -6311.39464331376     
+ 85:  fix layer 1 ice temp: reset it to:   173.000000000000     
+ 85:  warning: layer 2 ice temp is too low:  -1846.64823773946     
+ 85:  fix layer 2 ice temp: reset it to:   173.000000000000     
+ 85:  warning: snow/ice temperature is too low: -7.719202093286149E+019
+ 85:  fix snow/ice temperature: reset it to:   173.000000000000     
+ 85:  warning: layer 1 ice temp is too low:  -6318.86485400219     
+ 85:  fix layer 1 ice temp: reset it to:   173.000000000000     
+ 85:  warning: layer 2 ice temp is too low:  -1846.64823773946     
+ 85:  fix layer 2 ice temp: reset it to:   173.000000000000     
+ 85:  warning: snow/ice temperature is too low: -7.567141077866809E+019
+ 85:  fix snow/ice temperature: reset it to:   173.000000000000     
+ 85:  warning: layer 1 ice temp is too low:  -6314.22072614972     
+ 85:  fix layer 1 ice temp: reset it to:   173.000000000000     
+ 85:  warning: layer 2 ice temp is too low:  -1846.64823773946     
+ 85:  fix layer 2 ice temp: reset it to:   173.000000000000     
+ 85:  warning: snow/ice temperature is too low: -7.846883190200987E+019
+ 85:  fix snow/ice temperature: reset it to:   173.000000000000     
+ 85:  warning: layer 1 ice temp is too low:  -6322.76410583724     
+ 85:  fix layer 1 ice temp: reset it to:   173.000000000000     
+ 85:  warning: layer 2 ice temp is too low:  -1846.64823773946     
+ 85:  fix layer 2 ice temp: reset it to:   173.000000000000     
+ 89:  warning: snow/ice temperature is too low: -7.818045645534259E+019
+ 89:  fix snow/ice temperature: reset it to:   173.000000000000     
+ 89:  warning: layer 1 ice temp is too low:  -6321.88345896956     
+ 89:  fix layer 1 ice temp: reset it to:   173.000000000000     
+ 89:  warning: layer 2 ice temp is too low:  -1846.64823773946     
+ 89:  fix layer 2 ice temp: reset it to:   173.000000000000     
+ 89:  warning: snow/ice temperature is too low: -7.886339772584110E+019
+ 89:  fix snow/ice temperature: reset it to:   173.000000000000     
+ 89:  warning: layer 1 ice temp is too low:  -6323.96901765840     
+ 89:  fix layer 1 ice temp: reset it to:   173.000000000000     
+ 89:  warning: layer 2 ice temp is too low:  -1846.64823773946     
+ 89:  fix layer 2 ice temp: reset it to:   173.000000000000     
+ 89:  warning: snow/ice temperature is too low: -8.354088485154547E+019
+ 89:  fix snow/ice temperature: reset it to:   173.000000000000     
+ 89:  warning: layer 1 ice temp is too low:  -6338.25108611769     
+ 89:  fix layer 1 ice temp: reset it to:   173.000000000000     
+ 89:  warning: layer 2 ice temp is too low:  -1846.64823773946     
+ 89:  fix layer 2 ice temp: reset it to:   173.000000000000     
+ 89:  warning: snow/ice temperature is too low: -7.813122224276532E+019
+ 89:  fix snow/ice temperature: reset it to:   173.000000000000     
+ 89:  warning: layer 1 ice temp is too low:  -6321.73310519870     
+ 89:  fix layer 1 ice temp: reset it to:   173.000000000000     
+ 89:  warning: layer 2 ice temp is too low:  -1846.64823773946     
+ 89:  fix layer 2 ice temp: reset it to:   173.000000000000     
+ 85:  warning: snow/ice temperature is too low: -8.480150624863524E+019
+ 85:  fix snow/ice temperature: reset it to:   173.000000000000     
+ 85:  warning: layer 1 ice temp is too low:  -6342.09962707440     
+ 85:  fix layer 1 ice temp: reset it to:   173.000000000000     
+ 85:  warning: layer 2 ice temp is too low:  -1846.64823773946     
+ 85:  fix layer 2 ice temp: reset it to:   173.000000000000     
+ 85:  warning: snow/ice temperature is too low: -8.695652262167857E+019
+ 85:  fix snow/ice temperature: reset it to:   173.000000000000     
+ 85:  warning: layer 1 ice temp is too low:  -6348.67807492361     
+ 85:  fix layer 1 ice temp: reset it to:   173.000000000000     
+ 85:  warning: layer 2 ice temp is too low:  -1846.64823773946     
+ 85:  fix layer 2 ice temp: reset it to:   173.000000000000     
+ 85:  warning: snow/ice temperature is too low: -8.693396720842226E+019
+ 85:  fix snow/ice temperature: reset it to:   173.000000000000     
+ 85:  warning: layer 1 ice temp is too low:  -6348.60922561762     
+ 85:  fix layer 1 ice temp: reset it to:   173.000000000000     
+ 85:  warning: layer 2 ice temp is too low:  -1846.64823773946     
+ 85:  fix layer 2 ice temp: reset it to:   173.000000000000     
+ 85:  warning: snow/ice temperature is too low: -6.819670193330869E+019
+ 85:  fix snow/ice temperature: reset it to:   173.000000000000     
+ 85:  warning: layer 1 ice temp is too low:  -6291.38671606588     
+ 85:  fix layer 1 ice temp: reset it to:   173.000000000000     
+ 85:  warning: layer 2 ice temp is too low:  -1846.64823773946     
+ 85:  fix layer 2 ice temp: reset it to:   173.000000000000     
+ 90:  warning: snow/ice temperature is too low: -6.739708141515017E+019
+ 90:  fix snow/ice temperature: reset it to:   173.000000000000     
+ 90:  warning: layer 1 ice temp is too low:  -6288.94348061467     
+ 90:  fix layer 1 ice temp: reset it to:   173.000000000000     
+ 90:  warning: layer 2 ice temp is too low:  -1846.64823773946     
+ 90:  fix layer 2 ice temp: reset it to:   173.000000000000     
+ 85:  warning: snow/ice temperature is too low: -8.132866262132761E+019
+ 85:  fix snow/ice temperature: reset it to:   173.000000000000     
+ 85:  warning: layer 1 ice temp is too low:  -6331.49680059931     
+ 85:  fix layer 1 ice temp: reset it to:   173.000000000000     
+ 85:  warning: layer 2 ice temp is too low:  -1846.64823773946     
+ 85:  fix layer 2 ice temp: reset it to:   173.000000000000     
+ 85:  warning: snow/ice temperature is too low: -7.323767037925810E+019
+ 85:  fix snow/ice temperature: reset it to:   173.000000000000     
+ 85:  warning: layer 1 ice temp is too low:  -6306.78702316655     
+ 85:  fix layer 1 ice temp: reset it to:   173.000000000000     
+ 85:  warning: layer 2 ice temp is too low:  -1846.64823773946     
+ 85:  fix layer 2 ice temp: reset it to:   173.000000000000     
+ 85:  warning: snow/ice temperature is too low: -7.973957701357416E+019
+ 85:  fix snow/ice temperature: reset it to:   173.000000000000     
+ 85:  warning: layer 1 ice temp is too low:  -6326.64457601853     
+ 85:  fix layer 1 ice temp: reset it to:   173.000000000000     
+ 85:  warning: layer 2 ice temp is too low:  -1846.64823773946     
+ 85:  fix layer 2 ice temp: reset it to:   173.000000000000     
+ 85:  warning: snow/ice temperature is too low: -7.918098324872112E+019
+ 85:  fix snow/ice temperature: reset it to:   173.000000000000     
+ 85:  warning: layer 1 ice temp is too low:  -6324.93883166575     
+ 85:  fix layer 1 ice temp: reset it to:   173.000000000000     
+ 85:  warning: layer 2 ice temp is too low:  -1846.64823773946     
+ 85:  fix layer 2 ice temp: reset it to:   173.000000000000     
+ 85:  warning: snow/ice temperature is too low: -7.733429605516449E+019
+ 85:  fix snow/ice temperature: reset it to:   173.000000000000     
+ 85:  warning: layer 1 ice temp is too low:  -6319.29936068833     
+ 85:  fix layer 1 ice temp: reset it to:   173.000000000000     
+ 85:  warning: layer 2 ice temp is too low:  -1846.64823773946     
+ 85:  fix layer 2 ice temp: reset it to:   173.000000000000     
+ 74:  warning: snow/ice temperature is too low: -7.332506334907573E+019
+ 74:  fix snow/ice temperature: reset it to:   173.000000000000     
+ 74:  warning: layer 1 ice temp is too low:  -6307.05397564571     
+ 74:  fix layer 1 ice temp: reset it to:   173.000000000000     
+ 74:  warning: layer 2 ice temp is too low:  -1846.64823773946     
+ 74:  fix layer 2 ice temp: reset it to:   173.000000000000     
+ 86:  warning: snow/ice temperature is too low: -7.884802119423223E+019
+ 86:  fix snow/ice temperature: reset it to:   173.000000000000     
+ 86:  warning: layer 1 ice temp is too low:  -6323.92206178727     
+ 86:  fix layer 1 ice temp: reset it to:   173.000000000000     
+ 86:  warning: layer 2 ice temp is too low:  -1846.64823773946     
+ 86:  fix layer 2 ice temp: reset it to:   173.000000000000     
+ 86:  warning: snow/ice temperature is too low: -7.177795334184169E+019
+ 86:  fix snow/ice temperature: reset it to:   173.000000000000     
+ 86:  warning: layer 1 ice temp is too low:  -6302.32796008330     
+ 86:  fix layer 1 ice temp: reset it to:   173.000000000000     
+ 86:  warning: layer 2 ice temp is too low:  -1846.64823773946     
+ 86:  fix layer 2 ice temp: reset it to:   173.000000000000     
+ 86:  warning: snow/ice temperature is too low: -7.835607608809503E+019
+ 86:  fix snow/ice temperature: reset it to:   173.000000000000     
+ 86:  warning: layer 1 ice temp is too low:  -6322.41977138747     
+ 86:  fix layer 1 ice temp: reset it to:   173.000000000000     
+ 86:  warning: layer 2 ice temp is too low:  -1846.64823773946     
+ 86:  fix layer 2 ice temp: reset it to:   173.000000000000     
+ 86:  warning: snow/ice temperature is too low: -7.102593913694801E+019
+ 86:  fix snow/ice temperature: reset it to:   173.000000000000     
+ 86:  warning: layer 1 ice temp is too low:  -6300.03061639566     
+ 86:  fix layer 1 ice temp: reset it to:   173.000000000000     
+ 86:  warning: layer 2 ice temp is too low:  -1846.64823773946     
+ 86:  fix layer 2 ice temp: reset it to:   173.000000000000     
+ 86:  warning: snow/ice temperature is too low: -7.107732630425856E+019
+ 86:  fix snow/ice temperature: reset it to:   173.000000000000     
+ 86:  warning: layer 1 ice temp is too low:  -6300.18760297308     
+ 86:  fix layer 1 ice temp: reset it to:   173.000000000000     
+ 86:  warning: layer 2 ice temp is too low:  -1846.64823773946     
+ 86:  fix layer 2 ice temp: reset it to:   173.000000000000     
+ 86:  warning: snow/ice temperature is too low: -8.063183656506147E+019
+ 86:  fix snow/ice temperature: reset it to:   173.000000000000     
+ 86:  warning: layer 1 ice temp is too low:  -6329.36911280350     
+ 86:  fix layer 1 ice temp: reset it to:   173.000000000000     
+ 86:  warning: layer 2 ice temp is too low:  -1846.64823773946     
+ 86:  fix layer 2 ice temp: reset it to:   173.000000000000     
+_______________________________________________________________
+Start Epilog on node h21c37 for job 61038072 :: Thu May 30 18:34:26 UTC 2024
+Job 61038072 finished for user Cameron.Book in partition hera with exit code 139:0
+_______________________________________________________________
+End Epilogue Thu May 30 18:34:26 UTC 2024
