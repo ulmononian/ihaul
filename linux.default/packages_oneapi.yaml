@@ -12,9 +12,9 @@ packages:
   intel-oneapi-mpi:
     buildable: False
     externals:
-    - spec: intel-oneapi-mpi@2021.13.1
+    - spec: intel-oneapi-mpi@2021.13
       modules:
-      - intel-oneapi-mpi/2021.13.1
+      - intel-oneapi-mpi/2021.13
       environment:
       prepend_path:
         MODULEPATH: '/opt/modulefiles'
