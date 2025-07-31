@@ -1,0 +1,35 @@
+packages:
+  all:
+    compiler:: [oneapi@2024.2.1]
+    providers:
+      mpi:: [intel-oneapi-mpi@2021.13]
+      # Remove the next three lines to switch to intel-oneapi-mkl
+      blas:: [openblas]
+      fftw-api:: [fftw]
+      lapack:: [openblas]
+  mpi:
+    buildable: False
+  intel-oneapi-mpi:
+    buildable: False
+    externals:
+    - spec: intel-oneapi-mpi@2021.13.1
+      modules:
+      - intel-oneapi-mpi/2021.13.1
+      environment:
+      prepend_path:
+        MODULEPATH: '/opt/modulefiles'
+      prefix: /opt/spack-stack/spack/opt/spack/linux-ubuntu22.04-sapphirerapids/gcc-11.4.0/intel-oneapi-mpi-2021.13.1-5l7irsoye6le4sudsuovujk4k4i47hwe
+      
+  ectrans:
+    require::
+    - '@1.5.0 ~mkl +fftw'
+  gsibec:
+    require::
+    - '@1.2.1 ~mkl'
+  py-numpy:
+    require::
+    - '@1.26'
+    - '^openblas'
+  py-scipy:
+    require:
+      '%gcc'
