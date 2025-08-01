@@ -9,10 +9,9 @@ better on high-performance computing (HPC) clusters based on Intel
 processors. LICENSE INFORMATION: By downloading and using this software,
 you agree to the terms and conditions of the software license agreements
 at https://intel.ly/393CijO.]])
+
 family("mpi")
---prepend_path("MODULEPATH","/apps/spack-2024-12/modules/linux-rocky9-x86_64/intel-oneapi-mpi/2021.13.1-ss72gbn/oneapi/2024.2.1")
---setenv("LMOD_MPI_NAME","intel-oneapi-mpi")
---setenv("LMOD_MPI_VERSION","2021.13.1-ss72gbn")
+
 prepend_path("CMAKE_PREFIX_PATH","/opt/spack-stack/spack/opt/spack/linux-ubuntu22.04-sapphirerapids/gcc-11.4.0/intel-oneapi-mpi-2021.13.1-5l7irsoye6le4sudsuovujk4k4i47hwe/.")
 prepend_path("CLASSPATH","/opt/spack-stack/spack/opt/spack/linux-ubuntu22.04-sapphirerapids/gcc-11.4.0/intel-oneapi-mpi-2021.13.1-5l7irsoye6le4sudsuovujk4k4i47hwe/mpi/2021.13/share/java/mpi.jar")
 prepend_path("CPATH","/opt/spack-stack/spack/opt/spack/linux-ubuntu22.04-sapphirerapids/gcc-11.4.0/intel-oneapi-mpi-2021.13.1-5l7irsoye6le4sudsuovujk4k4i47hwe/mpi/2021.13/include")
