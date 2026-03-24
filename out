@@ -1,0 +1,2558 @@
+
+Currently Loaded Modules:
+  1) intel-oneapi-compilers/2024.2.1  29) py-mpi4py/4.0.1
+  2) stack-oneapi/2024.2.1            30) intel-oneapi-mkl/2024.2.1
+  3) intel-oneapi-mpi/2021.13.1       31) py-numpy/1.26.4
+  4) stack-intel-oneapi-mpi/2021.13   32) py-pip/23.1.2
+  5) glibc/2.34                       33) libyaml/0.2.5
+  6) intel-oneapi-runtime/2024.2.1    34) py-pyyaml/6.0.2
+  7) nghttp2/1.63.0                   35) esmf/8.8.0
+  8) zlib/1.2.13                      36) fms/2024.02
+  9) curl/8.10.1                      37) bacio/2.4.1
+ 10) cmake/3.27.9                     38) crtm-fix/2.4.0.1_emc
+ 11) libjpeg/2.1.0                    39) git-lfs/3.5.1
+ 12) jasper/2.0.32                    40) crtm/2.4.0.1
+ 13) libpng/1.6.37                    41) g2/3.5.1
+ 14) hdf5/1.14.3                      42) g2tmpl/1.13.0
+ 15) snappy/1.2.1                     43) ip/5.1.0
+ 16) zstd/1.5.6                       44) sp/2.5.0
+ 17) c-blosc/1.21.5                   45) w3emc/2.10.0
+ 18) netcdf-c/4.9.2                   46) gftl/1.14.0
+ 19) netcdf-fortran/4.6.1             47) gftl-shared/1.9.0
+ 20) parallel-netcdf/1.12.3           48) fargparse/1.8.0
+ 21) parallelio/2.6.2                 49) yafyaml/1.4.0
+ 22) pigz/2.8                         50) pflogger/1.15.0
+ 23) tar/1.34                         51) udunits/2.2.28
+ 24) gettext/0.22.5                   52) mapl/2.53.4-esmf-8.8.0
+ 25) sqlite/3.46.0                    53) scotch/7.0.4
+ 26) util-linux-uuid/2.40.2           54) ufs_common
+ 27) python/3.11.7                    55) nccmp/1.9.1.0
+ 28) python-venv/1.0                  56) modules.fv3
+
+ 
+
+Model started: Tue Mar 24 18:04:35 UTC 2026
+  0: 
+  0: 
+  0: * . * . * . * . * . * . * . * . * . * . * . * . * . * . * . * . * . * . * . * . 
+  0:      PROGRAM ufs-weather-model HAS BEGUN. COMPILED       0.00     ORG: np23
+  0:      STARTING DATE-TIME  MAR 24,2026  18:04:37.908   83  TUE   2461124
+  0: 
+  0: 
+  0: Compiler version: Intel(R) Fortran Intel(R) 64 Compiler Classic for applications running on Intel(R) 64, Version 2021.13.1 Build 20240703_000000
+  0: 
+  0: MPI Library: Intel(R) MPI Library 2021.13 for Linux* OS
+  0: 
+  0: MPI Version: 3.1
+  0:  af ufs config,quilting= T  calendar=julian iau_offset=           0  noutput_fh=
+  0:            2
+  0:  af ufs config,quilting= T  write_groups=           2          10 
+  0:   isrcTermProcessing=           0
+  0:  af ufs config,dt_atmos=          90 nfhmax=   3.000000    
+  0:  in fcst comp init, fcst_ntasks=         200
+  0:  af ufs config,num_restart_fh=           1
+  0:  af ufs config,restart_fh=  0.0000000E+00
+  0: NOTE from PE     0: MPP_DOMAINS_SET_STACK_SIZE: stack size set to    32768.
+  0:  &MPP_IO_NML
+  0:  HEADER_BUFFER_VAL       =       16384,
+  0:  GLOBAL_FIELD_ON_ROOT_PE = T,
+  0:  IO_CLOCKS_ON    = F,
+  0:  SHUFFLE =           0,
+  0:  DEFLATE_LEVEL   =          -1,
+  0:  CF_COMPLIANCE   = F
+  0:  /
+  0: NOTE from PE     0: MPP_IO_SET_STACK_SIZE: stack size set to     131072.
+  0: NOTE from PE     0: MPP_DOMAINS_SET_STACK_SIZE: stack size set to 30000000.
+  0: StartTime= 2019    8   24    0    0    0
+  0: CurrTime = 2019    8   24    0    0    0
+  0: StopTime = 2019    8   24    3    0    0
+  0:  time_init=        2019           8          24           0           0
+  0:            0 time=        2019           8          24           0           0
+  0:            0 time_end=        2019           8          24           3
+  0:            0           0 dt_atmos=          90
+  0:  frestart=           3
+  0: atmosphere_init: current_time_seconds =       0.0
+  0: Using n_split from the namelist: 005
+  0:  Off center implicit scheme param=   1.000000    
+  0:   p_fac=  0.1000000    
+  0: Using n_sponge : 024
+  0: Using non_ortho :       T
+  0:  Starting PEs :          200
+  0:  Starting Threads :            2
+  0:  Cubed-sphere, single face domain decomposition
+  0: whalo =    3, ehalo =    3, shalo =    3, nhalo =    3
+  0:   X-AXIS =  105 105 105 105 105 105 105 105 105 105
+  0:   Y-AXIS =   53  53  53  53  53  52  52  52  52  52  52  52  52  52  52  53  53  53  53  53
+  0:  Cubed-sphere, single face domain decomposition
+  0: whalo =    1, ehalo =    1, shalo =    1, nhalo =    1
+  0:   X-AXIS =  105 105 105 105 105 105 105 105 105 105
+  0:   Y-AXIS =   53  53  53  53  53  52  52  52  52  52  52  52  52  52  52  53  53  53  53  53
+  0: NOTE from PE     0: You are using the legacy version of the field_table
+  0:  ncnst=          10  num_prog=          10  pnats=           0  dnats=
+  0:            0  num_family=           0
+  0:  
+  0:   Bounded domain: nested =  F , regional =  T
+  0:  ==>Note from fv_grid_tools_mod(read_grid): read atmosphere grid from mosaic ver
+  0:  sion grid
+  0: MAX    AREA (m*m): 0.19526549327016E+08          MIN AREA (m*m): 0.19332130930330E+08
+  0: GLOBAL AREA (m*m): 0.21448747310895E+14 IDEAL GLOBAL AREA (m*m): 0.51009649655132E+15
+  0:  
+  0:   Radius is    6371200.00000000      , omega is   7.2921001E-05  small_fac = 
+  0:    1.000000    
+  0:   Cubed-Sphere Grid Stats :         1051 x        1051 x           1
+  0:    4307.84472656250        4507.90917968750        4410.99400666868     
+  0:    4307.84472656250        4507.90917968750     
+  0:       Grid Length               : min:     4307.84 max:     4507.91 avg:     4410.99 min/max:        0.96
+  0:       Deviation from Orthogonal : min:  0.66969684553442E-06 max:  0.20316478833500E+01 avg:  0.49149608324483E+00
+  0:       Aspect Ratio              : min:  0.10000001105135E+01 max:  0.10461325665636E+01 avg:  0.10151061462581E+01
+  0:  
+  0:  da_max/da_min=   1.01005674942856     
+  0:  da_max_c/da_min_c=   1.00978413560210     
+  0:   
+  0:  Divergence damping Coefficients
+  0:  For small dt=   9.000000    
+  0:  External mode del-2 (m**2/s)=  0.000000000000000E+000
+  0:  Internal mode del-2 SMAG dimensionless coeff=  0.1000000    
+  0:  Internal mode del-2 background diff=  0.000000000000000E+000
+  0:  Internal mode del-6 background diff=  0.1500000    
+  0:  tracer del-2 diff=  0.0000000E+00
+  0:  Vorticity del-4 (m**4/s)=   66441.1144278640     
+  0:  beta=  0.0000000E+00
+  0:   
+  0:  in fv_restart ncnst=          10
+  0:  FV_RESTART:            1 F F
+  0:  Calling get_external_ic
+  0: NOTE from PE     0: Using external_IC::get_nggps_ic which is valid only for data which has been horizontally interpolated to the current cubed-sphere grid
+  0: NOTE from PE     0: External_IC::get_nggps_ic -  use externally-generated, filtered terrain and NCEP pressure levels (no vertical remapping)
+  0:  enter get_nggps_ic is=   1 ie= 105 js=   1 je=  53 isd=  -2 ied= 108 jsd=  -2 jed=  56
+  0: NOTE from PE     0: ==> External_ic::get_nggps_ic: using control file INPUT/gfs_ctrl.nc for NGGPS IC
+  0: NOTE from PE     0: INPUT gfs_data source string: FV3GFS GRIB2 FILE
+  0: NOTE from PE     0: READING FROM REGRIDDED FV3GFS NEMSIO/NETCDF/GRIB2 FILE
+  0: NOTE from PE     0: ==> External_ic::get_nggps_ic: Reading processed IC
+  0: NOTE from PE     0: ==> External_ic::get_nggps_ic: IC has 82 levels
+  0: NOTE from PE     0: ==> External_ic::get_nggps_ic: using tiled data file INPUT/gfs_data.nc for NGGPS IC
+  0: NOTE from PE     0: ==> External_ic::get_nggps_ic: using tiled data file INPUT/sfc_data.nc for NGGPS IC
+  0: NOTE from PE     0: ==> External_ic::get_nggps_ic: using tiled data file INPUT/oro_data.nc for NGGPS IC
+  0: Tracer sphum initialized with surface value of  0.300000E-05 and vertical multiplier of      1.000000
+  0: Tracer liq_wat initialized with surface value of  0.100000E+31 and vertical multiplier of      1.000000
+  0: Tracer ice_wat initialized with surface value of  0.100000E+31 and vertical multiplier of      1.000000
+  0: Tracer rainwat initialized with surface value of  0.100000E+31 and vertical multiplier of      1.000000
+  0: Tracer snowwat initialized with surface value of  0.100000E+31 and vertical multiplier of      1.000000
+  0: Tracer graupel initialized with surface value of  0.100000E+31 and vertical multiplier of      1.000000
+  0: Tracer ice_nc initialized with surface value of  0.000000E+00 and vertical multiplier of      1.000000
+  0: Tracer rain_nc initialized with surface value of  0.000000E+00 and vertical multiplier of      1.000000
+  0: Tracer o3mr initialized with surface value of  0.100000E+31 and vertical multiplier of      1.000000
+  0: Tracer sgs_tke initialized with surface value of  0.000000E+00 and vertical multiplier of      1.000000
+  0:   ptop & ks    200.0000              14
+  0:  GFS ak(1)=  0.0000000E+00  ak(2)=   200.0000    
+  0: NOTE from PE     0: INPUT gfs_bndy source string: FV3GFS GRIB2 FILE
+  0: NOTE from PE     0: Opened BC file: INPUT/gfs_bndy.tile7.000.nc
+  0: NOTE from PE     0: Opened grid file: INPUT/grid.tile7.halo4.nc
+  0: NOTE from PE     0: Opened topo file: INPUT/oro_data.tile7.halo4.nc
+  0: NOTE from PE     0: Opened BC file: INPUT/gfs_bndy.tile7.000.nc
+  0: NOTE from PE     0: Tracer ice_nc_bottom not in input file
+  0: NOTE from PE     0: Tracer ice_nc_left not in input file
+  0: NOTE from PE     0: Tracer rain_nc_bottom not in input file
+  0: NOTE from PE     0: Tracer rain_nc_left not in input file
+  0: NOTE from PE     0: Tracer sgs_tke_bottom not in input file
+  0: NOTE from PE     0: Tracer sgs_tke_left not in input file
+  0: NOTE from PE     0: Opened BC file: INPUT/gfs_bndy.tile7.126.nc
+  0: NOTE from PE     0: Tracer ice_nc_bottom not in input file
+  0: NOTE from PE     0: Tracer ice_nc_left not in input file
+  0: NOTE from PE     0: Tracer rain_nc_bottom not in input file
+  0: NOTE from PE     0: Tracer rain_nc_left not in input file
+  0: NOTE from PE     0: Tracer sgs_tke_bottom not in input file
+  0: NOTE from PE     0: Tracer sgs_tke_left not in input file
+  0:  delz_model  -22.08860      -4771.153    
+  0:  sphum_model  2.1339893E-02  1.9874808E-11
+  0:  liq_wat_model  2.7503513E-20  0.0000000E+00
+  0:  ice_wat_model  0.0000000E+00  0.0000000E+00
+  0:  PS_model (mb)   1015.001       1003.766    
+  0:  PT_model   301.6316       200.9364    
+  0:  Global Area=   21448747310894.7     
+  0:  ZS_model  0.0000000E+00  0.0000000E+00  0.0000000E+00
+  0:  ZS_data  0.0000000E+00  0.0000000E+00  0.0000000E+00
+  0:  ZS_diff (m)  0.0000000E+00  0.0000000E+00  0.0000000E+00
+  0:  PS_diff (mb)  4.6874999E-04 -4.6874999E-04 -1.1638756E-04
+  0:  done remap_scalar
+  0:  done remap_dwinds
+  0:   Calling FV3_zs_filter...
+  0:  Before filter: Max_slope=  0.000000000000000E+000
+  0:  After filter: Max_slope=  0.000000000000000E+000
+  0:  Warning !!! del-4 terrain filter has been applied            1  times
+  0:  PS max =    1015.001      min =    1003.766    
+  0:  T max =    301.6316      min =    200.9364    
+  0:  W max =   1.8644679E-02  min =  -1.8391330E-02
+  0:  SPHUM max =   2.1339893E-02  min =   1.9874808E-11
+  0:  TS max =    308.1879      min =    291.7454    
+  0:  liq_wat max =   2.7503513E-20  min =   0.0000000E+00
+  0:  ice_wat max =   0.0000000E+00  min =   0.0000000E+00
+  0:  rainwat max =   0.0000000E+00  min =   0.0000000E+00
+  0:  snowwat max =   9.6361391E-06  min =   0.0000000E+00
+  0:  graupel max =   0.0000000E+00  min =   0.0000000E+00
+  0:  O3MR max =   1.7092876E-07  min =   5.8256546E-12
+  0:  sgs_tke max =   0.0000000E+00  min =   0.0000000E+00
+  0:  IC generated from the specified external source
+  0:  in fv_restart ncnst=          10
+  0:  
+  0:  fv_restart u    =       6451098437777917
+  0:  fv_restart v    =     -27638839731146274
+  0:  fv_restart w    =    -102086899147169232
+  0:  fv_restart delp =     102640315599596988
+  0:  fv_restart phis =                      0
+  0:  fv_restart pt   =     101083384649715408
+  0:  fv_restart q(prog) nq   =          10    157673873588724773
+  0:  fv_restart sphum =      84982746548226631
+  0:  fv_restart liq_wat =       1276539188029852
+  0:  fv_restart ice_wat =                      0
+  0:  fv_restart rainwat =                      0
+  0:  fv_restart snowwat =       1765273051987486
+  0:  fv_restart graupel =                      0
+  0:  fv_restart ice_nc =                      0
+  0:  fv_restart rain_nc =                      0
+  0:  fv_restart o3mr =      69649314800480804
+  0:  fv_restart sgs_tke =                      0
+  0:  ZS  0.0000000E+00  0.0000000E+00  0.0000000E+00
+  0:  PS   1015.001       1003.766       1014.837    
+  0:  T    301.6316       200.9364       301.1793    
+  0:  sphum  2.1339893E-02  1.9874808E-11  2.1304790E-02
+  0:  liq_wat  2.7503513E-20  0.0000000E+00  0.0000000E+00
+  0:  ice_wat  0.0000000E+00  0.0000000E+00  0.0000000E+00
+  0:  rainwat  0.0000000E+00  0.0000000E+00  0.0000000E+00
+  0:  snowwat  9.6361391E-06  0.0000000E+00  0.0000000E+00
+  0:  graupel  0.0000000E+00  0.0000000E+00  0.0000000E+00
+  0:  ice_nc  0.0000000E+00  0.0000000E+00  0.0000000E+00
+  0:  rain_nc  0.0000000E+00  0.0000000E+00  0.0000000E+00
+  0:  o3mr  1.7092876E-07  5.8256546E-12  4.3815052E-11
+  0:  sgs_tke  0.0000000E+00  0.0000000E+00  0.0000000E+00
+  0:  U  max =    19.75768      min =   -19.71051    
+  0:  V  max =    19.71869      min =   -19.68979    
+  0:  W   1.8644679E-02 -1.8391330E-02 -5.7229531E-06
+  0:  
+  0:  mp_top=           1 pfull=   3.082879    
+  0:  Mean specific humidity (mg/kg) above 75 mb=  1.0299461E-04
+  0:  Total surface pressure (mb) =    1014.837    
+  0:  mean dry surface pressure =    1009.917    
+  0:  Total Water Vapor (kg/m**2) =   50.16567    
+  0:  --- Micro Phys water substances (kg/m**2) ---
+  0:  Total cloud water=  5.3632364E-19
+  0:  Total rain  water=  0.0000000E+00
+  0:  Total cloud ice  =  0.0000000E+00
+  0:  Total snow       =  4.8895180E-04
+  0:  Total graupel    =  0.0000000E+00
+  0:  ---------------------------------------------
+  0: NOTE from PE     0: READING FROM SST_restart DISABLED
+  0:  Before adi: W max =   1.8644679E-02  min =  -1.8391330E-02
+  0: NOTE from PE     0: Performing adiabatic init   1 times
+  0:  Rayleigh_Super in sec tau=   432000.0      tau_w=   432000.0    
+  0:            1   3.082879    
+  0:            2   5.872846    
+  0:            3   9.423779    
+  0:            4   14.23040    
+  0:            5   20.02807    
+  0:            6   26.32803    
+  0:            7   33.12969    
+  0:            8   40.42937    
+  0:            9   48.22218    
+  0:           10   56.50277    
+  0:           11   65.26557    
+  0:           12   74.50470    
+  0:           13   84.21444    
+  0:           14   94.38879    
+  0:           15   105.0136    
+  0:  Rayleigh_Super E-folding time (mb days):
+  0:            1   3.082879       5.229750    
+  0:            2   5.872846       6.682628    
+  0:            3   9.423779       9.452765    
+  0:            4   14.23040       15.09573    
+  0:            5   20.02807       26.81961    
+  0:            6   26.32803       52.73809    
+  0:            7   33.12969       125.6176    
+  0:            8   40.42937       466.7823    
+  0:            9   48.22218       16020.38    
+  0:  After adi: W max =   3.6623966E-02  min =  -2.9322809E-02
+  0:  na_ini Z500   5895.102       5894.850      0.0000000E+00   5895.292    
+  0: NOTE from PE     0: fv_tracker_init
+  0: 
+  0: WARNING from PE     0: atmos_modeldefine_blocks_packed: domain ( 105  53) is not an even divisor with definition (  70) - blocks will not be uniform with a remainder of   35
+  0: 
+  0:  NO FLAG: gwd is generic
+  0:  FLAG: satmedmf and isatedmf=1 so pbl not generic
+  0:  NO FLAG: scnv is generic
+  0:  NO FLAG: dcnv is generic
+  0:   model init,iaufhrs=  0.000000000000000E+000  -1.00000000000000     
+  0:   -1.00000000000000       -1.00000000000000       -1.00000000000000     
+  0:   -1.00000000000000       -1.00000000000000     
+  0:  Reading in o3data from global_o3prdlos.f77 
+  0:        oz_coeff =            6
+  0:         latsozp =           71
+  0:          levozp =           53
+  0:          timeoz =           12
+  0:  in atm phys init, phour=  0.000000000000000E+000 fhour=  2.500000000000000E-002
+  0:  zhour=  0.000000000000000E+000 kdt=           1
+  0:   dxmax=   18.1991080870045       dxmin=   24.5164135836650       dxinv=
+  0:  -0.158295336600173      max_lon=        5000  max_lat=        2000  min_lon=
+  0:          192  min_lat=          94  rhc_max=  0.999999900000000       huge=
+  0:   9.969209968386869E+036
+  0:   NOAH Land Surface Model used
+  0:   nst_anl= T  use_ufo= T  frac_grid= F  ignore_lake= T  frac_ice= T
+  0:   min_lakeice=  0.150000000000000       min_seaice=  0.150000000000000      
+  0:  min_lake_height=   250.000000000000     
+  0:  lake model parameters
+  0:   lake master flag lkm   :            0
+  0:   NSSTM is active 
+  0:   nstf_name(1)=           2
+  0:   nstf_name(2)=           1
+  0:   nstf_name(3)=           0
+  0:   nstf_name(4)=           0
+  0:   nstf_name(5)=           0
+  0:   scale & aerosol-aware mass-flux deep conv scheme
+  0:   update version (May 2019) of sale-aware TKE-based moist EDMF scheme used
+  0:   scale- & aerosol-aware mass-flux shallow conv scheme (2017)
+  0:  GSL unified oragraphic gravity wave drag parameterization used
+  0:   do_gwd= T
+  0:   exponential-decorr cloud overlap for Radiation IOVR=           3
+  0:   sub-grid cloud for Shortwave ISUBC_SW=           2
+  0:   sub-grid cloud for Longwave ISUBC_LW=           2
+  0:   Using Thompson/TEMPO double moment microphysics ltaerosol =  F  mraerosol =  F
+  0:   lthailaware =  F  ttendlim =  -999.000000000000       ext_diag_thompson = F 
+  0:   dt_inner =   45.0000000000000       sedi_semi= T  decfl=          10  nt_c_l=
+  0:    150000000.000000       nt_c_o=   50000000.0000000       av_i=
+  0:   -999.000000000000       xnc_max=   1000000.00000000       ssati_min
+  0:   0.150000000000000       Nt_i_max   4999000.00000000       rr_min
+  0:    1000.00000000000       fs_fac_rain   1.00000000000000       fs_fac_snow
+  0:    1.00000000000000       effr_in = T  lradar = T  nsfullradar_diag =
+  0:   -999.000000000000       num_p3d =           3  num_p2d =           1
+  0:   num_p3d=           3  num_p2d=           1  crtrh=  0.900000000000000     
+  0:   0.900000000000000       0.900000000000000       npdf3d=           0  pdfcld= F
+  0:   shcnvcw= F  cnvcld= T  ncnvcld3d=           1  do_shoc= F  nshoc3d=
+  0:            0  nshoc_2d=           0  shoc_cld= F  nkbfshoc=        -999 
+  0:   nahdshoc=        -999  nscfshoc=        -999  xr_cnvcld= T  uni_cld= F  ntot3d
+  0:  =           4  ntot2d=           1  shocaftcnv= F  indcld=          -1 
+  0:   shoc_parm=   7000.00000000000        1.00000000000000     
+  0:    4.28571430000000       0.700000000000000       -999.000000000000       ncnvw=
+  0:            4  ncnvc=        -999
+  0:   
+  0:  basic control parameters
+  0:   me                :            0
+  0:   master            :            0
+  0:   communicator      :  -1006632936
+  0:   nlunit            :         9999
+  0:   fn_nml            : using internal file
+  0:   fhzero            :    3.00000000000000     
+  0:   fhzero_array      :   0.000000000000000E+000  0.000000000000000E+000
+  0:   fhzero_fhour      :   0.000000000000000E+000  0.000000000000000E+000
+  0:   n_diag_buckets    :            1
+  0:   ldiag3d           :  F
+  0:   qdiag3d           :  F
+  0:   lssav             :  F
+  0:   naux2d            :            0
+  0:   naux3d            :            0
+  0:   fhcyc             :   0.000000000000000E+000
+  0:   thermodyn_id      :            1
+  0:   sfcpress_id       :            1
+  0:   gen_coord_hybrid  :  F
+  0:   hydrostatic       :  F
+  0:   
+  0:  grid extent parameters
+  0:   isc               :            1
+  0:   jsc               :            1
+  0:   nx                :          105
+  0:   ny                :           53
+  0:   levs              :           81
+  0:   cnx               :         1050
+  0:   cny               :         1050
+  0:   lonr              :         4200
+  0:   latr              :         2100
+  0:   nblks             :           80
+  0:   blksz(1)          :           70
+  0:   blksz(nblks)      :           35
+  0:   Model%ncols       :         5565
+  0:   
+  0:  coupling parameters
+  0:   cplflx            :  F
+  0:   cplice            :  F
+  0:   cplocn2atm        :  T
+  0:   cplwav            :  F
+  0:   cplwav2atm        :  F
+  0:   cplaqm            :  F
+  0:   cplchm            :  F
+  0:   cpllnd            :  F
+  0:   cpllnd2atm        :  F
+  0:   rrfs_sd           :  F
+  0:   cpl_fire          :  F
+  0:   use_cice_alb      :  F
+  0:   cpl_imp_mrg       :  T
+  0:   cpl_imp_dbg       :  F
+  0:   use_med_flux      :  F
+  0:   use_cdeps_inline  :  F
+  0:   
+  0:   lsidea            :  F
+  0:   
+  0:  calendars and time parameters and activation triggers
+  0:   dtp               :    90.0000000000000     
+  0:   dtf               :    90.0000000000000     
+  0:   frain             :    1.00000000000000     
+  0:   nscyc             :            0
+  0:   nszero            :          120
+  0:   idat              :         2019           8          24           0
+  0:            0           0           0           0
+  0:   idate             :            0           8          24        2019
+  0:   
+  0:  radiation control parameters
+  0:   fhswr             :    900.000000000000     
+  0:   fhlwr             :    900.000000000000     
+  0:   nsswr             :           10
+  0:   nslwr             :           10
+  0:   nhfrad            :            0
+  0:   levr              :           81
+  0:   nfxr              :           45
+  0:   ntrcaer           :           15
+  0:   lmfshal           :  T
+  0:   lmfdeep2          :  T
+  0:   nrcm              :            2
+  0:   iflip             :            1
+  0:   isol              :            2
+  0:   ico2              :            2
+  0:   ialb              :            1
+  0:   iems              :            1
+  0:   iaer              :         1011
+  0:   iaermdl           :            1
+  0:   iaerflg           :            0
+  0:   lalw1bd           :  F
+  0:   aeros_file        : aerosol.dat               
+  0:   solar_file        : solarconstant_noaa_a0.txt 
+  0:   semis_file        : sfc_emissivity_idx.txt    
+  0:   icliq_sw          :            1
+  0:   icice_sw          :            3
+  0:   icliq_lw          :            1
+  0:   icice_lw          :            3
+  0:   iovr              :            3
+  0:   idcor             :            1
+  0:   dcorr_con         :    2.50000000000000     
+  0:   ictm              :            1
+  0:   isubc_sw          :            2
+  0:   isubc_lw          :            2
+  0:   iswmode           :            2
+  0:   lcrick            :  F
+  0:   lcnorm            :  F
+  0:   lnoprec           :  F
+  0:   lwhtr             :  T
+  0:   swhtr             :  T
+  0:   rad_hr_units      :            2
+  0:   inc_minor_gas     :  T
+  0:   ipsd0             :            0
+  0:   ipsdlim           :    100000000
+  0:   lrseeds           :  F
+  0:   nrstreams         :            2
+  0:   lextop            :  F
+  0:   xr_con            :    2000.00000000000     
+  0:   xr_exp            :   0.250000000000000     
+  0:   
+  0:  microphysical switch
+  0:   imp_physics       :            8
+  0:   
+  0:   Thompson microphysical parameters
+  0:   ltaerosol         :  F
+  0:   mraerosol         :  F
+  0:   lthailaware       :  F
+  0:   lradar            :  T
+  0:   nsfullradar_diag  :   -999.000000000000     
+  0:   lrefres           :  F
+  0:   ttendlim          :   -999.000000000000     
+  0:   ext_diag_thompson :  F
+  0:   dt_inner          :    45.0000000000000     
+  0:   sedi_semi         :  T
+  0:   decfl             :           10
+  0:   nt_c_l            :    150000000.000000     
+  0:   nt_c_o            :    50000000.0000000     
+  0:   av_i              :   -999.000000000000     
+  0:   xnc_max           :    1000000.00000000     
+  0:   ssati_min         :   0.150000000000000     
+  0:   Nt_i_max          :    4999000.00000000     
+  0:   rr_min            :    1000.00000000000     
+  0:   fs_fac_rain       :    1.00000000000000     
+  0:   fs_fac_snow       :    1.00000000000000     
+  0:   
+  0:  land/surface model parameters
+  0:   lsm               :            1
+  0:   lsoil             :            4
+  0:   rdlai             :  F
+  0:   lsoil_lsm         :            4
+  0:   zs  (may be unset):  -0.100000000000000      -0.400000000000000     
+  0:   -1.00000000000000       -2.00000000000000     
+  0:   dzs (may be unset):   0.100000000000000       0.300000000000000     
+  0:   0.600000000000000        1.00000000000000     
+  0:   iopt_thcnd        :            1
+  0:   ua_phys           :  F
+  0:   usemonalb         :  T
+  0:   aoasis            :    1.00000000000000     
+  0:   fasdas            :            0
+  0:   kice              :            2
+  0:   shape(pores)      :           30
+  0:   shape(resid)      :           30
+  0:   ivegsrc           :            1
+  0:   nvegcat           :           20
+  0:   isot              :            1
+  0:   nsoilcat          :           16
+  0:   use_ufo           :  T
+  0:   lcurr_sf          :  F
+  0:   pert_cd           :  F
+  0:   ntsflg            :            0
+  0:   sfenth            :   0.000000000000000E+000
+  0:   
+  0:  flake model parameters
+  0:  lkm                :            0
+  0:   
+  0:  tuning parameters for physical parameterizations
+  0:   ras               :  F
+  0:   flipv             :  T
+  0:   trans_trac        :  T
+  0:   old_monin         :  F
+  0:   do_gwd            :  T
+  0:   cnvgwd            :  F
+  0:   do_cnvgwd         :  F
+  0:   mstrat            :  F
+  0:   moist_adj         :  F
+  0:   cscnv             :  F
+  0:   cal_pre           :  F
+  0:   do_aw             :  F
+  0:   flx_form          :  F
+  0:   do_shoc           :  F
+  0:   shoc_parm         :    7000.00000000000        1.00000000000000     
+  0:    4.28571430000000       0.700000000000000       -999.000000000000     
+  0:   shocaftcnv        :  F
+  0:   shoc_cld          :  F
+  0:   uni_cld           :  F
+  0:   oz_phys           :  F
+  0:   oz_phys_2015      :  T
+  0:   h2o_phys          :  T
+  0:   pdfcld            :  F
+  0:   shcnvcw           :  F
+  0:   redrag            :  T
+  0:   hybedmf           :  F
+  0:   satmedmf          :  T
+  0:   tte_edmf          :  F
+  0:   isatmedmf         :            1
+  0:   shinhong          :  F
+  0:   do_ysu            :  F
+  0:   dspheat           :  T
+  0:   sa3dtke           :  F
+  0:   lheatstrg         :  F
+  0:   lseaspray         :  F
+  0:   cnvcld            :  T
+  0:   random_clds       :  F
+  0:   shal_cnv          :  T
+  0:   imfshalcnv        :            2
+  0:   imfdeepcnv        :            2
+  0:   do_deep           :  T
+  0:   conv_cf_opt        :            0
+  0:   nmtvr             :           24
+  0:   jcap              :            1
+  0:   cscale            :    1.00000000000000     
+  0:   cs_parm           :    8.00000000000000        4.00000000000000     
+  0:    1000.00000000000        3500.00000000000        20.0000000000000     
+  0:    1.00000000000000       -999.000000000000        1.00000000000000     
+  0:   0.600000000000000       0.000000000000000E+000
+  0:   flgmin            :   0.180000000000000       0.220000000000000     
+  0:   cgwf              :   0.500000000000000       5.000000000000000E-002
+  0:   ccwf              :    1.00000000000000        1.00000000000000     
+  0:   cdmbgwd           :    1.00000000000000        1.00000000000000     
+  0:    1.00000000000000        1.00000000000000     
+  0:   alpha_fd          :    12.0000000000000     
+  0:   psl_gwd_dx_factor :    6.00000000000000     
+  0:   sup               :    1.00000000000000     
+  0:   ctei_rm           :    10.0000000000000        10.0000000000000     
+  0:   crtrh             :   0.900000000000000       0.900000000000000     
+  0:   0.900000000000000     
+  0:   dlqf              :   0.150000000000000       0.150000000000000     
+  0:   seed0             :            0
+  0:   rbcr              :   0.250000000000000     
+  0:   do_mynnedmf       :  F
+  0:   do_mynnsfclay     :  F
+  0:   diag_flux         :  F
+  0:   diag_log          :  F
+  0:   do_myjsfc         :  F
+  0:   do_myjpbl         :  F
+  0:   do_ugwp           :  F
+  0:   gwd_opt           :            2
+  0:   do_ugwp_v0           :  F
+  0:   do_ugwp_v0_orog_only :  F
+  0:   do_ugwp_v0_nst_only  :  T
+  0:   do_gsl_drag_ls_bl    :  T
+  0:   do_gsl_drag_ss       :  T
+  0:   do_gsl_drag_tofd     :  T
+  0:   do_gwd_opt_psl       :  F
+  0:   do_ugwp_v1           :  F
+  0:   do_ngw_ec            :  F
+  0:   do_ugwp_v1_orog_only :  F
+  0:   do_ugwp_v1_w_gsldrag :  F
+  0:   hurr_pbl          :  T
+  0:   var_ric           :    1.00000000000000     
+  0:   coef_ric_l        :   0.160000000000000     
+  0:   coef_ric_s        :   0.250000000000000     
+  0:   
+  0:  Rayleigh friction
+  0:   prslrd0           :   0.000000000000000E+000
+  0:   ral_ts            :   0.000000000000000E+000
+  0:   
+  0:  mass flux deep convection
+  0:   clam_deep         :   0.150000000000000     
+  0:   c0s_deep          :   2.000000000000000E-003
+  0:   c1_deep           :   2.000000000000000E-003
+  0:   betal_deep        :   5.000000000000000E-002
+  0:   betas_deep        :   5.000000000000000E-002
+  0:   evef              :   9.000000000000000E-002
+  0:   evfact_deep       :   0.300000000000000     
+  0:   evfactl_deep      :   0.300000000000000     
+  0:   pgcon_deep        :   0.550000000000000     
+  0:   asolfac_deep      :   0.958000000000000     
+  0:   cat_adj_deep      :    1.00000000000000     
+  0:   
+  0:  mass flux shallow convection
+  0:   clam_shal         :   0.300000000000000     
+  0:   c0s_shal          :   2.000000000000000E-003
+  0:   c1_shal           :   5.000000000000000E-004
+  0:   pgcon_shal        :   0.550000000000000     
+  0:   asolfac_shal      :   0.958000000000000     
+  0:   cat_adj_shal      :    1.00000000000000     
+  0:   
+  0:  near surface sea temperature model
+  0:   nst_anl           :  T
+  0:   nstf_name         :            2           1           0           0
+  0:            0
+  0:   lsea              :            0
+  0:   
+  0:  surface layer options
+  0:   sfc_z0_type       :            6
+  0:   use_oceanuv       :  T
+  0:   
+  0:  vertical diffusion coefficients
+  0:   xkzm_m            :    1.00000000000000     
+  0:   xkzm_h            :    1.00000000000000     
+  0:   xkzm_s            :    1.00000000000000     
+  0:   xkzminv           :   0.300000000000000     
+  0:   moninq_fac        :   -1.00000000000000     
+  0:   dspfac            :    1.00000000000000     
+  0:   bl_upfr           :   0.130000000000000     
+  0:   bl_dnfr           :   0.100000000000000     
+  0:   rlmx              :    300.000000000000     
+  0:   elmx              :    300.000000000000     
+  0:   sfc_rlm           :            1
+  0:   tc_pbl            :            0
+  0:   use_lpt           :            0
+  0:   
+  0:  parameters for canopy heat storage parametrization
+  0:   h0facu            :   0.250000000000000     
+  0:   h0facs            :    1.00000000000000     
+  0:   
+  0:  stochastic physics
+  0:   do_sppt           :  F
+  0:   pert_mp         :  F
+  0:   pert_clds       :  F
+  0:   pert_radtend    :  T
+  0:   do_shum           :  F
+  0:   do_skeb           :  F
+  0:   lndp_type         :            0
+  0:   n_var_lndp        :            0
+  0:   lndp_each_step    :  F
+  0:   do_spp            :  F
+  0:   n_var_spp         :            0
+  0:   
+  0:  convection
+  0:  betascu            :    4.00000000000000     
+  0:  betamcu            :    1.00000000000000     
+  0:  betadcu            :    1.00000000000000     
+  0:  sigmab_coldstart   :  F
+  0:   
+  0:  cellular automata
+  0:   nca               :            0
+  0:   ncells            :            5
+  0:   nlives            :           12
+  0:   nca_g             :            0
+  0:   ncells_g          :            1
+  0:   nlives_g          :          100
+  0:   nfracseed         :   0.500000000000000     
+  0:   nseed_g           :          100
+  0:   nseed             :            1
+  0:   ca_global         :  F
+  0:   ca_sgs            :  F
+  0:   do_ca             :  F
+  0:   ca_advect         :  F
+  0:   iseed_ca          :                      1
+  0:   ca_smooth         :  F
+  0:   nspinup           :            1
+  0:   nthresh           :    18.0000000000000     
+  0:   ca_amplitude      :   0.350000000000000     
+  0:   nsmooth           :          100
+  0:   ca_closure        :  F
+  0:   ca_entr           :  F
+  0:   ca_trigger        :  F
+  0:   
+  0:  tracers
+  0:   tracer_names      : sphum                           
+  0:  liq_wat                         ice_wat                         
+  0:  rainwat                         snowwat                         
+  0:  graupel                         ice_nc                          
+  0:  rain_nc                         o3mr                            
+  0:  sgs_tke                         
+  0:   ntrac             :           10
+  0:   nqrimef           :          -99
+  0:   ntqv              :            1
+  0:   ntoz              :            9
+  0:   ntno2             :            0
+  0:   ntno              :            0
+  0:   nto3              :            0
+  0:   ntcw              :            2
+  0:   ntiw              :            3
+  0:   ntrw              :            4
+  0:   ntsw              :            5
+  0:   ntgl              :            6
+  0:   nthl              :          -99
+  0:   ntclamt           :          -99
+  0:   ntlnc             :          -99
+  0:   ntinc             :            7
+  0:   ntrnc             :            8
+  0:   ntsnc             :          -99
+  0:   ntgnc             :          -99
+  0:   nthnc             :          -99
+  0:   ntccn             :          -99
+  0:   ntccna            :          -99
+  0:   ntgv              :          -99
+  0:   nthv              :          -99
+  0:   ntrz              :          -99
+  0:   ntgz              :          -99
+  0:   nthz              :          -99
+  0:   ntke              :           10
+  0:   ntsigma           :          -99
+  0:   ntomega           :          -99
+  0:   nto               :            0
+  0:   nto2              :            0
+  0:   ntwa              :          -99
+  0:   ntia              :          -99
+  0:   ntfsmoke          :            0
+  0:   ntsmoke           :            0
+  0:   ntdust            :            0
+  0:   ntcoarsepm        :            0
+  0:   nchem             :            0
+  0:   ndvel             :            0
+  0:   ntchm             :            0
+  0:   ntchs             :          -99
+  0:   ntche             :          -99
+  0:   ndchm             :            0
+  0:   ndchs             :          -99
+  0:   ndche             :          -99
+  0:   fscav             : 
+  0:   
+  0:  derived totals for phy_f*d
+  0:   ntot2d            :            1
+  0:   ntot3d            :            4
+  0:   num_p2d           :            1
+  0:   num_p3d           :            3
+  0:   nshoc_2d          :            0
+  0:   nshoc_3d          :            0
+  0:   ncnvcld3d         :            1
+  0:   npdf3d            :            0
+  0:   nctp              :            0
+  0:   nkbfshoc          :         -999
+  0:   nahdshoc          :         -999
+  0:   nscfshoc          :         -999
+  0:   
+  0:  debug flags
+  0:   debug             :  F
+  0:   pre_rad           :  F
+  0:   
+  0:  variables modified at each time step
+  0:   ipt               :            1
+  0:   lprnt             :  F
+  0:   lsswr             :  F
+  0:   lslwr             :  F
+  0:   solhr             :   -9999.00000000000     
+  0:   solcon            :   -9999.00000000000     
+  0:   slag              :   -9999.00000000000     
+  0:   sdec              :   -9999.00000000000     
+  0:   cdec              :   -9999.00000000000     
+  0:   clstp             :   -9999.00000000000     
+  0:   phour             :   0.000000000000000E+000
+  0:   fhour             :   2.500000000000000E-002
+  0:   zhour             :   0.000000000000000E+000
+  0:   kdt               :            1
+  0:   jdat              :         2019           8          24           0
+  0:            0           0           0           0
+  0:   si                :    1.00000000000000       0.997523306768816     
+  0:   0.994826299958530       0.991887986977109       0.988690096638848     
+  0:   0.985208865546473       0.981422902373065       0.977305812767911     
+  0:   0.972833633984565       0.967978934600415       0.962712180771845     
+  0:   0.957003260472207       0.950824313357086       0.944141352465480     
+  0:   0.936924024406263       0.929139608855890       0.920757217334728     
+  0:   0.911746860068572       0.902076205066756       0.891720116318230     
+  0:   0.880651716382011       0.868850181946206       0.856297694144939     
+  0:   0.842981844632086       0.828895753245713       0.814039332231279     
+  0:   0.798420899263271       0.782056481235844       0.764971949668102     
+  0:   0.747202307081635       0.728792363775675       0.709796571364361     
+  0:   0.690280153189660       0.670316835105788       0.649988683844968     
+  0:   0.629385266827417       0.608596109797545       0.587710675729367     
+  0:   0.566818575122595       0.546009272218487       0.525372264544366     
+  0:   0.504992432023450       0.484909231158505       0.465128613438683     
+  0:   0.445656502545396       0.426498915577996       0.407661690877601     
+  0:   0.389150806844013       0.370972182700307       0.353131737393266     
+  0:   0.335635426577148       0.318489169877598       0.301698919517295     
+  0:   0.285270602578728       0.269210135249184       0.253523479802426     
+  0:   0.238216526385070       0.223295258142155       0.208765575745565     
+  0:   0.194633424815237       0.180904728213700       0.167585432545290     
+  0:   0.154681463597105       0.142198754547627       0.130143237281779     
+  0:   0.118520840999614       0.107337510771716       9.659917722496909E-002
+  0:   8.631177572620519E-002  7.648122682323856E-002  6.711347438967862E-002
+  0:   5.821444781365884E-002  4.979008131180470E-002  4.184630910074166E-002
+  0:   3.438906298284920E-002  2.742427717475278E-002  2.095788347883189E-002
+  0:   1.499581731883498E-002  9.543999633034610E-003  5.438813349814586E-003
+  0:   2.472187886279357E-003  0.000000000000000E+000
+  0:   sec               :   0.000000000000000E+000
+  0:   first_time_step   :  T
+  0:   restart           :  F
+  0:   lsm_cold_start    :  T
+  0:   do_canopy         :  F
+  0:   
+  0:  lightning threat indexes
+  0:   lightning_threat  :  F
+  0:  lnd_iau_mod_set_control: Warning! EoF (-1) while reading land_iau namelist, lik
+  0:  ely because land_iau_nml was not found in input.nml. It will be set to default.
+  0:  land_iau_nml
+  0:  &LAND_IAU_NML
+  0:  DO_LAND_IAU     = F,
+  0:  LAND_IAU_DELTHRS        =  0.000000000000000E+000,
+  0:  LAND_IAU_INC_FILES      =                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
+  0:                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
+  0:                                                                                                                                                                                                                                                                                                                                                                                                                                    ,
+  0:  LAND_IAU_FHRS   = 7*-1.00000000000000       ,
+  0:  LAND_IAU_FILTER_INCREMENTS      = F,
+  0:  LSOIL_INCR      =           4,
+  0:  LAND_IAU_UPD_STC        = F,
+  0:  LAND_IAU_UPD_SLC        = F,
+  0:  LAND_IAU_DO_STCSMC_ADJUSTMENT   = F,
+  0:  LAND_IAU_MIN_T_INCREMENT        =  1.000000000000000E-004,
+  0:  LAND_IAU_MIN_SLC_INCREMENT      =  1.000000000000000E-006
+  0:  /
+  0:  in iau_init  0.000000000000000E+000
+  0:  nfiles =            0
+  0:  in fv3atm_diag_register, nrgst_bl=          63  nrgst_nb=         342 
+  0:   nrgst_vctbl=           3 hist%isco=           1         105 hist%jsco=
+  0:            1          53  hist%num_axes_phys=           3
+  0: NOTE from PE     0: reading topographic/orographic information from INPUT/oro_data.tile*.nc
+  0: NOTE from PE     0: reading topographic/orographic information from INPUT/oro_data_ls.tile*.nc
+  0: NOTE from PE     0: reading topographic/orographic information from INPUT/oro_data_ss.tile*.nc
+  0: NOTE from PE     0: reading surface properties data from INPUT/sfc_data.tile*.nc
+  0: NOTE from PE     0: gfs_driver:: - after put to container
+  0: NOTE from PE     0: gfs_driver::surface_props_input - set init soil color
+  0: NOTE from PE     0: gfs_driver::surface_props_input - computing snodl
+  0: NOTE from PE     0: gfs_driver::surface_props_input - computing weasdl
+  0: NOTE from PE     0: gfs_driver::surface_props_input - computing tsfcl
+  0: NOTE from PE     0: gfs_driver::surface_props_input - computing zorlw
+  0: NOTE from PE     0: gfs_driver::surface_props_input - computing zorll
+  0: NOTE from PE     0: gfs_driver::surface_props_input - computing zorli
+  0: NOTE from PE     0: gfs_driver::surface_props_input - computing emis_ice
+  0: NOTE from PE     0: gfs_driver::surface_props_input - computing sncovr_ice
+  0: NOTE from PE     0: gfs_driver::surface_props_input - computing snodi
+  0: NOTE from PE     0: gfs_driver::surface_props_input - computing weasdi
+  0: NOTE from PE     0: gfs_driver::surface_props_input - computing composite tsfc
+  0: NOTE from PE     0: gfs_driver::surface_props_input - computing zorlwav
+  0: NOTE from PE     0: gfs_driver::surface_props_input - computing tiice
+  0: NOTE from PE     0: No physics restarts - cold starting physical parameterizations
+  0:   In rad_initialize (GFS_rrtmg_setup_init), before calling RRTMG initialization
+  0:   si =   1.00000000000000       0.997523306768816       0.994826299958530     
+  0:   0.991887986977109       0.988690096638848       0.985208865546473     
+  0:   0.981422902373065       0.977305812767911       0.972833633984565     
+  0:   0.967978934600415       0.962712180771845       0.957003260472207     
+  0:   0.950824313357086       0.944141352465480       0.936924024406263     
+  0:   0.929139608855890       0.920757217334728       0.911746860068572     
+  0:   0.902076205066756       0.891720116318230       0.880651716382011     
+  0:   0.868850181946206       0.856297694144939       0.842981844632086     
+  0:   0.828895753245713       0.814039332231279       0.798420899263271     
+  0:   0.782056481235844       0.764971949668102       0.747202307081635     
+  0:   0.728792363775675       0.709796571364361       0.690280153189660     
+  0:   0.670316835105788       0.649988683844968       0.629385266827417     
+  0:   0.608596109797545       0.587710675729367       0.566818575122595     
+  0:   0.546009272218487       0.525372264544366       0.504992432023450     
+  0:   0.484909231158505       0.465128613438683       0.445656502545396     
+  0:   0.426498915577996       0.407661690877601       0.389150806844013     
+  0:   0.370972182700307       0.353131737393266       0.335635426577148     
+  0:   0.318489169877598       0.301698919517295       0.285270602578728     
+  0:   0.269210135249184       0.253523479802426       0.238216526385070     
+  0:   0.223295258142155       0.208765575745565       0.194633424815237     
+  0:   0.180904728213700       0.167585432545290       0.154681463597105     
+  0:   0.142198754547627       0.130143237281779       0.118520840999614     
+  0:   0.107337510771716       9.659917722496909E-002  8.631177572620519E-002
+  0:   7.648122682323856E-002  6.711347438967862E-002  5.821444781365884E-002
+  0:   4.979008131180470E-002  4.184630910074166E-002  3.438906298284920E-002
+  0:   2.742427717475278E-002  2.095788347883189E-002  1.499581731883498E-002
+  0:   9.543999633034610E-003  5.438813349814586E-003  2.472187886279357E-003
+  0:   0.000000000000000E+000
+  0:   levr=          81  ictm=           1  isol=           2  ico2=           2 
+  0:   iaermdl=           1  iaerflg=          11
+  0:   np3d=           3  ntoz=           9  iovr=           3  isubcsw=           2 
+  0:   isubclw=           2  icliq_sw=           1  iflip=           1   me=
+  0:            0
+  0:   lcrick= F  lcnorm= F  lnoprec= F
+  0:  lextop= F  ltp=           0
+  0:  NCEP-Radiation_astronomy v5.2  Jan 2013 
+  0:   - Using NOAA annual mean TSI table in TIM scale
+  0:   with cycle approximation (new values)!
+  0:  NCEP-Radiation_aerosols  v5.2  Jan 2013 
+  0:   - Using MERRA2-climatology for tropospheric aerosol effect
+  0:     IAER=          11   LW-trop-aer= T   SW-trop-aer= T   Volc-aer= F
+  0:   - No stratospheric volcanic aerosol effect
+  0:     - Compute multi-band aerosol optical properties for SW input parameters
+  0:     - Compute multi-band aerosol optical properties for LW input parameters
+  0:  NCEP-Radiation_gases     v5.1  Nov 2012 
+  0:   - Using observed co2 monthly 2-d data
+  0:  NCEP-Radiation_clouds    v5.1  Nov 2012 
+  0:   - Using Prognostic Cloud Method
+  0:     --- Thompson cloud microphysics
+  0:   - Using AER Longwave Radiation, Version: 
+  0:  NCEP LW v5.1  Nov 2012 -RRTMG-LW v4.82  
+  0:     --- Include rare gases N2O, CH4, O2, CFCs absorptions in LW
+  0:     --- Using MCICA sub-colum clouds approximation 
+  0:  with provided input array of permutation seeds
+  0:   - Using AER Shortwave Radiation, Version: 
+  0:  NCEP SW v5.1  Nov 2012 -RRTMG-SW v3.8   
+  0:     --- PIFM 2-stream transfer scheme
+  0:     --- Include rare gases N2O, CH4, O2, absorptions in SW
+  0:     --- Using MCICA sub-colum clouds approximation 
+  0:  with provided input array of permutation seeds
+  0:    Radiation sub-cloud initial seed =       47669  IC-idate =           0
+  0:            8          24        2019
+  0:   return from rad_initialize (GFS_rrtmg_setup_init) - after calling RRTMG initia
+  0:  lization
+  0:  GFS is bottom-up
+  0:  MERRA2 dim:          576         361          72           1
+  0: GFS_phys_time_vary_init: compute sncovr from weasd and soil vegetation parameters
+  0:  In GFS_radiation_surface_init, before calling sfc_init
+  0:  ialb=           1  iems=           1
+  0:  NCEP-Radiation_surface   v5.1  Nov 2012 
+  0:   - Using MODIS based land surface albedo for sw
+  0:   - Using Varying Surface Emissivity for lw
+  0:     Opened data file: sfc_emissivity_idx.txt    
+  0:  SURFACE EMISSIVITY INDEX, IDM,JDM: 360 180    NOTE: DATA FROM N TO S           
+  0:   
+  0:  ugwp_v0: init_gw_wmsdis_control 
+  0:  ugwp_v0: WMSDIS launch layer           25
+  0:  ugwp_v0: WMSDID tot_mflux in mpa   30.0000000000000     
+  0:  
+  0:  ugwp_v0: zcimin=  0.500000000000000     
+  0:  ugwp_v0: zcimax=   125.000000000000     
+  0:  ugwp_v0: cd_crit=  0.250000000000000     
+  0:  ugwp_v0: launch_level          25
+  0:   ugwp_v0 zms_l=   2000.00000000000     
+  0:   ugwp_vgw  nslope=   1.00000000000000     
+  0:  
+  0: Using non-aerosol-aware version of Thompson microphysics
+  0:  creating microphysics lookup tables ... 
+  0:  using: mu_c_o=15.00 mu_i= 0.00 mu_r= 0.00 mu_g= 0.00
+  0:    calling table_ccnAct routine
+  0:    creating qc collision eff tables
+  0:    creating rain evap table
+  0:    creating ice converting to snow table
+  0: Calculating Thompson tables part 1 took      0.346 seconds.
+  0: Calling radar_init took      0.000 seconds.
+  0:    creating rain collecting graupel table
+  0: Computing rain collecting graupel table took      0.827 seconds.
+  0:    creating rain collecting snow table
+  0: Computing rain collecting snow table took      0.025 seconds.
+  0:    creating freezing of water drops table
+  0: Computing freezing of water drops table took      0.145 seconds.
+  0: Calculating Thompson tables part 2 took      0.145 seconds.
+  0:   ... DONE microphysical lookup tables
+  0:  in atmos_model, fhzero=   3.00000000000000      fhour=  0.0000000E+00
+  0:            0
+  0: NOTE from PE     0: before create fcst grid
+  0:  dateS=hours since 2019-08-24 00:00:00date_init=        2019           8
+  0:           24           0           0           0
+  0:  u comp. of storm motion, output name=ustm
+  0:  v comp. of storm motion, output name=vstm
+  0:  0-1km srh, output name=srh01
+  0:  0-3km srh, output name=srh03
+  0:  max hourly 0-1km vert. vorticity, output name=maxvort01
+  0:  max hourly 0-2km vert. vorticity, output name=maxvort02
+  0:  max hourly lev 1 vert. vorticity output name=maxvorthy1
+  0:  max hourly updraft vel, output name=upvvelmax
+  0:  max hourly downdraft vel, output name=dnvvelmax
+  0:  max hourly 0-3km updraft helicity, output name=uhmax03
+  0:  max hourly 0-3km updraft helicity, output name=uhmin03
+  0:  max hourly 2-5km updraft helicity, output name=uhmax25
+  0:  max hourly 2-5km updraft helicity, output name=uhmin25
+  0:  in fv_phys bundle,nbdl=           2
+  0:  add 3D field to after nearest_stod, fld=refl_10cm
+  0:  add 3D field to after nearest_stod, fld=dkt
+  0:  add 3D field to after nearest_stod, fld=dku
+  0:  fcst_initialize total time:    41.6608494736720     
+  0:  ufsatm_cap: field bundles in fcstComp export state, FBCount=            3
+  0:  af allco wrtComp,write_groups=           2
+200: NOTE from PE     0: MPP_DOMAINS_SET_STACK_SIZE: stack size set to    32768.
+200:  &MPP_IO_NML
+200:  HEADER_BUFFER_VAL       =       16384,
+200:  GLOBAL_FIELD_ON_ROOT_PE = T,
+200:  IO_CLOCKS_ON    = F,
+200:  SHUFFLE =           0,
+200:  DEFLATE_LEVEL   =          -1,
+200:  CF_COMPLIANCE   = F
+200:  /
+200: NOTE from PE     0: MPP_IO_SET_STACK_SIZE: stack size set to     131072.
+200: NOTE from PE     0: MPP_DOMAINS_SET_STACK_SIZE: stack size set to 30000000.
+  0:  af wrtState reconcile, FBcount=           3
+  0:  computing regrid/redist routehandles
+  0:  FB:  1 atm_bilinear                     grid_id  1 output_grid: regional_latlon          is_moving:  F needs_dst_mask:  T
+  0:         generate destination mask for grid            1
+  0:         done computing routehandle for field bundle:  1    3.735534
+  0:  FB:  2 sfc_bilinear                     grid_id  1 output_grid: regional_latlon          is_moving:  F needs_dst_mask:  T
+  0:         use already generated destination mask for grid            1
+  0:         done computing routehandle for field bundle:  2    1.842889
+  0:  FB:  3 sfc_nearest_stod                 grid_id  1 output_grid: regional_latlon          is_moving:  F needs_dst_mask:  T
+  0:         use already generated destination mask for grid            1
+  0:         done computing routehandle for field bundle:  3    0.473453
+  0:  done computing all routehandles:     6.052395
+210: NOTE from PE     0: MPP_DOMAINS_SET_STACK_SIZE: stack size set to    32768.
+210:  &MPP_IO_NML
+210:  HEADER_BUFFER_VAL       =       16384,
+210:  GLOBAL_FIELD_ON_ROOT_PE = T,
+210:  IO_CLOCKS_ON    = F,
+210:  SHUFFLE =           0,
+210:  DEFLATE_LEVEL   =          -1,
+210:  CF_COMPLIANCE   = F
+210:  /
+210: NOTE from PE     0: MPP_IO_SET_STACK_SIZE: stack size set to     131072.
+210: NOTE from PE     0: MPP_DOMAINS_SET_STACK_SIZE: stack size set to 30000000.
+  0:  af wrtState reconcile, FBcount=           3
+  0:  computing regrid/redist routehandles
+  0:  FB:  1 atm_bilinear                     grid_id  1 output_grid: regional_latlon          is_moving:  F needs_dst_mask:  T
+  0:         done computing routehandle for field bundle:  1    0.000181
+  0:  FB:  2 sfc_bilinear                     grid_id  1 output_grid: regional_latlon          is_moving:  F needs_dst_mask:  T
+  0:         done computing routehandle for field bundle:  2    0.000128
+  0:  FB:  3 sfc_nearest_stod                 grid_id  1 output_grid: regional_latlon          is_moving:  F needs_dst_mask:  T
+  0:         done computing routehandle for field bundle:  3    0.000124
+  0:  done computing all routehandles:     0.000574
+  0:  in ufsatm_cap init, time wrtcrt/regrdst   6.90986304730177     
+  0:  in ufsatm cap init, output_startfh=  0.0000000E+00  iau_offset=           0
+  0:  output_fh=  2.5000000E-02   3.000000     lflname_fulltime= F
+  0:  fcst_advertise, cpl_grid_id=           1
+  0:  fcst_realize, cpl_grid_id=           1
+  0:    Updating solar constant with cycle approx
+  0:     Opened solar constant data file: solarconstant_noaa_an.txt 
+  0:   CHECK: Solar constant data used for year        2019   1361.04000000000     
+  0:    1361.04000000000     
+  0: 0 FORECAST DATE          24 AUG.  2019 AT  0 HRS  0.00 MINS
+  0:   JULIAN DAY             2458719  PLUS   0.500000
+  0:   RADIUS VECTOR          1.0111751
+  0:   RIGHT ASCENSION OF SUN  10.1763135 HRS, OR  10 HRS  10 MINS  34.7 SECS
+  0:   DECLINATION OF THE SUN  11.2656419 DEGS, OR   11 DEGS  15 MINS  56.3 SECS
+  0:   EQUATION OF TIME        -2.6014509 MINS, OR   -156.09 SECS, OR-0.011382 RADIANS
+  0:   SOLAR CONSTANT        1331.1228369 (DISTANCE AJUSTED)
+  0: 
+  0: 
+  0:     for cosz calculations: nswr,deltim,deltsw,dtswh =          10
+  0:    90.0000000000000        900.000000000000       0.250000000000000      
+  0:    anginc,nstp =  6.544984694978735E-003          10
+  0:     Opened co2 data file: co2historicaldata_2019.txt
+  0:         2019 
+  0:   MONTHLY CO2 (PPMV)   24  12  LON/LAT (N-S/0-360E) IN 15 DEGREE RESOLUTION,  GL
+  0:  B ANNUAL MEAN =   409.980000000000        GROWTH RATE =   2.42000000000000     
+  0:     Global annual mean CO2 data for year        2019  4.099800000000000E-004
+  0:   CHECK: Sample of selected months of CO2 data used for year:        2019
+  0:          Month =           1
+  0:   4.183800000000000E-004  4.195199999999999E-004  4.192300000000000E-004
+  0:   4.181600000000000E-004  4.143300000000000E-004  4.112600000000000E-004
+  0:   4.087400000000000E-004  4.068700000000000E-004  4.066200000000000E-004
+  0:   4.064300000000000E-004  4.063500000000000E-004  4.058300000000000E-004
+  0:          Month =           4
+  0:   4.193999999999999E-004  4.169300000000000E-004  4.151000000000000E-004
+  0:   4.147500000000000E-004  4.148200000000000E-004  4.119900000000000E-004
+  0:   4.081500000000000E-004  4.054500000000000E-004  4.058300000000000E-004
+  0:   4.062500000000000E-004  4.061100000000000E-004  4.061100000000000E-004
+  0:          Month =           7
+  0:   4.060500000000000E-004  4.051100000000000E-004  4.057800000000000E-004
+  0:   4.078700000000000E-004  4.105700000000000E-004  4.110299999999999E-004
+  0:   4.106400000000000E-004  4.095300000000000E-004  4.089200000000000E-004
+  0:   4.080300000000000E-004  4.074200000000000E-004  4.072000000000000E-004
+  0:          Month =          10
+  0:   4.100500000000000E-004  4.112400000000000E-004  4.108399999999999E-004
+  0:   4.105700000000000E-004  4.100600000000000E-004  4.096000000000000E-004
+  0:   4.094300000000000E-004  4.091300000000000E-004  4.087600000000000E-004
+  0:   4.084400000000000E-004  4.084600000000000E-004  4.082800000000000E-004
+  0:  in radiation_clouds_prop=           8 F           4 F F           2           1
+  0:  in radiation_clouds_prop=           8 F           4 F F           2           1
+  0:  in radiation_clouds_prop=           8 F           4 F F           2           1
+  0:  in radiation_clouds_prop=           8 F           4 F F           2           1
+  0:  in radiation_clouds_prop=           8 F           4 F F           2           1
+  0:  in radiation_clouds_prop=           8 F           4 F F           2           1
+  0:  in radiation_clouds_prop=           8 F           4 F F           2           1
+  0:  in radiation_clouds_prop=           8 F           4 F F           2           1
+  0:  in radiation_clouds_prop=           8 F           4 F F           2           1
+  0:  in radiation_clouds_prop=           8 F           4 F F           2           1
+  0:  in radiation_clouds_prop=           8 F           4 F F           2           1
+  0:  in radiation_clouds_prop=           8 F           4 F F           2           1
+  0:  in radiation_clouds_prop=           8 F           4 F F           2           1
+  0:  in radiation_clouds_prop=           8 F           4 F F           2           1
+  0:  in radiation_clouds_prop=           8 F           4 F F           2           1
+  0:  in radiation_clouds_prop=           8 F           4 F F           2           1
+  0:  in radiation_clouds_prop=           8 F           4 F F           2           1
+  0:  in radiation_clouds_prop=           8 F           4 F F           2           1
+  0:  in radiation_clouds_prop=           8 F           4 F F           2           1
+  0:  in radiation_clouds_prop=           8 F           4 F F           2           1
+  0:  in radiation_clouds_prop=           8 F           4 F F           2           1
+  0:  in radiation_clouds_prop=           8 F           4 F F           2           1
+  0:  in radiation_clouds_prop=           8 F           4 F F           2           1
+  0:  in radiation_clouds_prop=           8 F           4 F F           2           1
+  0:  in radiation_clouds_prop=           8 F           4 F F           2           1
+  0:  in radiation_clouds_prop=           8 F           4 F F           2           1
+  0:  in radiation_clouds_prop=           8 F           4 F F           2           1
+  0:  in radiation_clouds_prop=           8 F           4 F F           2           1
+  0:  in radiation_clouds_prop=           8 F           4 F F           2           1
+  0:  in radiation_clouds_prop=           8 F           4 F F           2           1
+  0:  in radiation_clouds_prop=           8 F           4 F F           2           1
+  0:  in radiation_clouds_prop=           8 F           4 F F           2           1
+  0:  in radiation_clouds_prop=           8 F           4 F F           2           1
+  0:  in radiation_clouds_prop=           8 F           4 F F           2           1
+  0:  in radiation_clouds_prop=           8 F           4 F F           2           1
+  0:  in radiation_clouds_prop=           8 F           4 F F           2           1
+  0:  in radiation_clouds_prop=           8 F           4 F F           2           1
+  0:  in radiation_clouds_prop=           8 F           4 F F           2           1
+  0:  in radiation_clouds_prop=           8 F           4 F F           2           1
+  0:  in radiation_clouds_prop=           8 F           4 F F           2           1
+  0:  in radiation_clouds_prop=           8 F           4 F F           2           1
+  0:  in radiation_clouds_prop=           8 F           4 F F           2           1
+  0:  in radiation_clouds_prop=           8 F           4 F F           2           1
+  0:  in radiation_clouds_prop=           8 F           4 F F           2           1
+  0:  in radiation_clouds_prop=           8 F           4 F F           2           1
+  0:  in radiation_clouds_prop=           8 F           4 F F           2           1
+  0:  in radiation_clouds_prop=           8 F           4 F F           2           1
+  0:  in radiation_clouds_prop=           8 F           4 F F           2           1
+  0:  in radiation_clouds_prop=           8 F           4 F F           2           1
+  0:  in radiation_clouds_prop=           8 F           4 F F           2           1
+  0:  in radiation_clouds_prop=           8 F           4 F F           2           1
+  0:  in radiation_clouds_prop=           8 F           4 F F           2           1
+  0:  in radiation_clouds_prop=           8 F           4 F F           2           1
+  0:  in radiation_clouds_prop=           8 F           4 F F           2           1
+  0:  in radiation_clouds_prop=           8 F           4 F F           2           1
+  0:  in radiation_clouds_prop=           8 F           4 F F           2           1
+  0:  in radiation_clouds_prop=           8 F           4 F F           2           1
+  0:  in radiation_clouds_prop=           8 F           4 F F           2           1
+  0:  in radiation_clouds_prop=           8 F           4 F F           2           1
+  0:  in radiation_clouds_prop=           8 F           4 F F           2           1
+  0:  in radiation_clouds_prop=           8 F           4 F F           2           1
+  0:  in radiation_clouds_prop=           8 F           4 F F           2           1
+  0:  in radiation_clouds_prop=           8 F           4 F F           2           1
+  0:  in radiation_clouds_prop=           8 F           4 F F           2           1
+  0:  in radiation_clouds_prop=           8 F           4 F F           2           1
+  0:  in radiation_clouds_prop=           8 F           4 F F           2           1
+  0:  in radiation_clouds_prop=           8 F           4 F F           2           1
+  0:  in radiation_clouds_prop=           8 F           4 F F           2           1
+  0:  in radiation_clouds_prop=           8 F           4 F F           2           1
+  0:  in radiation_clouds_prop=           8 F           4 F F           2           1
+  0:  in radiation_clouds_prop=           8 F           4 F F           2           1
+  0:  in radiation_clouds_prop=           8 F           4 F F           2           1
+  0:  in radiation_clouds_prop=           8 F           4 F F           2           1
+  0:  in radiation_clouds_prop=           8 F           4 F F           2           1
+  0:  in radiation_clouds_prop=           8 F           4 F F           2           1
+  0:  in radiation_clouds_prop=           8 F           4 F F           2           1
+  0:  in radiation_clouds_prop=           8 F           4 F F           2           1
+  0:  in radiation_clouds_prop=           8 F           4 F F           2           1
+  0:  in radiation_clouds_prop=           8 F           4 F F           2           1
+  0:  in radiation_clouds_prop=           8 F           4 F F           2           1
+  0: Thompson MP is using 2 inner loops per time step with an effective time step of  45.00 seconds
+  0: PASS: fcstRUN phase 1, n_atmsteps =                0 time is         8.864495
+  0:  ---isec,seconds          90          90
+  0:  gfs diags time since last bucket empty:    90.0000000000000       time_intfull=
+  0:    90.0000000000000       kdt=           1
+  0:  in atmos_model update, fhzero=   3.00000000000000      fhour=  2.5000000E-02
+  0:   0.0000000E+00
+  0: PASS: fcstRUN phase 2, n_atmsteps =                0 time is         2.697666
+  0:   aft fcst run output time=          90 FBcount=           3 na=           1
+  0: At forecast hour     0.050 mean abs pgr change is       2.26388986 hPa/hr
+  0:   max abs change     -0.0010550337 bar  at  tile=1 i=266 j=747
+  0:   pgr at that point   1.0134484990 bar      lat=    8.459376 lon=  187.495598
+  0: PASS: fcstRUN phase 1, n_atmsteps =                1 time is         5.283505
+  0:  in atmos_model update, fhzero=   3.00000000000000      fhour=  5.0000001E-02
+  0:   0.0000000E+00
+  0: PASS: fcstRUN phase 2, n_atmsteps =                1 time is         0.387334
+  0: At forecast hour     0.075 mean abs pgr change is       2.25162007 hPa/hr
+  0:   max abs change     -0.0008044763 bar  at  tile=1 i=634 j=738
+  0:   pgr at that point   1.0144695111 bar      lat=    9.007196 lon=  172.751537
+  0: PASS: fcstRUN phase 1, n_atmsteps =                2 time is         4.730354
+  0:  in atmos_model update, fhzero=   3.00000000000000      fhour=  7.5000003E-02
+  0:   0.0000000E+00
+  0: PASS: fcstRUN phase 2, n_atmsteps =                2 time is         0.378711
+  0: At forecast hour     0.100 mean abs pgr change is       2.86549135 hPa/hr
+  0:   max abs change      0.0009174208 bar  at  tile=1 i=292 j=719
+  0:   pgr at that point   1.0160904446 bar      lat=    9.612903 lon=  186.491211
+  0: PASS: fcstRUN phase 1, n_atmsteps =                3 time is         4.718062
+  0:  in atmos_model update, fhzero=   3.00000000000000      fhour=  0.1000000    
+  0:   0.0000000E+00
+  0: PASS: fcstRUN phase 2, n_atmsteps =                3 time is         0.381490
+  0: At forecast hour     0.125 mean abs pgr change is       2.95812841 hPa/hr
+  0:   max abs change     -0.0007609461 bar  at  tile=1 i=389 j=620
+  0:   pgr at that point   1.0126508722 bar      lat=   13.671214 lon=  182.680161
+  0: PASS: fcstRUN phase 1, n_atmsteps =                4 time is         4.778403
+  0:  in atmos_model update, fhzero=   3.00000000000000      fhour=  0.1250000    
+  0:   0.0000000E+00
+  0: PASS: fcstRUN phase 2, n_atmsteps =                4 time is         0.383278
+  0: At forecast hour     0.150 mean abs pgr change is       2.55915649 hPa/hr
+  0:   max abs change      0.0007671094 bar  at  tile=1 i=463 j=703
+  0:   pgr at that point   1.0057582813 bar      lat=   10.428150 lon=  179.618141
+  0: PASS: fcstRUN phase 1, n_atmsteps =                5 time is         4.760265
+  0:  in atmos_model update, fhzero=   3.00000000000000      fhour=  0.1500000    
+  0:   0.0000000E+00
+  0: PASS: fcstRUN phase 2, n_atmsteps =                5 time is         0.400801
+  0: At forecast hour     0.175 mean abs pgr change is       2.31541320 hPa/hr
+  0:   max abs change      0.0011746875 bar  at  tile=1 i=457 j=711
+  0:   pgr at that point   1.0052206250 bar      lat=   10.106879 lon=  179.856411
+  0: PASS: fcstRUN phase 1, n_atmsteps =                6 time is         4.783954
+  0:  in atmos_model update, fhzero=   3.00000000000000      fhour=  0.1750000    
+  0:   0.0000000E+00
+  0: PASS: fcstRUN phase 2, n_atmsteps =                6 time is         0.397846
+  0: At forecast hour     0.200 mean abs pgr change is       2.25947612 hPa/hr
+  0:   max abs change      0.0018696875 bar  at  tile=1 i=453 j=714
+  0:   pgr at that point   1.0068218750 bar      lat=    9.985445 lon=  180.016022
+  0: PASS: fcstRUN phase 1, n_atmsteps =                7 time is         4.741673
+  0:  in atmos_model update, fhzero=   3.00000000000000      fhour=  0.2000000    
+  0:   0.0000000E+00
+  0: PASS: fcstRUN phase 2, n_atmsteps =                7 time is         0.392879
+  0: At forecast hour     0.225 mean abs pgr change is       2.17097720 hPa/hr
+  0:   max abs change      0.0006702685 bar  at  tile=1 i=437 j=591
+  0:   pgr at that point   1.0137659703 bar      lat=   14.865469 lon=  180.737568
+  0: PASS: fcstRUN phase 1, n_atmsteps =                8 time is         4.752079
+  0:  in atmos_model update, fhzero=   3.00000000000000      fhour=  0.2250000    
+  0:   0.0000000E+00
+  0: PASS: fcstRUN phase 2, n_atmsteps =                8 time is         0.380791
+  0: At forecast hour     0.250 mean abs pgr change is       2.04236803 hPa/hr
+  0:   max abs change     -0.0018861719 bar  at  tile=1 i=453 j=714
+  0:   pgr at that point   1.0054017969 bar      lat=    9.985445 lon=  180.016022
+  0: PASS: fcstRUN phase 1, n_atmsteps =                9 time is         4.750981
+  0:  in atmos_model update, fhzero=   3.00000000000000      fhour=  0.2500000    
+  0:   0.0000000E+00
+  0: PASS: fcstRUN phase 2, n_atmsteps =                9 time is         0.388566
+  0: 0 FORECAST DATE          24 AUG.  2019 AT  0 HRS 15.00 MINS
+  0:   JULIAN DAY             2458719  PLUS   0.510417
+  0:   RADIUS VECTOR          1.0111729
+  0:   RIGHT ASCENSION OF SUN  10.1769519 HRS, OR  10 HRS  10 MINS  37.0 SECS
+  0:   DECLINATION OF THE SUN  11.2620952 DEGS, OR   11 DEGS  15 MINS  43.5 SECS
+  0:   EQUATION OF TIME        -2.5986986 MINS, OR   -155.92 SECS, OR-0.011370 RADIANS
+  0:   SOLAR CONSTANT        1331.1286279 (DISTANCE AJUSTED)
+  0: 
+  0: 
+  0:     for cosz calculations: nswr,deltim,deltsw,dtswh =          10
+  0:    90.0000000000000        900.000000000000       0.250000000000000      
+  0:    anginc,nstp =  6.544984694978735E-003          10
+  0: At forecast hour     0.275 mean abs pgr change is       1.81261247 hPa/hr
+  0:   max abs change     -0.0024294531 bar  at  tile=1 i=453 j=714
+  0:   pgr at that point   1.0029723437 bar      lat=    9.985445 lon=  180.016022
+  0: PASS: fcstRUN phase 1, n_atmsteps =               10 time is        11.725187
+  0:  in atmos_model update, fhzero=   3.00000000000000      fhour=  0.2750000    
+  0:   0.0000000E+00
+  0: PASS: fcstRUN phase 2, n_atmsteps =               10 time is         0.374365
+  0: At forecast hour     0.300 mean abs pgr change is       1.87242476 hPa/hr
+  0:   max abs change     -0.0005698323 bar  at  tile=1 i=548 j=799
+  0:   pgr at that point   1.0138163432 bar      lat=    6.612203 lon=  176.206051
+  0: PASS: fcstRUN phase 1, n_atmsteps =               11 time is         4.800504
+  0:  in atmos_model update, fhzero=   3.00000000000000      fhour=  0.3000000    
+  0:   0.0000000E+00
+  0: PASS: fcstRUN phase 2, n_atmsteps =               11 time is         0.377587
+  0: At forecast hour     0.325 mean abs pgr change is       1.83320054 hPa/hr
+  0:   max abs change      0.0022689063 bar  at  tile=1 i=453 j=714
+  0:   pgr at that point   1.0049947656 bar      lat=    9.985445 lon=  180.016022
+  0: PASS: fcstRUN phase 1, n_atmsteps =               12 time is         4.686271
+  0:  in atmos_model update, fhzero=   3.00000000000000      fhour=  0.3250000    
+  0:   0.0000000E+00
+  0: PASS: fcstRUN phase 2, n_atmsteps =               12 time is         0.378728
+  0: At forecast hour     0.350 mean abs pgr change is       1.74777721 hPa/hr
+  0:   max abs change      0.0020280469 bar  at  tile=1 i=453 j=714
+  0:   pgr at that point   1.0070228125 bar      lat=    9.985445 lon=  180.016022
+  0: PASS: fcstRUN phase 1, n_atmsteps =               13 time is         4.648308
+  0:  in atmos_model update, fhzero=   3.00000000000000      fhour=  0.3500000    
+  0:   0.0000000E+00
+  0: PASS: fcstRUN phase 2, n_atmsteps =               13 time is         0.389416
+  0: At forecast hour     0.375 mean abs pgr change is       1.71670104 hPa/hr
+  0:   max abs change      0.0007770313 bar  at  tile=1 i=459 j=725
+  0:   pgr at that point   1.0070728906 bar      lat=    9.550366 lon=  179.770119
+  0: PASS: fcstRUN phase 1, n_atmsteps =               14 time is         4.817459
+  0:  in atmos_model update, fhzero=   3.00000000000000      fhour=  0.3750000    
+  0:   0.0000000E+00
+  0: PASS: fcstRUN phase 2, n_atmsteps =               14 time is         0.387674
+  0: At forecast hour     0.400 mean abs pgr change is       1.72348069 hPa/hr
+  0:   max abs change     -0.0008082812 bar  at  tile=1 i=422 j=740
+  0:   pgr at that point   1.0084114060 bar      lat=    8.931211 lon=  181.246773
+  0: PASS: fcstRUN phase 1, n_atmsteps =               15 time is         4.702782
+  0:  in atmos_model update, fhzero=   3.00000000000000      fhour=  0.4000000    
+  0:   0.0000000E+00
+  0: PASS: fcstRUN phase 2, n_atmsteps =               15 time is         0.394798
+  0: At forecast hour     0.425 mean abs pgr change is       1.69698959 hPa/hr
+  0:   max abs change     -0.0007872656 bar  at  tile=1 i=455 j=754
+  0:   pgr at that point   1.0076607812 bar      lat=    8.393023 lon=  179.918591
+  0: PASS: fcstRUN phase 1, n_atmsteps =               16 time is         4.631117
+  0:  in atmos_model update, fhzero=   3.00000000000000      fhour=  0.4250000    
+  0:   0.0000000E+00
+  0: PASS: fcstRUN phase 2, n_atmsteps =               16 time is         0.390366
+  0: At forecast hour     0.450 mean abs pgr change is       1.63603397 hPa/hr
+  0:   max abs change      0.0005933630 bar  at  tile=1 i=481 j=778
+  0:   pgr at that point   1.0118486504 bar      lat=    7.445812 lon=  178.873043
+  0: PASS: fcstRUN phase 1, n_atmsteps =               17 time is         4.654313
+  0:  in atmos_model update, fhzero=   3.00000000000000      fhour=  0.4500000    
+  0:   0.0000000E+00
+  0: PASS: fcstRUN phase 2, n_atmsteps =               17 time is         0.383313
+  0: At forecast hour     0.475 mean abs pgr change is       1.58569587 hPa/hr
+  0:   max abs change     -0.0009314063 bar  at  tile=1 i=452 j=736
+  0:   pgr at that point   1.0068189063 bar      lat=    9.108813 lon=  180.046322
+  0: PASS: fcstRUN phase 1, n_atmsteps =               18 time is         4.668140
+  0:  in atmos_model update, fhzero=   3.00000000000000      fhour=  0.4750000    
+  0:   0.0000000E+00
+  0: PASS: fcstRUN phase 2, n_atmsteps =               18 time is         0.382731
+  0: At forecast hour     0.500 mean abs pgr change is       1.61026564 hPa/hr
+  0:   max abs change     -0.0009922656 bar  at  tile=1 i=452 j=733
+  0:   pgr at that point   1.0057148438 bar      lat=    9.228316 lon=  180.047649
+  0: PASS: fcstRUN phase 1, n_atmsteps =               19 time is         4.623000
+  0:  in atmos_model update, fhzero=   3.00000000000000      fhour=  0.5000000    
+  0:   0.0000000E+00
+  0: PASS: fcstRUN phase 2, n_atmsteps =               19 time is         0.394628
+  0: 0 FORECAST DATE          24 AUG.  2019 AT  0 HRS 30.00 MINS
+  0:   JULIAN DAY             2458719  PLUS   0.520833
+  0:   RADIUS VECTOR          1.0111707
+  0:   RIGHT ASCENSION OF SUN  10.1775904 HRS, OR  10 HRS  10 MINS  39.3 SECS
+  0:   DECLINATION OF THE SUN  11.2585481 DEGS, OR   11 DEGS  15 MINS  30.8 SECS
+  0:   EQUATION OF TIME        -2.5959456 MINS, OR   -155.76 SECS, OR-0.011358 RADIANS
+  0:   SOLAR CONSTANT        1331.1344198 (DISTANCE AJUSTED)
+  0: 
+  0: 
+  0:     for cosz calculations: nswr,deltim,deltsw,dtswh =          10
+  0:    90.0000000000000        900.000000000000       0.250000000000000      
+  0:    anginc,nstp =  6.544984694978735E-003          10
+  0: At forecast hour     0.525 mean abs pgr change is       1.67599794 hPa/hr
+  0:   max abs change     -0.0011163281 bar  at  tile=1 i=453 j=723
+  0:   pgr at that point   1.0045464063 bar      lat=    9.627095 lon=  180.011959
+  0: PASS: fcstRUN phase 1, n_atmsteps =               20 time is        10.979115
+  0:  in atmos_model update, fhzero=   3.00000000000000      fhour=  0.5250000    
+  0:   0.0000000E+00
+  0: PASS: fcstRUN phase 2, n_atmsteps =               20 time is         0.355675
+  0: At forecast hour     0.550 mean abs pgr change is       1.57594600 hPa/hr
+  0:   max abs change     -0.0018007813 bar  at  tile=1 i=454 j=714
+  0:   pgr at that point   1.0028109375 bar      lat=    9.985954 lon=  179.975796
+  0: PASS: fcstRUN phase 1, n_atmsteps =               21 time is         4.595641
+  0:  in atmos_model update, fhzero=   3.00000000000000      fhour=  0.5500000    
+  0:   0.0000000E+00
+  0: PASS: fcstRUN phase 2, n_atmsteps =               21 time is         0.387414
+  0: At forecast hour     0.575 mean abs pgr change is       1.48626144 hPa/hr
+  0:   max abs change     -0.0014961719 bar  at  tile=1 i=454 j=714
+  0:   pgr at that point   1.0013147656 bar      lat=    9.985954 lon=  179.975796
+  0: PASS: fcstRUN phase 1, n_atmsteps =               22 time is         4.565011
+  0:  in atmos_model update, fhzero=   3.00000000000000      fhour=  0.5750000    
+  0:   0.0000000E+00
+  0: PASS: fcstRUN phase 2, n_atmsteps =               22 time is         0.390205
+  0: At forecast hour     0.600 mean abs pgr change is       1.53971258 hPa/hr
+  0:   max abs change     -0.0006604662 bar  at  tile=1 i=462 j=765
+  0:   pgr at that point   1.0099893552 bar      lat=    7.957610 lon=  179.634724
+  0: PASS: fcstRUN phase 1, n_atmsteps =               23 time is         4.586505
+  0:  in atmos_model update, fhzero=   3.00000000000000      fhour=  0.6000000    
+  0:   0.0000000E+00
+  0: PASS: fcstRUN phase 2, n_atmsteps =               23 time is         0.422844
+  0: At forecast hour     0.625 mean abs pgr change is       1.54053505 hPa/hr
+  0:   max abs change      0.0009132813 bar  at  tile=1 i=454 j=714
+  0:   pgr at that point   1.0021425781 bar      lat=    9.985954 lon=  179.975796
+  0: PASS: fcstRUN phase 1, n_atmsteps =               24 time is         4.617494
+  0:  in atmos_model update, fhzero=   3.00000000000000      fhour=  0.6250000    
+  0:   0.0000000E+00
+  0: PASS: fcstRUN phase 2, n_atmsteps =               24 time is         0.392583
+  0: At forecast hour     0.650 mean abs pgr change is       1.54675818 hPa/hr
+  0:   max abs change      0.0010795313 bar  at  tile=1 i=464 j=715
+  0:   pgr at that point   1.0038343750 bar      lat=    9.950846 lon=  179.573154
+  0: PASS: fcstRUN phase 1, n_atmsteps =               25 time is         4.579424
+  0:  in atmos_model update, fhzero=   3.00000000000000      fhour=  0.6500000    
+  0:   0.0000000E+00
+  0: PASS: fcstRUN phase 2, n_atmsteps =               25 time is         0.382026
+  0: At forecast hour     0.675 mean abs pgr change is       1.52110312 hPa/hr
+  0:   max abs change      0.0013978906 bar  at  tile=1 i=443 j=710
+  0:   pgr at that point   1.0052667188 bar      lat=   10.139169 lon=  180.420395
+  0: PASS: fcstRUN phase 1, n_atmsteps =               26 time is         4.583770
+  0:  in atmos_model update, fhzero=   3.00000000000000      fhour=  0.6750000    
+  0:   0.0000000E+00
+  0: PASS: fcstRUN phase 2, n_atmsteps =               26 time is         0.377924
+  0: At forecast hour     0.700 mean abs pgr change is       1.47271370 hPa/hr
+  0:   max abs change      0.0016947656 bar  at  tile=1 i=453 j=714
+  0:   pgr at that point   1.0059391406 bar      lat=    9.985445 lon=  180.016022
+  0: PASS: fcstRUN phase 1, n_atmsteps =               27 time is         4.603898
+  0:  in atmos_model update, fhzero=   3.00000000000000      fhour=  0.7000000    
+  0:   0.0000000E+00
+  0: PASS: fcstRUN phase 2, n_atmsteps =               27 time is         0.377674
+  0: At forecast hour     0.725 mean abs pgr change is       1.44889126 hPa/hr
+  0:   max abs change      0.0014287500 bar  at  tile=1 i=453 j=714
+  0:   pgr at that point   1.0073678906 bar      lat=    9.985445 lon=  180.016022
+  0: PASS: fcstRUN phase 1, n_atmsteps =               28 time is         4.565827
+  0:  in atmos_model update, fhzero=   3.00000000000000      fhour=  0.7250000    
+  0:   0.0000000E+00
+  0: PASS: fcstRUN phase 2, n_atmsteps =               28 time is         0.374886
+  0: At forecast hour     0.750 mean abs pgr change is       1.48651990 hPa/hr
+  0:   max abs change     -0.0004977344 bar  at  tile=1 i=441 j=716
+  0:   pgr at that point   1.0063412500 bar      lat=    9.899163 lon=  180.497707
+  0: PASS: fcstRUN phase 1, n_atmsteps =               29 time is         4.587026
+  0:  in atmos_model update, fhzero=   3.00000000000000      fhour=  0.7500000    
+  0:   0.0000000E+00
+  0: PASS: fcstRUN phase 2, n_atmsteps =               29 time is         0.406956
+  0: 0 FORECAST DATE          24 AUG.  2019 AT  0 HRS 45.00 MINS
+  0:   JULIAN DAY             2458719  PLUS   0.531250
+  0:   RADIUS VECTOR          1.0111685
+  0:   RIGHT ASCENSION OF SUN  10.1782288 HRS, OR  10 HRS  10 MINS  41.6 SECS
+  0:   DECLINATION OF THE SUN  11.2550008 DEGS, OR   11 DEGS  15 MINS  18.0 SECS
+  0:   EQUATION OF TIME        -2.5931918 MINS, OR   -155.59 SECS, OR-0.011346 RADIANS
+  0:   SOLAR CONSTANT        1331.1402127 (DISTANCE AJUSTED)
+  0: 
+  0: 
+  0:     for cosz calculations: nswr,deltim,deltsw,dtswh =          10
+  0:    90.0000000000000        900.000000000000       0.250000000000000      
+  0:    anginc,nstp =  6.544984694978735E-003          10
+  0: At forecast hour     0.775 mean abs pgr change is       1.50618360 hPa/hr
+  0:   max abs change     -0.0020899219 bar  at  tile=1 i=453 j=714
+  0:   pgr at that point   1.0049889063 bar      lat=    9.985445 lon=  180.016022
+  0: PASS: fcstRUN phase 1, n_atmsteps =               30 time is         9.885049
+  0:  in atmos_model update, fhzero=   3.00000000000000      fhour=  0.7750000    
+  0:   0.0000000E+00
+  0: PASS: fcstRUN phase 2, n_atmsteps =               30 time is         0.358439
+  0: At forecast hour     0.800 mean abs pgr change is       1.50081031 hPa/hr
+  0:   max abs change     -0.0022311719 bar  at  tile=1 i=453 j=713
+  0:   pgr at that point   1.0027629688 bar      lat=   10.025256 lon=  180.016483
+  0: PASS: fcstRUN phase 1, n_atmsteps =               31 time is         4.611066
+  0:  in atmos_model update, fhzero=   3.00000000000000      fhour=  0.8000000    
+  0:   0.0000000E+00
+  0: PASS: fcstRUN phase 2, n_atmsteps =               31 time is         0.377118
+  0: At forecast hour     0.825 mean abs pgr change is       1.49196593 hPa/hr
+  0:   max abs change     -0.0009242188 bar  at  tile=1 i=459 j=707
+  0:   pgr at that point   1.0027705469 bar      lat=   10.267077 lon=  179.777611
+  0: PASS: fcstRUN phase 1, n_atmsteps =               32 time is         4.567083
+  0:  in atmos_model update, fhzero=   3.00000000000000      fhour=  0.8250000    
+  0:   0.0000000E+00
+  0: PASS: fcstRUN phase 2, n_atmsteps =               32 time is         0.383524
+  0: At forecast hour     0.850 mean abs pgr change is       1.48012575 hPa/hr
+  0:   max abs change     -0.0006785156 bar  at  tile=1 i=465 j=698
+  0:   pgr at that point   1.0043764063 bar      lat=   10.628053 lon=  179.539513
+  0: PASS: fcstRUN phase 1, n_atmsteps =               33 time is         4.567132
+  0:  in atmos_model update, fhzero=   3.00000000000000      fhour=  0.8500000    
+  0:   0.0000000E+00
+  0: PASS: fcstRUN phase 2, n_atmsteps =               33 time is         0.387197
+  0: At forecast hour     0.875 mean abs pgr change is       1.48273760 hPa/hr
+  0:   max abs change      0.0008402344 bar  at  tile=1 i=453 j=714
+  0:   pgr at that point   1.0032191406 bar      lat=    9.985445 lon=  180.016022
+  0: PASS: fcstRUN phase 1, n_atmsteps =               34 time is         4.589072
+  0:  in atmos_model update, fhzero=   3.00000000000000      fhour=  0.8750000    
+  0:   0.0000000E+00
+  0: PASS: fcstRUN phase 2, n_atmsteps =               34 time is         0.378967
+  0: At forecast hour     0.900 mean abs pgr change is       1.52168384 hPa/hr
+  0:   max abs change      0.0005807813 bar  at  tile=1 i=453 j=713
+  0:   pgr at that point   1.0037914063 bar      lat=   10.025256 lon=  180.016483
+  0: PASS: fcstRUN phase 1, n_atmsteps =               35 time is         4.612427
+  0:  in atmos_model update, fhzero=   3.00000000000000      fhour=  0.9000000    
+  0:   0.0000000E+00
+  0: PASS: fcstRUN phase 2, n_atmsteps =               35 time is         0.382470
+  0: At forecast hour     0.925 mean abs pgr change is       1.57659786 hPa/hr
+  0:   max abs change     -0.0005006250 bar  at  tile=1 i=471 j=678
+  0:   pgr at that point   1.0076233594 bar      lat=   11.426444 lon=  179.304806
+  0: PASS: fcstRUN phase 1, n_atmsteps =               36 time is         4.608645
+  0:  in atmos_model update, fhzero=   3.00000000000000      fhour=  0.9250000    
+  0:   0.0000000E+00
+  0: PASS: fcstRUN phase 2, n_atmsteps =               36 time is         0.382705
+  0: At forecast hour     0.950 mean abs pgr change is       1.61507796 hPa/hr
+  0:   max abs change     -0.0004982811 bar  at  tile=1 i=477 j=674
+  0:   pgr at that point   1.0082978117 bar      lat=   11.587870 lon=  179.063377
+  0: PASS: fcstRUN phase 1, n_atmsteps =               37 time is         4.643860
+  0:  in atmos_model update, fhzero=   3.00000000000000      fhour=  0.9500000    
+  0:   0.0000000E+00
+  0: PASS: fcstRUN phase 2, n_atmsteps =               37 time is         0.396938
+  0: At forecast hour     0.975 mean abs pgr change is       1.62235817 hPa/hr
+  0:   max abs change     -0.0004528902 bar  at  tile=1 i=483 j=672
+  0:   pgr at that point   1.0086231217 bar      lat=   11.669466 lon=  178.821056
+  0: PASS: fcstRUN phase 1, n_atmsteps =               38 time is         4.584168
+  0:  in atmos_model update, fhzero=   3.00000000000000      fhour=  0.9750000    
+  0:   0.0000000E+00
+  0: PASS: fcstRUN phase 2, n_atmsteps =               38 time is         0.395960
+  0: At forecast hour     1.000 mean abs pgr change is       1.60430046 hPa/hr
+  0:   max abs change     -0.0003790616 bar  at  tile=1 i=489 j=669
+  0:   pgr at that point   1.0092026499 bar      lat=   11.790586 lon=  178.578831
+  0: PASS: fcstRUN phase 1, n_atmsteps =               39 time is         4.618676
+  0:  in atmos_model update, fhzero=   3.00000000000000      fhour=   1.000000    
+  0:   0.0000000E+00
+  0: PASS: fcstRUN phase 2, n_atmsteps =               39 time is         0.377553
+  0: 0 FORECAST DATE          24 AUG.  2019 AT  1 HRS  0.00 MINS
+  0:   JULIAN DAY             2458719  PLUS   0.541667
+  0:   RADIUS VECTOR          1.0111663
+  0:   RIGHT ASCENSION OF SUN  10.1788672 HRS, OR  10 HRS  10 MINS  43.9 SECS
+  0:   DECLINATION OF THE SUN  11.2514531 DEGS, OR   11 DEGS  15 MINS   5.2 SECS
+  0:   EQUATION OF TIME        -2.5904373 MINS, OR   -155.43 SECS, OR-0.011334 RADIANS
+  0:   SOLAR CONSTANT        1331.1460065 (DISTANCE AJUSTED)
+  0: 
+  0: 
+  0:     for cosz calculations: nswr,deltim,deltsw,dtswh =          10
+  0:    90.0000000000000        900.000000000000       0.250000000000000      
+  0:    anginc,nstp =  6.544984694978735E-003          10
+  0: At forecast hour     1.025 mean abs pgr change is       1.57856107 hPa/hr
+  0:   max abs change     -0.0003321869 bar  at  tile=1 i=487 j=658
+  0:   pgr at that point   1.0101634329 bar      lat=   12.227611 lon=  178.662827
+  0: PASS: fcstRUN phase 1, n_atmsteps =               40 time is        10.434487
+  0:  in atmos_model update, fhzero=   3.00000000000000      fhour=   1.025000    
+  0:   0.0000000E+00
+  0: PASS: fcstRUN phase 2, n_atmsteps =               40 time is         0.341188
+  0: At forecast hour     1.050 mean abs pgr change is       1.56676251 hPa/hr
+  0:   max abs change     -0.0003189062 bar  at  tile=1 i=481 j=648
+  0:   pgr at that point   1.0107607808 bar      lat=   12.623437 lon=  178.909576
+  0: PASS: fcstRUN phase 1, n_atmsteps =               41 time is         4.590537
+  0:  in atmos_model update, fhzero=   3.00000000000000      fhour=   1.050000    
+  0:   0.0000000E+00
+  0: PASS: fcstRUN phase 2, n_atmsteps =               41 time is         0.395059
+  0: At forecast hour     1.075 mean abs pgr change is       1.55891164 hPa/hr
+  0:   max abs change     -0.0003149219 bar  at  tile=1 i=484 j=643
+  0:   pgr at that point   1.0111874999 bar      lat=   12.823252 lon=  178.789082
+  0: PASS: fcstRUN phase 1, n_atmsteps =               42 time is         4.596906
+  0:  in atmos_model update, fhzero=   3.00000000000000      fhour=   1.075000    
+  0:   0.0000000E+00
+  0: PASS: fcstRUN phase 2, n_atmsteps =               42 time is         0.395156
+  0: At forecast hour     1.100 mean abs pgr change is       1.54692176 hPa/hr
+  0:   max abs change     -0.0003055018 bar  at  tile=1 i=399 j=781
+  0:   pgr at that point   1.0120430905 bar      lat=    7.280171 lon=  182.139351
+  0: PASS: fcstRUN phase 1, n_atmsteps =               43 time is         4.618394
+  0:  in atmos_model update, fhzero=   3.00000000000000      fhour=   1.100000    
+  0:   0.0000000E+00
+  0: PASS: fcstRUN phase 2, n_atmsteps =               43 time is         0.376880
+  0: At forecast hour     1.125 mean abs pgr change is       1.53417290 hPa/hr
+  0:   max abs change     -0.0003196320 bar  at  tile=1 i=506 j=787
+  0:   pgr at that point   1.0120009863 bar      lat=    7.091809 lon=  177.875984
+  0: PASS: fcstRUN phase 1, n_atmsteps =               44 time is         4.635520
+  0:  in atmos_model update, fhzero=   3.00000000000000      fhour=   1.125000    
+  0:   0.0000000E+00
+  0: PASS: fcstRUN phase 2, n_atmsteps =               44 time is         0.385323
+  0: At forecast hour     1.150 mean abs pgr change is       1.52691794 hPa/hr
+  0:   max abs change     -0.0003032376 bar  at  tile=1 i=511 j=788
+  0:   pgr at that point   1.0120104308 bar      lat=    7.052436 lon=  177.676933
+  0: PASS: fcstRUN phase 1, n_atmsteps =               45 time is         4.639626
+  0:  in atmos_model update, fhzero=   3.00000000000000      fhour=   1.150000    
+  0:   0.0000000E+00
+  0: PASS: fcstRUN phase 2, n_atmsteps =               45 time is         0.381641
+  0: At forecast hour     1.175 mean abs pgr change is       1.52454309 hPa/hr
+  0:   max abs change     -0.0002931727 bar  at  tile=1 i=372 j=773
+  0:   pgr at that point   1.0123747152 bar      lat=    7.573964 lon=  183.222389
+  0: PASS: fcstRUN phase 1, n_atmsteps =               46 time is         4.580011
+  0:  in atmos_model update, fhzero=   3.00000000000000      fhour=   1.175000    
+  0:   0.0000000E+00
+  0: PASS: fcstRUN phase 2, n_atmsteps =               46 time is         0.375284
+  0: At forecast hour     1.200 mean abs pgr change is       1.52551703 hPa/hr
+  0:   max abs change     -0.0002899067 bar  at  tile=1 i=535 j=785
+  0:   pgr at that point   1.0126553261 bar      lat=    7.172600 lon=  176.721851
+  0: PASS: fcstRUN phase 1, n_atmsteps =               47 time is         4.586660
+  0:  in atmos_model update, fhzero=   3.00000000000000      fhour=   1.200000    
+  0:   0.0000000E+00
+  0: PASS: fcstRUN phase 2, n_atmsteps =               47 time is         0.396656
+  0: At forecast hour     1.225 mean abs pgr change is       1.53062586 hPa/hr
+  0:   max abs change     -0.0002930439 bar  at  tile=1 i=548 j=776
+  0:   pgr at that point   1.0128399234 bar      lat=    7.530475 lon=  176.203293
+  0: PASS: fcstRUN phase 1, n_atmsteps =               48 time is         4.589041
+  0:  in atmos_model update, fhzero=   3.00000000000000      fhour=   1.225000    
+  0:   0.0000000E+00
+  0: PASS: fcstRUN phase 2, n_atmsteps =               48 time is         0.383843
+  0: At forecast hour     1.250 mean abs pgr change is       1.53113506 hPa/hr
+  0:   max abs change     -0.0002838871 bar  at  tile=1 i=561 j=762
+  0:   pgr at that point   1.0129745486 bar      lat=    8.086524 lon=  175.682415
+  0: PASS: fcstRUN phase 1, n_atmsteps =               49 time is         4.635258
+  0:  in atmos_model update, fhzero=   3.00000000000000      fhour=   1.250000    
+  0:   0.0000000E+00
+  0: PASS: fcstRUN phase 2, n_atmsteps =               49 time is         0.397028
+  0: 0 FORECAST DATE          24 AUG.  2019 AT  1 HRS 15.00 MINS
+  0:   JULIAN DAY             2458719  PLUS   0.552083
+  0:   RADIUS VECTOR          1.0111641
+  0:   RIGHT ASCENSION OF SUN  10.1795056 HRS, OR  10 HRS  10 MINS  46.2 SECS
+  0:   DECLINATION OF THE SUN  11.2479050 DEGS, OR   11 DEGS  14 MINS  52.5 SECS
+  0:   EQUATION OF TIME        -2.5876820 MINS, OR   -155.26 SECS, OR-0.011322 RADIANS
+  0:   SOLAR CONSTANT        1331.1518013 (DISTANCE AJUSTED)
+  0: 
+  0: 
+  0:     for cosz calculations: nswr,deltim,deltsw,dtswh =          10
+  0:    90.0000000000000        900.000000000000       0.250000000000000      
+  0:    anginc,nstp =  6.544984694978735E-003          10
+  0: At forecast hour     1.275 mean abs pgr change is       1.51870513 hPa/hr
+  0:   max abs change     -0.0002595163 bar  at  tile=1 i=463 j=589
+  0:   pgr at that point   1.0134161853 bar      lat=   14.960842 lon=  179.669811
+  0: PASS: fcstRUN phase 1, n_atmsteps =               50 time is        10.493719
+  0:  in atmos_model update, fhzero=   3.00000000000000      fhour=   1.275000    
+  0:   0.0000000E+00
+  0: PASS: fcstRUN phase 2, n_atmsteps =               50 time is         0.396215
+  0: At forecast hour     1.300 mean abs pgr change is       1.49089940 hPa/hr
+  0:   max abs change     -0.0002779067 bar  at  tile=1 i=324 j=750
+  0:   pgr at that point   1.0133156821 bar      lat=    8.431407 lon=  185.165184
+  0: PASS: fcstRUN phase 1, n_atmsteps =               51 time is         4.669699
+  0:  in atmos_model update, fhzero=   3.00000000000000      fhour=   1.300000    
+  0:   0.0000000E+00
+  0: PASS: fcstRUN phase 2, n_atmsteps =               51 time is         0.381562
+  0: At forecast hour     1.325 mean abs pgr change is       1.46387564 hPa/hr
+  0:   max abs change     -0.0002643111 bar  at  tile=1 i=319 j=730
+  0:   pgr at that point   1.0132102942 bar      lat=    9.218331 lon=  185.389942
+  0: PASS: fcstRUN phase 1, n_atmsteps =               52 time is         4.619246
+  0:  in atmos_model update, fhzero=   3.00000000000000      fhour=   1.325000    
+  0:   0.0000000E+00
+  0: PASS: fcstRUN phase 2, n_atmsteps =               52 time is         0.388437
+  0: At forecast hour     1.350 mean abs pgr change is       1.44551038 hPa/hr
+  0:   max abs change     -0.0002555521 bar  at  tile=1 i=313 j=755
+  0:   pgr at that point   1.0133024940 bar      lat=    8.217438 lon=  185.599995
+  0: PASS: fcstRUN phase 1, n_atmsteps =               53 time is         4.667984
+  0:  in atmos_model update, fhzero=   3.00000000000000      fhour=   1.350000    
+  0:   0.0000000E+00
+  0: PASS: fcstRUN phase 2, n_atmsteps =               53 time is         0.381461
+  0: At forecast hour     1.375 mean abs pgr change is       1.43830428 hPa/hr
+  0:   max abs change     -0.0002303914 bar  at  tile=1 i=314 j=658
+  0:   pgr at that point   1.0136543740 bar      lat=   12.064543 lon=  185.690197
+  0: PASS: fcstRUN phase 1, n_atmsteps =               54 time is         4.609765
+  0:  in atmos_model update, fhzero=   3.00000000000000      fhour=   1.375000    
+  0:   0.0000000E+00
+  0: PASS: fcstRUN phase 2, n_atmsteps =               54 time is         0.366744
+  0: At forecast hour     1.400 mean abs pgr change is       1.44146581 hPa/hr
+  0:   max abs change     -0.0002293937 bar  at  tile=1 i=613 j=723
+  0:   pgr at that point   1.0139288079 bar      lat=    9.618684 lon=  173.585438
+  0: PASS: fcstRUN phase 1, n_atmsteps =               55 time is         4.632392
+  0:  in atmos_model update, fhzero=   3.00000000000000      fhour=   1.400000    
+  0:   0.0000000E+00
+  0: PASS: fcstRUN phase 2, n_atmsteps =               55 time is         0.373903
+  0: At forecast hour     1.425 mean abs pgr change is       1.44630676 hPa/hr
+  0:   max abs change     -0.0002301109 bar  at  tile=1 i=617 j=707
+  0:   pgr at that point   1.0139712062 bar      lat=   10.252979 lon=  173.415546
+  0: PASS: fcstRUN phase 1, n_atmsteps =               56 time is         4.595667
+  0:  in atmos_model update, fhzero=   3.00000000000000      fhour=   1.425000    
+  0:   0.0000000E+00
+  0: PASS: fcstRUN phase 2, n_atmsteps =               56 time is         0.390801
+  0: At forecast hour     1.450 mean abs pgr change is       1.44433173 hPa/hr
+  0:   max abs change     -0.0002241360 bar  at  tile=1 i=345 j=580
+  0:   pgr at that point   1.0141439095 bar      lat=   15.200758 lon=  184.536983
+  0: PASS: fcstRUN phase 1, n_atmsteps =               57 time is         4.632818
+  0:  in atmos_model update, fhzero=   3.00000000000000      fhour=   1.450000    
+  0:   0.0000000E+00
+  0: PASS: fcstRUN phase 2, n_atmsteps =               57 time is         0.391295
+  0: At forecast hour     1.475 mean abs pgr change is       1.43464725 hPa/hr
+  0:   max abs change     -0.0002203909 bar  at  tile=1 i=342 j=575
+  0:   pgr at that point   1.0141196053 bar      lat=   15.394248 lon=  184.668224
+  0: PASS: fcstRUN phase 1, n_atmsteps =               58 time is         4.655804
+  0:  in atmos_model update, fhzero=   3.00000000000000      fhour=   1.475000    
+  0:   0.0000000E+00
+  0: PASS: fcstRUN phase 2, n_atmsteps =               58 time is         0.411271
+  0: At forecast hour     1.500 mean abs pgr change is       1.42740563 hPa/hr
+  0:   max abs change     -0.0002241455 bar  at  tile=1 i=636 j=697
+  0:   pgr at that point   1.0140657677 bar      lat=   10.636990 lon=  172.643105
+  0: PASS: fcstRUN phase 1, n_atmsteps =               59 time is         4.553800
+  0:  in atmos_model update, fhzero=   3.00000000000000      fhour=   1.500000    
+  0:   0.0000000E+00
+  0: PASS: fcstRUN phase 2, n_atmsteps =               59 time is         0.407487
+  0: 0 FORECAST DATE          24 AUG.  2019 AT  1 HRS 30.00 MINS
+  0:   JULIAN DAY             2458719  PLUS   0.562500
+  0:   RADIUS VECTOR          1.0111619
+  0:   RIGHT ASCENSION OF SUN  10.1801440 HRS, OR  10 HRS  10 MINS  48.5 SECS
+  0:   DECLINATION OF THE SUN  11.2443567 DEGS, OR   11 DEGS  14 MINS  39.7 SECS
+  0:   EQUATION OF TIME        -2.5849259 MINS, OR   -155.10 SECS, OR-0.011310 RADIANS
+  0:   SOLAR CONSTANT        1331.1575971 (DISTANCE AJUSTED)
+  0: 
+  0: 
+  0:     for cosz calculations: nswr,deltim,deltsw,dtswh =          10
+  0:    90.0000000000000        900.000000000000       0.250000000000000      
+  0:    anginc,nstp =  6.544984694978735E-003          10
+  0: At forecast hour     1.525 mean abs pgr change is       1.42137075 hPa/hr
+  0:   max abs change     -0.0002232545 bar  at  tile=1 i=641 j=684
+  0:   pgr at that point   1.0141984634 bar      lat=   11.149726 lon=  172.431446
+  0: PASS: fcstRUN phase 1, n_atmsteps =               60 time is         9.936197
+  0:  in atmos_model update, fhzero=   3.00000000000000      fhour=   1.525000    
+  0:   0.0000000E+00
+  0: PASS: fcstRUN phase 2, n_atmsteps =               60 time is         0.396508
+  0: At forecast hour     1.550 mean abs pgr change is       1.41155191 hPa/hr
+  0:   max abs change     -0.0002214817 bar  at  tile=1 i=644 j=673
+  0:   pgr at that point   1.0142716422 bar      lat=   11.584306 lon=  172.301315
+  0: PASS: fcstRUN phase 1, n_atmsteps =               61 time is         4.585701
+  0:  in atmos_model update, fhzero=   3.00000000000000      fhour=   1.550000    
+  0:   0.0000000E+00
+  0: PASS: fcstRUN phase 2, n_atmsteps =               61 time is         0.385950
+  0: At forecast hour     1.575 mean abs pgr change is       1.39628460 hPa/hr
+  0:   max abs change     -0.0002394682 bar  at  tile=1 i=652 j=683
+  0:   pgr at that point   1.0141345151 bar      lat=   11.179712 lon=  171.985786
+  0: PASS: fcstRUN phase 1, n_atmsteps =               62 time is         4.550224
+  0:  in atmos_model update, fhzero=   3.00000000000000      fhour=   1.575000    
+  0:   0.0000000E+00
+  0: PASS: fcstRUN phase 2, n_atmsteps =               62 time is         0.413138
+  0: At forecast hour     1.600 mean abs pgr change is       1.37827865 hPa/hr
+  0:   max abs change     -0.0002462030 bar  at  tile=1 i=655 j=672
+  0:   pgr at that point   1.0141528568 bar      lat=   11.613914 lon=  171.854786
+  0: PASS: fcstRUN phase 1, n_atmsteps =               63 time is         4.578418
+  0:  in atmos_model update, fhzero=   3.00000000000000      fhour=   1.600000    
+  0:   0.0000000E+00
+  0: PASS: fcstRUN phase 2, n_atmsteps =               63 time is         0.395284
+  0: At forecast hour     1.625 mean abs pgr change is       1.35336522 hPa/hr
+  0:   max abs change     -0.0002226718 bar  at  tile=1 i=658 j=670
+  0:   pgr at that point   1.0140574063 bar      lat=   11.690436 lon=  171.731403
+  0: PASS: fcstRUN phase 1, n_atmsteps =               64 time is         4.600908
+  0:  in atmos_model update, fhzero=   3.00000000000000      fhour=   1.625000    
+  0:   0.0000000E+00
+  0: PASS: fcstRUN phase 2, n_atmsteps =               64 time is         0.381859
+  0: At forecast hour     1.650 mean abs pgr change is       1.32934890 hPa/hr
+  0:   max abs change     -0.0002139291 bar  at  tile=1 i=672 j=655
+  0:   pgr at that point   1.0142573983 bar      lat=   12.271354 lon=  171.148499
+  0: PASS: fcstRUN phase 1, n_atmsteps =               65 time is         4.592493
+  0:  in atmos_model update, fhzero=   3.00000000000000      fhour=   1.650000    
+  0:   0.0000000E+00
+  0: PASS: fcstRUN phase 2, n_atmsteps =               65 time is         0.395300
+  0: At forecast hour     1.675 mean abs pgr change is       1.30408571 hPa/hr
+  0:   max abs change     -0.0002267452 bar  at  tile=1 i=671 j=656
+  0:   pgr at that point   1.0140241922 bar      lat=   12.232767 lon=  171.190178
+  0: PASS: fcstRUN phase 1, n_atmsteps =               66 time is         4.602199
+  0:  in atmos_model update, fhzero=   3.00000000000000      fhour=   1.675000    
+  0:   0.0000000E+00
+  0: PASS: fcstRUN phase 2, n_atmsteps =               66 time is         0.388574
+  0: At forecast hour     1.700 mean abs pgr change is       1.28218124 hPa/hr
+  0:   max abs change     -0.0002096347 bar  at  tile=1 i=675 j=650
+  0:   pgr at that point   1.0140068391 bar      lat=   12.466421 lon=  171.021225
+  0: PASS: fcstRUN phase 1, n_atmsteps =               67 time is         4.624934
+  0:  in atmos_model update, fhzero=   3.00000000000000      fhour=   1.700000    
+  0:   0.0000000E+00
+  0: PASS: fcstRUN phase 2, n_atmsteps =               67 time is         0.388376
+  0: At forecast hour     1.725 mean abs pgr change is       1.26518110 hPa/hr
+  0:   max abs change     -0.0001924510 bar  at  tile=1 i=681 j=638
+  0:   pgr at that point   1.0140993423 bar      lat=   12.935513 lon=  170.763603
+  0: PASS: fcstRUN phase 1, n_atmsteps =               68 time is         4.600207
+  0:  in atmos_model update, fhzero=   3.00000000000000      fhour=   1.725000    
+  0:   0.0000000E+00
+  0: PASS: fcstRUN phase 2, n_atmsteps =               68 time is         0.375284
+  0: At forecast hour     1.750 mean abs pgr change is       1.25422829 hPa/hr
+  0:   max abs change     -0.0001756447 bar  at  tile=1 i=685 j=632
+  0:   pgr at that point   1.0140777928 bar      lat=   13.168615 lon=  170.593452
+  0: PASS: fcstRUN phase 1, n_atmsteps =               69 time is         4.549688
+  0:  in atmos_model update, fhzero=   3.00000000000000      fhour=   1.750000    
+  0:   0.0000000E+00
+  0: PASS: fcstRUN phase 2, n_atmsteps =               69 time is         0.381883
+  0: 0 FORECAST DATE          24 AUG.  2019 AT  1 HRS 45.00 MINS
+  0:   JULIAN DAY             2458719  PLUS   0.572917
+  0:   RADIUS VECTOR          1.0111597
+  0:   RIGHT ASCENSION OF SUN  10.1807824 HRS, OR  10 HRS  10 MINS  50.8 SECS
+  0:   DECLINATION OF THE SUN  11.2408080 DEGS, OR   11 DEGS  14 MINS  26.9 SECS
+  0:   EQUATION OF TIME        -2.5821690 MINS, OR   -154.93 SECS, OR-0.011298 RADIANS
+  0:   SOLAR CONSTANT        1331.1633939 (DISTANCE AJUSTED)
+  0: 
+  0: 
+  0:     for cosz calculations: nswr,deltim,deltsw,dtswh =          10
+  0:    90.0000000000000        900.000000000000       0.250000000000000      
+  0:    anginc,nstp =  6.544984694978735E-003          10
+  0: At forecast hour     1.775 mean abs pgr change is       1.24354543 hPa/hr
+  0:   max abs change     -0.0001704060 bar  at  tile=1 i=416 j=464
+  0:   pgr at that point   1.0144547502 bar      lat=   19.888321 lon=  181.727032
+  0: PASS: fcstRUN phase 1, n_atmsteps =               70 time is         9.702498
+  0:  in atmos_model update, fhzero=   3.00000000000000      fhour=   1.775000    
+  0:   0.0000000E+00
+  0: PASS: fcstRUN phase 2, n_atmsteps =               70 time is         0.362767
+  0: At forecast hour     1.800 mean abs pgr change is       1.22915209 hPa/hr
+  0:   max abs change     -0.0001638435 bar  at  tile=1 i=695 j=626
+  0:   pgr at that point   1.0139671720 bar      lat=   13.393703 lon=  170.177662
+  0: PASS: fcstRUN phase 1, n_atmsteps =               71 time is         4.599107
+  0:  in atmos_model update, fhzero=   3.00000000000000      fhour=   1.800000    
+  0:   0.0000000E+00
+  0: PASS: fcstRUN phase 2, n_atmsteps =               71 time is         0.389980
+  0: At forecast hour     1.825 mean abs pgr change is       1.21079345 hPa/hr
+  0:   max abs change     -0.0001842353 bar  at  tile=1 i=413 j=453
+  0:   pgr at that point   1.0142681863 bar      lat=   20.321784 lon=  181.866489
+  0: PASS: fcstRUN phase 1, n_atmsteps =               72 time is         4.643249
+  0:  in atmos_model update, fhzero=   3.00000000000000      fhour=   1.825000    
+  0:   0.0000000E+00
+  0: PASS: fcstRUN phase 2, n_atmsteps =               72 time is         0.381414
+  0: At forecast hour     1.850 mean abs pgr change is       1.19267831 hPa/hr
+  0:   max abs change     -0.0001998626 bar  at  tile=1 i=443 j=445
+  0:   pgr at that point   1.0142913092 bar      lat=   20.666890 lon=  180.602222
+  0: PASS: fcstRUN phase 1, n_atmsteps =               73 time is         4.601114
+  0:  in atmos_model update, fhzero=   3.00000000000000      fhour=   1.850000    
+  0:   0.0000000E+00
+  0: PASS: fcstRUN phase 2, n_atmsteps =               73 time is         0.382576
+  0: At forecast hour     1.875 mean abs pgr change is       1.18205459 hPa/hr
+  0:   max abs change     -0.0001948518 bar  at  tile=1 i=459 j=440
+  0:   pgr at that point   1.0142875701 bar      lat=   20.876791 lon=  179.926483
+  0: PASS: fcstRUN phase 1, n_atmsteps =               74 time is         4.615950
+  0:  in atmos_model update, fhzero=   3.00000000000000      fhour=   1.875000    
+  0:   0.0000000E+00
+  0: PASS: fcstRUN phase 2, n_atmsteps =               74 time is         0.386312
+  0: At forecast hour     1.900 mean abs pgr change is       1.17594324 hPa/hr
+  0:   max abs change     -0.0001875135 bar  at  tile=1 i=441 j=432
+  0:   pgr at that point   1.0141260803 bar      lat=   21.181674 lon=  180.698795
+  0: PASS: fcstRUN phase 1, n_atmsteps =               75 time is         4.545151
+  0:  in atmos_model update, fhzero=   3.00000000000000      fhour=   1.900000    
+  0:   0.0000000E+00
+  0: PASS: fcstRUN phase 2, n_atmsteps =               75 time is         0.385776
+  0: At forecast hour     1.925 mean abs pgr change is       1.16977655 hPa/hr
+  0:   max abs change     -0.0001898649 bar  at  tile=1 i=582 j=458
+  0:   pgr at that point   1.0142916976 bar      lat=   20.167405 lon=  174.709171
+  0: PASS: fcstRUN phase 1, n_atmsteps =               76 time is         4.552721
+  0:  in atmos_model update, fhzero=   3.00000000000000      fhour=   1.925000    
+  0:   0.0000000E+00
+  0: PASS: fcstRUN phase 2, n_atmsteps =               76 time is         0.403074
+  0: At forecast hour     1.950 mean abs pgr change is       1.15982365 hPa/hr
+  0:   max abs change     -0.0001808753 bar  at  tile=1 i=607 j=463
+  0:   pgr at that point   1.0141459215 bar      lat=   19.952777 lon=  173.655396
+  0: PASS: fcstRUN phase 1, n_atmsteps =               77 time is         4.533157
+  0:  in atmos_model update, fhzero=   3.00000000000000      fhour=   1.950000    
+  0:   0.0000000E+00
+  0: PASS: fcstRUN phase 2, n_atmsteps =               77 time is         0.388930
+  0: At forecast hour     1.975 mean abs pgr change is       1.14587941 hPa/hr
+  0:   max abs change     -0.0001629838 bar  at  tile=1 i=605 j=449
+  0:   pgr at that point   1.0141099850 bar      lat=   20.510301 lon=  173.728462
+  0: PASS: fcstRUN phase 1, n_atmsteps =               78 time is         4.536634
+  0:  in atmos_model update, fhzero=   3.00000000000000      fhour=   1.975000    
+  0:   0.0000000E+00
+  0: PASS: fcstRUN phase 2, n_atmsteps =               78 time is         0.393777
+  0: At forecast hour     2.000 mean abs pgr change is       1.13301235 hPa/hr
+  0:   max abs change     -0.0001502590 bar  at  tile=1 i=554 j=423
+  0:   pgr at that point   1.0142451315 bar      lat=   21.569724 lon=  175.883446
+  0: PASS: fcstRUN phase 1, n_atmsteps =               79 time is         4.578770
+  0:  in atmos_model update, fhzero=   3.00000000000000      fhour=   2.000000    
+  0:   0.0000000E+00
+  0: PASS: fcstRUN phase 2, n_atmsteps =               79 time is         0.386128
+  0: 0 FORECAST DATE          24 AUG.  2019 AT  2 HRS  0.00 MINS
+  0:   JULIAN DAY             2458719  PLUS   0.583333
+  0:   RADIUS VECTOR          1.0111575
+  0:   RIGHT ASCENSION OF SUN  10.1814207 HRS, OR  10 HRS  10 MINS  53.1 SECS
+  0:   DECLINATION OF THE SUN  11.2372590 DEGS, OR   11 DEGS  14 MINS  14.1 SECS
+  0:   EQUATION OF TIME        -2.5794113 MINS, OR   -154.76 SECS, OR-0.011286 RADIANS
+  0:   SOLAR CONSTANT        1331.1691917 (DISTANCE AJUSTED)
+  0: 
+  0: 
+  0:     for cosz calculations: nswr,deltim,deltsw,dtswh =          10
+  0:    90.0000000000000        900.000000000000       0.250000000000000      
+  0:    anginc,nstp =  6.544984694978735E-003          10
+  0: At forecast hour     2.025 mean abs pgr change is       1.11971830 hPa/hr
+  0:   max abs change     -0.0001387662 bar  at  tile=1 i=185 j=552
+  0:   pgr at that point   1.0141904525 bar      lat=   15.957389 lon=  191.220078
+  0: PASS: fcstRUN phase 1, n_atmsteps =               80 time is         9.661864
+  0:  in atmos_model update, fhzero=   3.00000000000000      fhour=   2.025000    
+  0:   0.0000000E+00
+  0: PASS: fcstRUN phase 2, n_atmsteps =               80 time is         0.361498
+  0: At forecast hour     2.050 mean abs pgr change is       1.10822208 hPa/hr
+  0:   max abs change     -0.0001433268 bar  at  tile=1 i=553 j=407
+  0:   pgr at that point   1.0142134654 bar      lat=   22.206212 lon=  175.921257
+  0: PASS: fcstRUN phase 1, n_atmsteps =               81 time is         4.532508
+  0:  in atmos_model update, fhzero=   3.00000000000000      fhour=   2.050000    
+  0:   0.0000000E+00
+  0: PASS: fcstRUN phase 2, n_atmsteps =               81 time is         0.407091
+  0: At forecast hour     2.075 mean abs pgr change is       1.09733627 hPa/hr
+  0:   max abs change     -0.0001345537 bar  at  tile=1 i=195 j=521
+  0:   pgr at that point   1.0142524772 bar      lat=   17.202363 lon=  190.894112
+  0: PASS: fcstRUN phase 1, n_atmsteps =               82 time is         4.600213
+  0:  in atmos_model update, fhzero=   3.00000000000000      fhour=   2.075000    
+  0:   0.0000000E+00
+  0: PASS: fcstRUN phase 2, n_atmsteps =               82 time is         0.376973
+  0: At forecast hour     2.100 mean abs pgr change is       1.08829524 hPa/hr
+  0:   max abs change     -0.0001494688 bar  at  tile=1 i=185 j=513
+  0:   pgr at that point   1.0142439683 bar      lat=   17.486792 lon=  191.336872
+  0: PASS: fcstRUN phase 1, n_atmsteps =               83 time is         4.566419
+  0:  in atmos_model update, fhzero=   3.00000000000000      fhour=   2.100000    
+  0:   0.0000000E+00
+  0: PASS: fcstRUN phase 2, n_atmsteps =               83 time is         0.378133
+  0: At forecast hour     2.125 mean abs pgr change is       1.08177479 hPa/hr
+  0:   max abs change     -0.0001595432 bar  at  tile=1 i=524 j=543
+  0:   pgr at that point   1.0141591712 bar      lat=   16.804657 lon=  177.162254
+  0: PASS: fcstRUN phase 1, n_atmsteps =               84 time is         4.532882
+  0:  in atmos_model update, fhzero=   3.00000000000000      fhour=   2.125000    
+  0:   0.0000000E+00
+  0: PASS: fcstRUN phase 2, n_atmsteps =               84 time is         0.387156
+  0: At forecast hour     2.150 mean abs pgr change is       1.07269909 hPa/hr
+  0:   max abs change     -0.0001854846 bar  at  tile=1 i=524 j=525
+  0:   pgr at that point   1.0141193552 bar      lat=   17.519857 lon=  177.162498
+  0: PASS: fcstRUN phase 1, n_atmsteps =               85 time is         4.544010
+  0:  in atmos_model update, fhzero=   3.00000000000000      fhour=   2.150000    
+  0:   0.0000000E+00
+  0: PASS: fcstRUN phase 2, n_atmsteps =               85 time is         0.391520
+  0: At forecast hour     2.175 mean abs pgr change is       1.06225595 hPa/hr
+  0:   max abs change     -0.0001892520 bar  at  tile=1 i=532 j=529
+  0:   pgr at that point   1.0139405875 bar      lat=   17.360752 lon=  176.829407
+  0: PASS: fcstRUN phase 1, n_atmsteps =               86 time is         4.589913
+  0:  in atmos_model update, fhzero=   3.00000000000000      fhour=   2.175000    
+  0:   0.0000000E+00
+  0: PASS: fcstRUN phase 2, n_atmsteps =               86 time is         0.384647
+  0: At forecast hour     2.200 mean abs pgr change is       1.04776363 hPa/hr
+  0:   max abs change     -0.0001890926 bar  at  tile=1 i=520 j=524
+  0:   pgr at that point   1.0137887865 bar      lat=   17.559468 lon=  177.329212
+  0: PASS: fcstRUN phase 1, n_atmsteps =               87 time is         4.547134
+  0:  in atmos_model update, fhzero=   3.00000000000000      fhour=   2.200000    
+  0:   0.0000000E+00
+  0: PASS: fcstRUN phase 2, n_atmsteps =               87 time is         0.377474
+  0: At forecast hour     2.225 mean abs pgr change is       1.02851787 hPa/hr
+  0:   max abs change     -0.0001798710 bar  at  tile=1 i=529 j=529
+  0:   pgr at that point   1.0136372246 bar      lat=   17.360881 lon=  176.954296
+  0: PASS: fcstRUN phase 1, n_atmsteps =               88 time is         4.535627
+  0:  in atmos_model update, fhzero=   3.00000000000000      fhour=   2.225000    
+  0:   0.0000000E+00
+  0: PASS: fcstRUN phase 2, n_atmsteps =               88 time is         0.391708
+  0: At forecast hour     2.250 mean abs pgr change is       1.00779704 hPa/hr
+  0:   max abs change     -0.0001669641 bar  at  tile=1 i=527 j=523
+  0:   pgr at that point   1.0135378796 bar      lat=   17.599323 lon=  177.037472
+  0: PASS: fcstRUN phase 1, n_atmsteps =               89 time is         4.537674
+  0:  in atmos_model update, fhzero=   3.00000000000000      fhour=   2.250000    
+  0:   0.0000000E+00
+  0: PASS: fcstRUN phase 2, n_atmsteps =               89 time is         0.398299
+  0: 0 FORECAST DATE          24 AUG.  2019 AT  2 HRS 15.00 MINS
+  0:   JULIAN DAY             2458719  PLUS   0.593750
+  0:   RADIUS VECTOR          1.0111553
+  0:   RIGHT ASCENSION OF SUN  10.1820591 HRS, OR  10 HRS  10 MINS  55.4 SECS
+  0:   DECLINATION OF THE SUN  11.2337097 DEGS, OR   11 DEGS  14 MINS   1.4 SECS
+  0:   EQUATION OF TIME        -2.5766529 MINS, OR   -154.60 SECS, OR-0.011274 RADIANS
+  0:   SOLAR CONSTANT        1331.1749904 (DISTANCE AJUSTED)
+  0: 
+  0: 
+  0:     for cosz calculations: nswr,deltim,deltsw,dtswh =          10
+  0:    90.0000000000000        900.000000000000       0.250000000000000      
+  0:    anginc,nstp =  6.544984694978735E-003          10
+  0: At forecast hour     2.275 mean abs pgr change is       0.98656803 hPa/hr
+  0:   max abs change     -0.0001449327 bar  at  tile=1 i=534 j=541
+  0:   pgr at that point   1.0133931026 bar      lat=   16.883826 lon=  176.747063
+  0: PASS: fcstRUN phase 1, n_atmsteps =               90 time is         9.694236
+  0:  in atmos_model update, fhzero=   3.00000000000000      fhour=   2.275000    
+  0:   0.0000000E+00
+  0: PASS: fcstRUN phase 2, n_atmsteps =               90 time is         0.363042
+  0: At forecast hour     2.300 mean abs pgr change is       0.96601727 hPa/hr
+  0:   max abs change     -0.0001285339 bar  at  tile=1 i=529 j=339
+  0:   pgr at that point   1.0136991224 bar      lat=   24.916216 lon=  176.947140
+  0: PASS: fcstRUN phase 1, n_atmsteps =               91 time is         4.585094
+  0:  in atmos_model update, fhzero=   3.00000000000000      fhour=   2.300000    
+  0:   0.0000000E+00
+  0: PASS: fcstRUN phase 2, n_atmsteps =               91 time is         0.388207
+  0: At forecast hour     2.325 mean abs pgr change is       0.94719031 hPa/hr
+  0:   max abs change     -0.0001161226 bar  at  tile=1 i=491 j=562
+  0:   pgr at that point   1.0133420693 bar      lat=   16.044723 lon=  178.526234
+  0: PASS: fcstRUN phase 1, n_atmsteps =               92 time is         4.562403
+  0:  in atmos_model update, fhzero=   3.00000000000000      fhour=   2.325000    
+  0:   0.0000000E+00
+  0: PASS: fcstRUN phase 2, n_atmsteps =               92 time is         0.392070
+  0: At forecast hour     2.350 mean abs pgr change is       0.92781023 hPa/hr
+  0:   max abs change      0.0001202073 bar  at  tile=1 i=23 j=121
+  0:   pgr at that point   1.0148015349 bar      lat=   32.003037 lon=  200.620418
+  0: PASS: fcstRUN phase 1, n_atmsteps =               93 time is         4.513150
+  0:  in atmos_model update, fhzero=   3.00000000000000      fhour=   2.350000    
+  0:   0.0000000E+00
+  0: PASS: fcstRUN phase 2, n_atmsteps =               93 time is         0.402322
+  0: At forecast hour     2.375 mean abs pgr change is       0.90920009 hPa/hr
+  0:   max abs change     -0.0001233474 bar  at  tile=1 i=475 j=572
+  0:   pgr at that point   1.0131002427 bar      lat=   15.641769 lon=  179.183441
+  0: PASS: fcstRUN phase 1, n_atmsteps =               94 time is         4.584836
+  0:  in atmos_model update, fhzero=   3.00000000000000      fhour=   2.375000    
+  0:   0.0000000E+00
+  0: PASS: fcstRUN phase 2, n_atmsteps =               94 time is         0.370937
+  0: At forecast hour     2.400 mean abs pgr change is       0.88803329 hPa/hr
+  0:   max abs change      0.0001166905 bar  at  tile=1 i=221 j=8
+  0:   pgr at that point   1.0149390402 bar      lat=   37.519809 lon=  192.079693
+  0: PASS: fcstRUN phase 1, n_atmsteps =               95 time is         4.572498
+  0:  in atmos_model update, fhzero=   3.00000000000000      fhour=   2.400000    
+  0:   0.0000000E+00
+  0: PASS: fcstRUN phase 2, n_atmsteps =               95 time is         0.382926
+  0: At forecast hour     2.425 mean abs pgr change is       0.86796709 hPa/hr
+  0:   max abs change     -0.0001188097 bar  at  tile=1 i=468 j=606
+  0:   pgr at that point   1.0122925038 bar      lat=   14.287812 lon=  179.456425
+  0: PASS: fcstRUN phase 1, n_atmsteps =               96 time is         4.583903
+  0:  in atmos_model update, fhzero=   3.00000000000000      fhour=   2.425000    
+  0:   0.0000000E+00
+  0: PASS: fcstRUN phase 2, n_atmsteps =               96 time is         0.373412
+  0: At forecast hour     2.450 mean abs pgr change is       0.85080016 hPa/hr
+  0:   max abs change     -0.0001346277 bar  at  tile=1 i=459 j=592
+  0:   pgr at that point   1.0127004997 bar      lat=   14.839568 lon=  179.832684
+  0: PASS: fcstRUN phase 1, n_atmsteps =               97 time is         4.538927
+  0:  in atmos_model update, fhzero=   3.00000000000000      fhour=   2.450000    
+  0:   0.0000000E+00
+  0: PASS: fcstRUN phase 2, n_atmsteps =               97 time is         0.393067
+  0: At forecast hour     2.475 mean abs pgr change is       0.83861491 hPa/hr
+  0:   max abs change     -0.0001324819 bar  at  tile=1 i=455 j=604
+  0:   pgr at that point   1.0122489856 bar      lat=   14.360632 lon=  179.990341
+  0: PASS: fcstRUN phase 1, n_atmsteps =               98 time is         4.658976
+  0:  in atmos_model update, fhzero=   3.00000000000000      fhour=   2.475000    
+  0:   0.0000000E+00
+  0: PASS: fcstRUN phase 2, n_atmsteps =               98 time is         0.396886
+  0: At forecast hour     2.500 mean abs pgr change is       0.82923915 hPa/hr
+  0:   max abs change     -0.0001333037 bar  at  tile=1 i=443 j=593
+  0:   pgr at that point   1.0126433905 bar      lat=   14.790196 lon=  180.489590
+  0: PASS: fcstRUN phase 1, n_atmsteps =               99 time is         4.608227
+  0:  in atmos_model update, fhzero=   3.00000000000000      fhour=   2.500000    
+  0:   0.0000000E+00
+  0: PASS: fcstRUN phase 2, n_atmsteps =               99 time is         0.376057
+  0: 0 FORECAST DATE          24 AUG.  2019 AT  2 HRS 30.00 MINS
+  0:   JULIAN DAY             2458719  PLUS   0.604167
+  0:   RADIUS VECTOR          1.0111531
+  0:   RIGHT ASCENSION OF SUN  10.1826974 HRS, OR  10 HRS  10 MINS  57.7 SECS
+  0:   DECLINATION OF THE SUN  11.2301601 DEGS, OR   11 DEGS  13 MINS  48.6 SECS
+  0:   EQUATION OF TIME        -2.5738937 MINS, OR   -154.43 SECS, OR-0.011261 RADIANS
+  0:   SOLAR CONSTANT        1331.1807901 (DISTANCE AJUSTED)
+  0: 
+  0: 
+  0:     for cosz calculations: nswr,deltim,deltsw,dtswh =          10
+  0:    90.0000000000000        900.000000000000       0.250000000000000      
+  0:    anginc,nstp =  6.544984694978735E-003          10
+  0: At forecast hour     2.525 mean abs pgr change is       0.82324833 hPa/hr
+  0:   max abs change     -0.0001373513 bar  at  tile=1 i=442 j=595
+  0:   pgr at that point   1.0125068424 bar      lat=   14.710093 lon=  180.529343
+  0: PASS: fcstRUN phase 1, n_atmsteps =              100 time is         9.789885
+  0:  in atmos_model update, fhzero=   3.00000000000000      fhour=   2.525000    
+  0:   0.0000000E+00
+  0: PASS: fcstRUN phase 2, n_atmsteps =              100 time is         0.355362
+  0: At forecast hour     2.550 mean abs pgr change is       0.81808723 hPa/hr
+  0:   max abs change     -0.0001372480 bar  at  tile=1 i=430 j=604
+  0:   pgr at that point   1.0122861107 bar      lat=   14.344038 lon=  181.015461
+  0: PASS: fcstRUN phase 1, n_atmsteps =              101 time is         4.547428
+  0:  in atmos_model update, fhzero=   3.00000000000000      fhour=   2.550000    
+  0:   0.0000000E+00
+  0: PASS: fcstRUN phase 2, n_atmsteps =              101 time is         0.373134
+  0: At forecast hour     2.575 mean abs pgr change is       0.81329741 hPa/hr
+  0:   max abs change     -0.0001178078 bar  at  tile=1 i=421 j=600
+  0:   pgr at that point   1.0125024845 bar      lat=   14.495652 lon=  181.387836
+  0: PASS: fcstRUN phase 1, n_atmsteps =              102 time is         4.580556
+  0:  in atmos_model update, fhzero=   3.00000000000000      fhour=   2.575000    
+  0:   0.0000000E+00
+  0: PASS: fcstRUN phase 2, n_atmsteps =              102 time is         0.390655
+  0: At forecast hour     2.600 mean abs pgr change is       0.80505379 hPa/hr
+  0:   max abs change     -0.0001177199 bar  at  tile=1 i=418 j=604
+  0:   pgr at that point   1.0123664869 bar      lat=   14.334298 lon=  181.507572
+  0: PASS: fcstRUN phase 1, n_atmsteps =              103 time is         4.590330
+  0:  in atmos_model update, fhzero=   3.00000000000000      fhour=   2.600000    
+  0:   0.0000000E+00
+  0: PASS: fcstRUN phase 2, n_atmsteps =              103 time is         0.381856
+  0: At forecast hour     2.625 mean abs pgr change is       0.79722210 hPa/hr
+  0:   max abs change     -0.0001177653 bar  at  tile=1 i=634 j=633
+  0:   pgr at that point   1.0133193308 bar      lat=   13.181920 lon=  172.675446
+  0: PASS: fcstRUN phase 1, n_atmsteps =              104 time is         4.577415
+  0:  in atmos_model update, fhzero=   3.00000000000000      fhour=   2.625000    
+  0:   0.0000000E+00
+  0: PASS: fcstRUN phase 2, n_atmsteps =              104 time is         0.386741
+  0: At forecast hour     2.650 mean abs pgr change is       0.78791928 hPa/hr
+  0:   max abs change     -0.0001149525 bar  at  tile=1 i=640 j=285
+  0:   pgr at that point   1.0139073913 bar      lat=   26.996297 lon=  172.017811
+  0: PASS: fcstRUN phase 1, n_atmsteps =              105 time is         4.577221
+  0:  in atmos_model update, fhzero=   3.00000000000000      fhour=   2.650000    
+  0:   0.0000000E+00
+  0: PASS: fcstRUN phase 2, n_atmsteps =              105 time is         0.404303
+  0: At forecast hour     2.675 mean abs pgr change is       0.77682224 hPa/hr
+  0:   max abs change     -0.0001186494 bar  at  tile=1 i=393 j=630
+  0:   pgr at that point   1.0119854869 bar      lat=   13.278578 lon=  182.506592
+  0: PASS: fcstRUN phase 1, n_atmsteps =              106 time is         4.582426
+  0:  in atmos_model update, fhzero=   3.00000000000000      fhour=   2.675000    
+  0:   0.0000000E+00
+  0: PASS: fcstRUN phase 2, n_atmsteps =              106 time is         0.386099
+  0: At forecast hour     2.700 mean abs pgr change is       0.76216714 hPa/hr
+  0:   max abs change     -0.0001224091 bar  at  tile=1 i=383 j=637
+  0:   pgr at that point   1.0120753253 bar      lat=   12.990126 lon=  182.907444
+  0: PASS: fcstRUN phase 1, n_atmsteps =              107 time is         4.557435
+  0:  in atmos_model update, fhzero=   3.00000000000000      fhour=   2.700000    
+  0:   0.0000000E+00
+  0: PASS: fcstRUN phase 2, n_atmsteps =              107 time is         0.385097
+  0: At forecast hour     2.725 mean abs pgr change is       0.74838334 hPa/hr
+  0:   max abs change     -0.0001151004 bar  at  tile=1 i=388 j=616
+  0:   pgr at that point   1.0124096463 bar      lat=   13.828844 lon=  182.725258
+  0: PASS: fcstRUN phase 1, n_atmsteps =              108 time is         4.534077
+  0:  in atmos_model update, fhzero=   3.00000000000000      fhour=   2.725000    
+  0:   0.0000000E+00
+  0: PASS: fcstRUN phase 2, n_atmsteps =              108 time is         0.377166
+  0: At forecast hour     2.750 mean abs pgr change is       0.73523555 hPa/hr
+  0:   max abs change     -0.0001125957 bar  at  tile=1 i=682 j=190
+  0:   pgr at that point   1.0141016229 bar      lat=   30.717173 lon=  169.931232
+  0: PASS: fcstRUN phase 1, n_atmsteps =              109 time is         4.593399
+  0:  in atmos_model update, fhzero=   3.00000000000000      fhour=   2.750000    
+  0:   0.0000000E+00
+  0: PASS: fcstRUN phase 2, n_atmsteps =              109 time is         0.388946
+  0: 0 FORECAST DATE          24 AUG.  2019 AT  2 HRS 45.00 MINS
+  0:   JULIAN DAY             2458719  PLUS   0.614583
+  0:   RADIUS VECTOR          1.0111509
+  0:   RIGHT ASCENSION OF SUN  10.1833357 HRS, OR  10 HRS  11 MINS   0.0 SECS
+  0:   DECLINATION OF THE SUN  11.2266101 DEGS, OR   11 DEGS  13 MINS  35.8 SECS
+  0:   EQUATION OF TIME        -2.5711337 MINS, OR   -154.27 SECS, OR-0.011249 RADIANS
+  0:   SOLAR CONSTANT        1331.1865907 (DISTANCE AJUSTED)
+  0: 
+  0: 
+  0:     for cosz calculations: nswr,deltim,deltsw,dtswh =          10
+  0:    90.0000000000000        900.000000000000       0.250000000000000      
+  0:    anginc,nstp =  6.544984694978735E-003          10
+  0: At forecast hour     2.775 mean abs pgr change is       0.72412147 hPa/hr
+  0:   max abs change     -0.0001124880 bar  at  tile=1 i=377 j=649
+  0:   pgr at that point   1.0118031369 bar      lat=   12.507238 lon=  183.139153
+  0: PASS: fcstRUN phase 1, n_atmsteps =              110 time is         9.865448
+  0:  in atmos_model update, fhzero=   3.00000000000000      fhour=   2.775000    
+  0:   0.0000000E+00
+  0: PASS: fcstRUN phase 2, n_atmsteps =              110 time is         0.365339
+  0: At forecast hour     2.800 mean abs pgr change is       0.71375297 hPa/hr
+  0:   max abs change     -0.0001086879 bar  at  tile=1 i=358 j=657
+  0:   pgr at that point   1.0123435673 bar      lat=   12.167082 lon=  183.902821
+  0: PASS: fcstRUN phase 1, n_atmsteps =              111 time is         4.598644
+  0:  in atmos_model update, fhzero=   3.00000000000000      fhour=   2.800000    
+  0:   0.0000000E+00
+  0: PASS: fcstRUN phase 2, n_atmsteps =              111 time is         0.374129
+  0: At forecast hour     2.825 mean abs pgr change is       0.70427048 hPa/hr
+  0:   max abs change     -0.0001200158 bar  at  tile=1 i=346 j=678
+  0:   pgr at that point   1.0125018507 bar      lat=   11.318579 lon=  184.364574
+  0: PASS: fcstRUN phase 1, n_atmsteps =              112 time is         4.586453
+  0:  in atmos_model update, fhzero=   3.00000000000000      fhour=   2.825000    
+  0:   0.0000000E+00
+  0: PASS: fcstRUN phase 2, n_atmsteps =              112 time is         0.385280
+  0: At forecast hour     2.850 mean abs pgr change is       0.69713423 hPa/hr
+  0:   max abs change     -0.0001207407 bar  at  tile=1 i=356 j=697
+  0:   pgr at that point   1.0119805829 bar      lat=   10.577353 lon=  183.938202
+  0: PASS: fcstRUN phase 1, n_atmsteps =              113 time is         4.574422
+  0:  in atmos_model update, fhzero=   3.00000000000000      fhour=   2.850000    
+  0:   0.0000000E+00
+  0: PASS: fcstRUN phase 2, n_atmsteps =              113 time is         0.379951
+  0: At forecast hour     2.875 mean abs pgr change is       0.68944079 hPa/hr
+  0:   max abs change     -0.0001228589 bar  at  tile=1 i=348 j=687
+  0:   pgr at that point   1.0122334374 bar      lat=   10.964154 lon=  184.272869
+  0: PASS: fcstRUN phase 1, n_atmsteps =              114 time is         4.591155
+  0:  in atmos_model update, fhzero=   3.00000000000000      fhour=   2.875000    
+  0:   0.0000000E+00
+  0: PASS: fcstRUN phase 2, n_atmsteps =              114 time is         0.375338
+  0: At forecast hour     2.900 mean abs pgr change is       0.68047697 hPa/hr
+  0:   max abs change     -0.0001229978 bar  at  tile=1 i=349 j=696
+  0:   pgr at that point   1.0121253331 bar      lat=   10.608298 lon=  184.221996
+  0: PASS: fcstRUN phase 1, n_atmsteps =              115 time is         4.541672
+  0:  in atmos_model update, fhzero=   3.00000000000000      fhour=   2.900000    
+  0:   0.0000000E+00
+  0: PASS: fcstRUN phase 2, n_atmsteps =              115 time is         0.383933
+  0: At forecast hour     2.925 mean abs pgr change is       0.67133003 hPa/hr
+  0:   max abs change     -0.0001252183 bar  at  tile=1 i=338 j=703
+  0:   pgr at that point   1.0125148496 bar      lat=   10.316100 lon=  184.657818
+  0: PASS: fcstRUN phase 1, n_atmsteps =              116 time is         4.557805
+  0:  in atmos_model update, fhzero=   3.00000000000000      fhour=   2.925000    
+  0:   0.0000000E+00
+  0: PASS: fcstRUN phase 2, n_atmsteps =              116 time is         0.379519
+  0: At forecast hour     2.950 mean abs pgr change is       0.66346671 hPa/hr
+  0:   max abs change     -0.0001147050 bar  at  tile=1 i=720 j=234
+  0:   pgr at that point   1.0140098260 bar      lat=   28.885454 lon=  168.325581
+  0: PASS: fcstRUN phase 1, n_atmsteps =              117 time is         4.586572
+  0:  in atmos_model update, fhzero=   3.00000000000000      fhour=   2.950000    
+  0:   0.0000000E+00
+  0: PASS: fcstRUN phase 2, n_atmsteps =              117 time is         0.392521
+  0: At forecast hour     2.975 mean abs pgr change is       0.65496947 hPa/hr
+  0:   max abs change     -0.0001141016 bar  at  tile=1 i=324 j=710
+  0:   pgr at that point   1.0128061277 bar      lat=   10.018947 lon=  185.213818
+  0: PASS: fcstRUN phase 1, n_atmsteps =              118 time is         4.583153
+  0:  in atmos_model update, fhzero=   3.00000000000000      fhour=   2.975000    
+  0:   0.0000000E+00
+  0: PASS: fcstRUN phase 2, n_atmsteps =              118 time is         0.371826
+  0: At forecast hour     3.000 mean abs pgr change is       0.64738114 hPa/hr
+  0:   max abs change     -0.0001090135 bar  at  tile=1 i=741 j=228
+  0:   pgr at that point   1.0140373883 bar      lat=   29.073709 lon=  167.359524
+  0: PASS: fcstRUN phase 1, n_atmsteps =              119 time is         4.577229
+  0:         2019           8          24           3           0           0
+  0:  ZS     0.0000000E+00  0.0000000E+00  0.0000000E+00
+  0:  PS max =    1015.299      min =    1003.601    
+  0:  Mean specific humidity (mg/kg) above 75 mb=  1.0921218E-03
+  0:  Total surface pressure (mb) =    1013.946    
+  0:  mean dry surface pressure =    1009.150    
+  0:  Total Water Vapor (kg/m**2) =   48.89924    
+  0:  --- Micro Phys water substances (kg/m**2) ---
+  0:  Total cloud water=  2.9298541E-12
+  0:  Total rain  water=  6.9633433E-07
+  0:  Total cloud ice  =  9.0144829E-05
+  0:  Total snow       =  8.7699176E-05
+  0:  Total graupel    =  3.1866995E-07
+  0:  ---------------------------------------------
+  0:  TE ( Joule/m^2 * E9) =   2.798372    
+  0:  UA_top max =    6.391098      min =   -7.791317    
+  0:  UA max =    18.92953      min =   -18.81156    
+  0:  VA max =    19.39842      min =   -18.28891    
+  0:  W  max =   0.4511977      min =  -0.4270330    
+  0:  Bottom w max =   2.8283114E-03  min =  -1.5717589E-03
+  0:  Bottom: w/dz max =   1.2747019E-04  min =  -7.1199604E-05
+  0:  DZ (m) max =   -21.94846      min =   -4814.323    
+  0:  Bottom DZ (m) max =   -21.94846      min =   -22.24158    
+  0:  TA max =    303.4280      min =    198.3564    
+  0:  OM max =   0.8786785      min =  -0.7699270    
+  0:  sphum max =   2.1795955E-02  min =   0.0000000E+00
+  0:  liq_wat max =   2.3794833E-10  min =   0.0000000E+00
+  0:  ice_wat max =   3.8422801E-05  min =   0.0000000E+00
+  0:  rainwat max =   3.1056654E-06  min =   0.0000000E+00
+  0:  snowwat max =   7.3069050E-06  min =   0.0000000E+00
+  0:  graupel max =   2.7618062E-06  min =   0.0000000E+00
+  0:  ice_nc max =   1.2452361E+07  min =   0.0000000E+00
+  0:  rain_nc max =    24.14404      min =   0.0000000E+00
+  0:  o3mr max =   3.8939929E-06  min =   1.2916425E-10
+  0:  sgs_tke max =    2.219076      min =   4.9811089E-08
+  0:  ---isec,seconds       10800       10800
+  0:  gfs diags time since last bucket empty:    10800.0000000000       time_intfull=
+  0:    10800.0000000000       kdt=         120
+  0:  in atmos_model update, fhzero=   3.00000000000000      fhour=   3.000000    
+  0:   0.0000000E+00
+  0:  write out restart at n_atmsteps=         119  seconds=       10800 
+  0:  integration length=   2.975000    
+  0: PASS: fcstRUN phase 2, n_atmsteps =              119 time is        30.971399
+  0:   aft fcst run output time=       10800 FBcount=           3 na=         120
+  0:  
+  0:    -----------------------------------------------------
+  0:       Block                    User time  System Time   Total Time   GID 
+  0:    -----------------------------------------------------
+  0:    ATMOS_INIT                  24.7039       0.0000      24.7039       0
+  0:    TOTAL                      777.9033       0.0000     777.9033       0
+  0:    NGGPS_IC                    23.1815       0.0000      23.1815       0
+  0:    COMM_TOTAL                 101.4854       0.0000     101.4854       0
+  0:    ADIABATIC_INIT              10.7440       0.0000      10.7440       0
+  0:    REGIONAL_BCS                 0.7659       0.0000       0.7659       0
+  0:    FV_DYN_LOOP                296.3700       0.0000     296.3700       0
+  0:    DYN_CORE                   245.1958       0.0000     245.1958       0
+  0:    COMM_TRACER                  2.5354       0.0000       2.5354       0
+  0:    C_SW                        11.5154       0.0000      11.5154       0
+  0:    UPDATE_DZ_C                  1.7054       0.0000       1.7054       0
+  0:    RIEM_SOLVER                 19.4691       0.0000      19.4691       0
+  0:    D_SW                        83.4415       0.0000      83.4415       0
+  0:    UPDATE_DZ                   17.0571       0.0000      17.0571       0
+  0:    PG_D                         4.1147       0.0000       4.1147       0
+  0:    TRACER_2D                   29.3083       0.0000      29.3083       0
+  0:    REMAPPING                   25.3124       0.0000      25.3124       0
+  0:    FV_DYNAMICS                316.8218       0.0000     316.8218       0
+  0:    GFS_TENDENCIES               6.5052       0.0000       6.5052       0
+  0:    FV_UPDATE_PHYS              14.8232       0.0000      14.8232       0
+  0:     UPDATE_DWINDS               1.5273       0.0000       1.5273       0
+  0:    FV_DIAG                     29.2151       0.0000      29.2151       0
+  0:  
+  0:  
+210:  MPP_DOMAINS_STACK high water mark=           0
+200:  MPP_DOMAINS_STACK high water mark=           0
+210: 
+  0:  fv_restart_end u    =     -17776679267776395
+210: Tabulating mpp_clock statistics across     10 PEs...
+210: 
+200: 
+200: Tabulating mpp_clock statistics across     10 PEs...
+200: 
+200:                                       hits          tmin          tmax          tavg          tstd  tfrac grain pemin pemax
+210:                                       hits          tmin          tmax          tavg          tstd  tfrac grain pemin pemax
+  0:  fv_restart_end v    =     -10085568233449661
+200: Total runtime                            1    736.224792    736.226929    736.225769      0.000692  1.000     0     0     9
+210: Total runtime                            1    729.740540    729.743347    729.741760      0.000877  1.000     0     0     9
+200:  MPP_STACK high water mark=           0
+210:  MPP_STACK high water mark=           0
+  0:  fv_restart_end w    =     -13519632001844595
+  0:  fv_restart_end delp =     102639425049100465
+  0:  fv_restart_end phis =                      0
+  0:  fv_restart_end pt   =     101084311500740273
+  0:  fv_restart_end q(prog) nq   =          10    266127227737620611
+  0:  fv_restart_end sphum =      85292568716852155
+  0:  fv_restart_end liq_wat =          1325968242661
+  0:  fv_restart_end ice_wat =       4236655960808398
+  0:  fv_restart_end rainwat =         26045458695783
+  0:  fv_restart_end snowwat =       7644359538903076
+  0:  fv_restart_end graupel =        104976223630946
+  0:  fv_restart_end ice_nc =       5767434849924002
+  0:  fv_restart_end rain_nc =         31655066522759
+  0:  fv_restart_end o3mr =      73131820049825239
+  0:  fv_restart_end sgs_tke =      89890385904215592
+  0:  ZS  0.0000000E+00  0.0000000E+00  0.0000000E+00
+  0:  PS    1015.299       1003.601       1013.946    
+  0:  PS* max =    1015.299      min =    1003.601    
+  0:  U  max =    18.81405      min =   -18.92393    
+  0:  V  max =    18.28878      min =   -19.39586    
+  0:  W  max =   0.4511977      min =  -0.4270330    
+  0:  T  max =    303.4280      min =    198.3564    
+  0:  sphum  2.1795955E-02  0.0000000E+00  1.9704795E-02
+  0:  liq_wat  2.3794833E-10  0.0000000E+00  0.0000000E+00
+  0:  ice_wat  3.8422801E-05  0.0000000E+00  0.0000000E+00
+  0:  rainwat  3.1056654E-06  0.0000000E+00  9.7070608E-11
+  0:  snowwat  7.3069050E-06  0.0000000E+00  0.0000000E+00
+  0:  graupel  2.7618062E-06  0.0000000E+00  0.0000000E+00
+  0:  ice_nc  1.2452361E+07  0.0000000E+00  0.0000000E+00
+  0:  rain_nc   24.14404      0.0000000E+00  3.4844343E-04
+  0:  o3mr  3.8939929E-06  1.2916425E-10  1.0642079E-09
+  0:  sgs_tke   2.219076      4.9811089E-08  0.1559576    
+  0:  MPP_DOMAINS_STACK high water mark=      320760
+  0: 
+  0: Tabulating mpp_clock statistics across    200 PEs...
+  0: 
+  0:                                       hits          tmin          tmax          tavg          tstd  tfrac grain pemin pemax
+  0: Total runtime                            1    778.309998    778.317566    778.314392      0.001668  1.000     0     0   199
+  0: Initialization                           1      0.000000      0.000000      0.000000      0.000000  0.000     0     0   199
+  0: FV dy-core                             240    327.651001    332.929626    330.043488      0.925243  0.424    11     0   199
+  0: FV subgrid_z                           120      1.130283      1.872142      1.669841      0.144447  0.002    11     0   199
+  0: FV Diag                                120     27.861055     29.215515     28.287661      0.256092  0.036    11     0   199
+  0: FV tracker                               0      0.000000      0.000000      0.000000      0.000000  0.000    11     0   199
+  0: GFS Step Setup                         240      9.586116     12.648374     11.246820      0.790780  0.014     1     0   199
+  0: GFS Radiation                          120     54.401081     67.778191     57.951515      2.550476  0.074     1     0   199
+  0: GFS Physics                            120    156.007858    204.672714    187.416367     10.431930  0.241     1     0   199
+  0: Dynamics get state                     120      5.534076      9.615412      7.948637      0.657014  0.010     1     0   199
+  0: Dynamics update state                  120     43.592751     47.514359     46.232018      0.826125  0.059     1     0   199
+  0: FV3 Dycore                             240    362.917755    366.749542    365.517853      0.851620  0.470     1     0   199
+  0:  MPP_STACK high water mark=           0
+  0:  fcst_finalize total time:   0.291691495571285     
+  0: 
+ 16:  enter get_nggps_ic is= 631 ie= 735 js=  54 je= 106 isd= 628 ied= 738 jsd=  51 jed= 109
+  0: 
+  1:  enter get_nggps_ic is= 106 ie= 210 js=   1 je=  53 isd= 103 ied= 213 jsd=  -2 jed=  56
+  1:  sphum =            1
+  1:  clwmr =            2
+  1:   o3mr =            9
+  1:  ncnst =           10
+  1:  ntracers =           10
+  1:  sphum =            1
+  1:  clwmr =            2
+  1:   o3mr =            9
+  1:  ncnst =           10
+  1:  ntracers =           10
+  1:  In remap_scalar:
+  1:  ncnst =           10
+  1:  nwat =            6
+  1:  sphum    =            1
+  1:  clwmr    =            2
+  1:  liq_wat  =            2
+  1:   o3mr    =            9
+  1:  rainwat =            4
+  1:  ice_wat =            3
+  1:  snowwat =            5
+  1:  graupel =            6
+  1:  sgs_tke =           10
+  1:  cld_amt =  -2147483646
+  0:      ENDING DATE-TIME    MAR 24,2026  18:17:36.579   83  TUE   2461124
+  0:      PROGRAM ufs       HAS ENDED.
+  0: * . * . * . * . * . * . * . * . * . * . * . * . * . * . * . * . * . * . * . * . 
+  0: *****************RESOURCE STATISTICS*******************************
+  0: The total amount of wall time                        = 778.672395
+  0: The total amount of time in user mode                = 633.417957
+  0: The total amount of time in sys mode                 = 136.226690
+  0: The maximum resident set size (KB)                   = 2858492
+  0: Number of page faults without I/O activity           = 7204143
+  0: Number of page faults with I/O activity              = 788
+  0: Number of times filesystem performed INPUT           = 2004448
+  0: Number of times filesystem performed OUTPUT          = 19719928
+  0: Number of Voluntary Context Switches                 = 13399
+  0: Number of InVoluntary Context Switches               = 158587
+  0: *****************END OF RESOURCE STATISTICS*************************
+  0: 
+  2:  enter get_nggps_ic is= 211 ie= 315 js=   1 je=  53 isd= 208 ied= 318 jsd=  -2 jed=  56
+  3:  enter get_nggps_ic is= 316 ie= 420 js=   1 je=  53 isd= 313 ied= 423 jsd=  -2 jed=  56
+  4:  enter get_nggps_ic is= 421 ie= 525 js=   1 je=  53 isd= 418 ied= 528 jsd=  -2 jed=  56
+  5:  enter get_nggps_ic is= 526 ie= 630 js=   1 je=  53 isd= 523 ied= 633 jsd=  -2 jed=  56
+  6:  enter get_nggps_ic is= 631 ie= 735 js=   1 je=  53 isd= 628 ied= 738 jsd=  -2 jed=  56
+  7:  enter get_nggps_ic is= 736 ie= 840 js=   1 je=  53 isd= 733 ied= 843 jsd=  -2 jed=  56
+  8:  enter get_nggps_ic is= 841 ie= 945 js=   1 je=  53 isd= 838 ied= 948 jsd=  -2 jed=  56
+ 13:  enter get_nggps_ic is= 316 ie= 420 js=  54 je= 106 isd= 313 ied= 423 jsd=  51 jed= 109
+ 12:  enter get_nggps_ic is= 211 ie= 315 js=  54 je= 106 isd= 208 ied= 318 jsd=  51 jed= 109
+ 17:  enter get_nggps_ic is= 736 ie= 840 js=  54 je= 106 isd= 733 ied= 843 jsd=  51 jed= 109
+  9:  enter get_nggps_ic is= 946 ie=1050 js=   1 je=  53 isd= 943 ied=1053 jsd=  -2 jed=  56
+ 10:  enter get_nggps_ic is=   1 ie= 105 js=  54 je= 106 isd=  -2 ied= 108 jsd=  51 jed= 109
+ 19:  enter get_nggps_ic is= 946 ie=1050 js=  54 je= 106 isd= 943 ied=1053 jsd=  51 jed= 109
+ 11:  enter get_nggps_ic is= 106 ie= 210 js=  54 je= 106 isd= 103 ied= 213 jsd=  51 jed= 109
+ 14:  enter get_nggps_ic is= 421 ie= 525 js=  54 je= 106 isd= 418 ied= 528 jsd=  51 jed= 109
+ 15:  enter get_nggps_ic is= 526 ie= 630 js=  54 je= 106 isd= 523 ied= 633 jsd=  51 jed= 109
+ 18:  enter get_nggps_ic is= 841 ie= 945 js=  54 je= 106 isd= 838 ied= 948 jsd=  51 jed= 109
+ 20:  enter get_nggps_ic is=   1 ie= 105 js= 107 je= 159 isd=  -2 ied= 108 jsd= 104 jed= 162
+ 22:  enter get_nggps_ic is= 211 ie= 315 js= 107 je= 159 isd= 208 ied= 318 jsd= 104 jed= 162
+ 24:  enter get_nggps_ic is= 421 ie= 525 js= 107 je= 159 isd= 418 ied= 528 jsd= 104 jed= 162
+ 25:  enter get_nggps_ic is= 526 ie= 630 js= 107 je= 159 isd= 523 ied= 633 jsd= 104 jed= 162
+ 21:  enter get_nggps_ic is= 106 ie= 210 js= 107 je= 159 isd= 103 ied= 213 jsd= 104 jed= 162
+ 26:  enter get_nggps_ic is= 631 ie= 735 js= 107 je= 159 isd= 628 ied= 738 jsd= 104 jed= 162
+ 27:  enter get_nggps_ic is= 736 ie= 840 js= 107 je= 159 isd= 733 ied= 843 jsd= 104 jed= 162
+ 28:  enter get_nggps_ic is= 841 ie= 945 js= 107 je= 159 isd= 838 ied= 948 jsd= 104 jed= 162
+ 29:  enter get_nggps_ic is= 946 ie=1050 js= 107 je= 159 isd= 943 ied=1053 jsd= 104 jed= 162
+ 30:  enter get_nggps_ic is=   1 ie= 105 js= 160 je= 212 isd=  -2 ied= 108 jsd= 157 jed= 215
+ 31:  enter get_nggps_ic is= 106 ie= 210 js= 160 je= 212 isd= 103 ied= 213 jsd= 157 jed= 215
+ 32:  enter get_nggps_ic is= 211 ie= 315 js= 160 je= 212 isd= 208 ied= 318 jsd= 157 jed= 215
+ 33:  enter get_nggps_ic is= 316 ie= 420 js= 160 je= 212 isd= 313 ied= 423 jsd= 157 jed= 215
+ 34:  enter get_nggps_ic is= 421 ie= 525 js= 160 je= 212 isd= 418 ied= 528 jsd= 157 jed= 215
+ 23:  enter get_nggps_ic is= 316 ie= 420 js= 107 je= 159 isd= 313 ied= 423 jsd= 104 jed= 162
+ 35:  enter get_nggps_ic is= 526 ie= 630 js= 160 je= 212 isd= 523 ied= 633 jsd= 157 jed= 215
+ 36:  enter get_nggps_ic is= 631 ie= 735 js= 160 je= 212 isd= 628 ied= 738 jsd= 157 jed= 215
+ 37:  enter get_nggps_ic is= 736 ie= 840 js= 160 je= 212 isd= 733 ied= 843 jsd= 157 jed= 215
+ 38:  enter get_nggps_ic is= 841 ie= 945 js= 160 je= 212 isd= 838 ied= 948 jsd= 157 jed= 215
+ 39:  enter get_nggps_ic is= 946 ie=1050 js= 160 je= 212 isd= 943 ied=1053 jsd= 157 jed= 215
+140:  enter get_nggps_ic is=   1 ie= 105 js= 734 je= 785 isd=  -2 ied= 108 jsd= 731 jed= 788
+141:  enter get_nggps_ic is= 106 ie= 210 js= 734 je= 785 isd= 103 ied= 213 jsd= 731 jed= 788
+142:  enter get_nggps_ic is= 211 ie= 315 js= 734 je= 785 isd= 208 ied= 318 jsd= 731 jed= 788
+143:  enter get_nggps_ic is= 316 ie= 420 js= 734 je= 785 isd= 313 ied= 423 jsd= 731 jed= 788
+155:  enter get_nggps_ic is= 526 ie= 630 js= 786 je= 838 isd= 523 ied= 633 jsd= 783 jed= 841
+159:  enter get_nggps_ic is= 946 ie=1050 js= 786 je= 838 isd= 943 ied=1053 jsd= 783 jed= 841
+144:  enter get_nggps_ic is= 421 ie= 525 js= 734 je= 785 isd= 418 ied= 528 jsd= 731 jed= 788
+147:  enter get_nggps_ic is= 736 ie= 840 js= 734 je= 785 isd= 733 ied= 843 jsd= 731 jed= 788
+148:  enter get_nggps_ic is= 841 ie= 945 js= 734 je= 785 isd= 838 ied= 948 jsd= 731 jed= 788
+149:  enter get_nggps_ic is= 946 ie=1050 js= 734 je= 785 isd= 943 ied=1053 jsd= 731 jed= 788
+150:  enter get_nggps_ic is=   1 ie= 105 js= 786 je= 838 isd=  -2 ied= 108 jsd= 783 jed= 841
+153:  enter get_nggps_ic is= 316 ie= 420 js= 786 je= 838 isd= 313 ied= 423 jsd= 783 jed= 841
+154:  enter get_nggps_ic is= 421 ie= 525 js= 786 je= 838 isd= 418 ied= 528 jsd= 783 jed= 841
+158:  enter get_nggps_ic is= 841 ie= 945 js= 786 je= 838 isd= 838 ied= 948 jsd= 783 jed= 841
+145:  enter get_nggps_ic is= 526 ie= 630 js= 734 je= 785 isd= 523 ied= 633 jsd= 731 jed= 788
+146:  enter get_nggps_ic is= 631 ie= 735 js= 734 je= 785 isd= 628 ied= 738 jsd= 731 jed= 788
+151:  enter get_nggps_ic is= 106 ie= 210 js= 786 je= 838 isd= 103 ied= 213 jsd= 783 jed= 841
+152:  enter get_nggps_ic is= 211 ie= 315 js= 786 je= 838 isd= 208 ied= 318 jsd= 783 jed= 841
+156:  enter get_nggps_ic is= 631 ie= 735 js= 786 je= 838 isd= 628 ied= 738 jsd= 783 jed= 841
+157:  enter get_nggps_ic is= 736 ie= 840 js= 786 je= 838 isd= 733 ied= 843 jsd= 783 jed= 841
+ 40:  enter get_nggps_ic is=   1 ie= 105 js= 213 je= 265 isd=  -2 ied= 108 jsd= 210 jed= 268
+188:  enter get_nggps_ic is= 841 ie= 945 js= 945 je= 997 isd= 838 ied= 948 jsd= 942 jed=1000
+189:  enter get_nggps_ic is= 946 ie=1050 js= 945 je= 997 isd= 943 ied=1053 jsd= 942 jed=1000
+194:  enter get_nggps_ic is= 421 ie= 525 js= 998 je=1050 isd= 418 ied= 528 jsd= 995 jed=1053
+195:  enter get_nggps_ic is= 526 ie= 630 js= 998 je=1050 isd= 523 ied= 633 jsd= 995 jed=1053
+197:  enter get_nggps_ic is= 736 ie= 840 js= 998 je=1050 isd= 733 ied= 843 jsd= 995 jed=1053
+198:  enter get_nggps_ic is= 841 ie= 945 js= 998 je=1050 isd= 838 ied= 948 jsd= 995 jed=1053
+180:  enter get_nggps_ic is=   1 ie= 105 js= 945 je= 997 isd=  -2 ied= 108 jsd= 942 jed=1000
+181:  enter get_nggps_ic is= 106 ie= 210 js= 945 je= 997 isd= 103 ied= 213 jsd= 942 jed=1000
+182:  enter get_nggps_ic is= 211 ie= 315 js= 945 je= 997 isd= 208 ied= 318 jsd= 942 jed=1000
+183:  enter get_nggps_ic is= 316 ie= 420 js= 945 je= 997 isd= 313 ied= 423 jsd= 942 jed=1000
+184:  enter get_nggps_ic is= 421 ie= 525 js= 945 je= 997 isd= 418 ied= 528 jsd= 942 jed=1000
+185:  enter get_nggps_ic is= 526 ie= 630 js= 945 je= 997 isd= 523 ied= 633 jsd= 942 jed=1000
+186:  enter get_nggps_ic is= 631 ie= 735 js= 945 je= 997 isd= 628 ied= 738 jsd= 942 jed=1000
+187:  enter get_nggps_ic is= 736 ie= 840 js= 945 je= 997 isd= 733 ied= 843 jsd= 942 jed=1000
+190:  enter get_nggps_ic is=   1 ie= 105 js= 998 je=1050 isd=  -2 ied= 108 jsd= 995 jed=1053
+191:  enter get_nggps_ic is= 106 ie= 210 js= 998 je=1050 isd= 103 ied= 213 jsd= 995 jed=1053
+192:  enter get_nggps_ic is= 211 ie= 315 js= 998 je=1050 isd= 208 ied= 318 jsd= 995 jed=1053
+193:  enter get_nggps_ic is= 316 ie= 420 js= 998 je=1050 isd= 313 ied= 423 jsd= 995 jed=1053
+196:  enter get_nggps_ic is= 631 ie= 735 js= 998 je=1050 isd= 628 ied= 738 jsd= 995 jed=1053
+199:  enter get_nggps_ic is= 946 ie=1050 js= 998 je=1050 isd= 943 ied=1053 jsd= 995 jed=1053
+130:  enter get_nggps_ic is=   1 ie= 105 js= 682 je= 733 isd=  -2 ied= 108 jsd= 679 jed= 736
+168:  enter get_nggps_ic is= 841 ie= 945 js= 839 je= 891 isd= 838 ied= 948 jsd= 836 jed= 894
+171:  enter get_nggps_ic is= 106 ie= 210 js= 892 je= 944 isd= 103 ied= 213 jsd= 889 jed= 947
+174:  enter get_nggps_ic is= 421 ie= 525 js= 892 je= 944 isd= 418 ied= 528 jsd= 889 jed= 947
+160:  enter get_nggps_ic is=   1 ie= 105 js= 839 je= 891 isd=  -2 ied= 108 jsd= 836 jed= 894
+161:  enter get_nggps_ic is= 106 ie= 210 js= 839 je= 891 isd= 103 ied= 213 jsd= 836 jed= 894
+162:  enter get_nggps_ic is= 211 ie= 315 js= 839 je= 891 isd= 208 ied= 318 jsd= 836 jed= 894
+163:  enter get_nggps_ic is= 316 ie= 420 js= 839 je= 891 isd= 313 ied= 423 jsd= 836 jed= 894
+164:  enter get_nggps_ic is= 421 ie= 525 js= 839 je= 891 isd= 418 ied= 528 jsd= 836 jed= 894
+ 48:  enter get_nggps_ic is= 841 ie= 945 js= 213 je= 265 isd= 838 ied= 948 jsd= 210 jed= 268
+165:  enter get_nggps_ic is= 526 ie= 630 js= 839 je= 891 isd= 523 ied= 633 jsd= 836 jed= 894
+166:  enter get_nggps_ic is= 631 ie= 735 js= 839 je= 891 isd= 628 ied= 738 jsd= 836 jed= 894
+167:  enter get_nggps_ic is= 736 ie= 840 js= 839 je= 891 isd= 733 ied= 843 jsd= 836 jed= 894
+169:  enter get_nggps_ic is= 946 ie=1050 js= 839 je= 891 isd= 943 ied=1053 jsd= 836 jed= 894
+170:  enter get_nggps_ic is=   1 ie= 105 js= 892 je= 944 isd=  -2 ied= 108 jsd= 889 jed= 947
+120:  enter get_nggps_ic is=   1 ie= 105 js= 630 je= 681 isd=  -2 ied= 108 jsd= 627 jed= 684
+172:  enter get_nggps_ic is= 211 ie= 315 js= 892 je= 944 isd= 208 ied= 318 jsd= 889 jed= 947
+173:  enter get_nggps_ic is= 316 ie= 420 js= 892 je= 944 isd= 313 ied= 423 jsd= 889 jed= 947
+175:  enter get_nggps_ic is= 526 ie= 630 js= 892 je= 944 isd= 523 ied= 633 jsd= 889 jed= 947
+123:  enter get_nggps_ic is= 316 ie= 420 js= 630 je= 681 isd= 313 ied= 423 jsd= 627 jed= 684
+176:  enter get_nggps_ic is= 631 ie= 735 js= 892 je= 944 isd= 628 ied= 738 jsd= 889 jed= 947
+177:  enter get_nggps_ic is= 736 ie= 840 js= 892 je= 944 isd= 733 ied= 843 jsd= 889 jed= 947
+ 50:  enter get_nggps_ic is=   1 ie= 105 js= 266 je= 317 isd=  -2 ied= 108 jsd= 263 jed= 320
+178:  enter get_nggps_ic is= 841 ie= 945 js= 892 je= 944 isd= 838 ied= 948 jsd= 889 jed= 947
+179:  enter get_nggps_ic is= 946 ie=1050 js= 892 je= 944 isd= 943 ied=1053 jsd= 889 jed= 947
+124:  enter get_nggps_ic is= 421 ie= 525 js= 630 je= 681 isd= 418 ied= 528 jsd= 627 jed= 684
+125:  enter get_nggps_ic is= 526 ie= 630 js= 630 je= 681 isd= 523 ied= 633 jsd= 627 jed= 684
+200:  num_files=           2
+200:  num_file=           1 filename_base= atm output_file= netcdf_parallel
+200:  num_file=           2 filename_base= sfc output_file= netcdf_parallel
+200:  grid_id=            1  output_grid= regional_latlon
+200:  lon1=  -200.9000      lat1=  -11.00000    
+200:  lon2=  -158.9000      lat2=   31.00000    
+200:  dlon=  3.9999999E-02  dlat=  3.9999999E-02
+200:  imo =        1051  jmo =        1051
+200:  ideflate=           1
+200:  quantize_mode=quantize_bitround quantize_nsd=           0
+200:  zstandard_level=           0
+200:   aft fcst run output time=          90 FBcount=           3 na=           1
+200:  in wrt run, cdate=        2019           8          24           0 fcst_seconds
+200:  =  2.5000000E-02 nfhour=  2.500000000000000E-002 lupp_history= T lrestart= F 
+200:  write grid comp not return,cfhour=000
+200:  ichunk2d,jchunk2d          -1          -1
+200:  ichunk3d,jchunk3d,kchunk3d          -1          -1          -1
+200:  in wrt run,filename=            1 ./atmf000.nc
+ 53:  enter get_nggps_ic is= 316 ie= 420 js= 266 je= 317 isd= 313 ied= 423 jsd= 263 jed= 320
+200:                                             ./atmf000.nc write time is   25.03846 at fcst    00:01
+200:  ichunk2d,jchunk2d          -1          -1
+200:  ichunk3d,jchunk3d,kchunk3d          -1          -1          -1
+200:  in wrt run,filename=            2 ./sfcf000.nc
+200:                                             ./sfcf000.nc write time is    3.11648 at fcst    00:01
+200:                                            ------- total write time is   28.18246 at Fcst    00:01
+200:   aft fcst run output time=       10800 FBcount=           3 na=         120
+100:  enter get_nggps_ic is=   1 ie= 105 js= 526 je= 577 isd=  -2 ied= 108 jsd= 523 jed= 580
+102:  enter get_nggps_ic is= 211 ie= 315 js= 526 je= 577 isd= 208 ied= 318 jsd= 523 jed= 580
+128:  enter get_nggps_ic is= 841 ie= 945 js= 630 je= 681 isd= 838 ied= 948 jsd= 627 jed= 684
+104:  enter get_nggps_ic is= 421 ie= 525 js= 526 je= 577 isd= 418 ied= 528 jsd= 523 jed= 580
+129:  enter get_nggps_ic is= 946 ie=1050 js= 630 je= 681 isd= 943 ied=1053 jsd= 627 jed= 684
+105:  enter get_nggps_ic is= 526 ie= 630 js= 526 je= 577 isd= 523 ied= 633 jsd= 523 jed= 580
+210:  num_files=           2
+210:  num_file=           1 filename_base= atm output_file= netcdf_parallel
+210:  num_file=           2 filename_base= sfc output_file= netcdf_parallel
+210:  grid_id=            1  output_grid= regional_latlon
+210:  lon1=  -200.9000      lat1=  -11.00000    
+210:  lon2=  -158.9000      lat2=   31.00000    
+210:  dlon=  3.9999999E-02  dlat=  3.9999999E-02
+210:  imo =        1051  jmo =        1051
+210:  ideflate=           1
+210:  quantize_mode=quantize_bitround quantize_nsd=           0
+210:  zstandard_level=           0
+210:  in wrt run, cdate=        2019           8          24           3 fcst_seconds
+210:  =   3.000000     nfhour=   3.00000000000000      lupp_history= T lrestart= T 
+210:  write grid comp not return,cfhour=003
+210:  ichunk2d,jchunk2d          -1          -1
+210:  ichunk3d,jchunk3d,kchunk3d          -1          -1          -1
+210:  in wrt run,filename=            1 ./atmf003.nc
+210:                                             ./atmf003.nc write time is  724.90289 at fcst    03:00
+210:  ichunk2d,jchunk2d          -1          -1
+101:  enter get_nggps_ic is= 106 ie= 210 js= 526 je= 577 isd= 103 ied= 213 jsd= 523 jed= 580
+133:  enter get_nggps_ic is= 316 ie= 420 js= 682 je= 733 isd= 313 ied= 423 jsd= 679 jed= 736
+ 41:  enter get_nggps_ic is= 106 ie= 210 js= 213 je= 265 isd= 103 ied= 213 jsd= 210 jed= 268
+103:  enter get_nggps_ic is= 316 ie= 420 js= 526 je= 577 isd= 313 ied= 423 jsd= 523 jed= 580
+131:  enter get_nggps_ic is= 106 ie= 210 js= 682 je= 733 isd= 103 ied= 213 jsd= 679 jed= 736
+135:  enter get_nggps_ic is= 526 ie= 630 js= 682 je= 733 isd= 523 ied= 633 jsd= 679 jed= 736
+ 42:  enter get_nggps_ic is= 211 ie= 315 js= 213 je= 265 isd= 208 ied= 318 jsd= 210 jed= 268
+132:  enter get_nggps_ic is= 211 ie= 315 js= 682 je= 733 isd= 208 ied= 318 jsd= 679 jed= 736
+ 43:  enter get_nggps_ic is= 316 ie= 420 js= 213 je= 265 isd= 313 ied= 423 jsd= 210 jed= 268
+210:  ichunk3d,jchunk3d,kchunk3d          -1          -1          -1
+210:  in wrt run,filename=            2 ./sfcf003.nc
+210:                                             ./sfcf003.nc write time is    4.01050 at fcst    03:00
+210:                                            ------- total write time is  728.94475 at Fcst    03:00
+ 44:  enter get_nggps_ic is= 421 ie= 525 js= 213 je= 265 isd= 418 ied= 528 jsd= 210 jed= 268
+121:  enter get_nggps_ic is= 106 ie= 210 js= 630 je= 681 isd= 103 ied= 213 jsd= 627 jed= 684
+134:  enter get_nggps_ic is= 421 ie= 525 js= 682 je= 733 isd= 418 ied= 528 jsd= 679 jed= 736
+ 45:  enter get_nggps_ic is= 526 ie= 630 js= 213 je= 265 isd= 523 ied= 633 jsd= 210 jed= 268
+107:  enter get_nggps_ic is= 736 ie= 840 js= 526 je= 577 isd= 733 ied= 843 jsd= 523 jed= 580
+ 46:  enter get_nggps_ic is= 631 ie= 735 js= 213 je= 265 isd= 628 ied= 738 jsd= 210 jed= 268
+ 51:  enter get_nggps_ic is= 106 ie= 210 js= 266 je= 317 isd= 103 ied= 213 jsd= 263 jed= 320
+122:  enter get_nggps_ic is= 211 ie= 315 js= 630 je= 681 isd= 208 ied= 318 jsd= 627 jed= 684
+106:  enter get_nggps_ic is= 631 ie= 735 js= 526 je= 577 isd= 628 ied= 738 jsd= 523 jed= 580
+126:  enter get_nggps_ic is= 631 ie= 735 js= 630 je= 681 isd= 628 ied= 738 jsd= 627 jed= 684
+ 47:  enter get_nggps_ic is= 736 ie= 840 js= 213 je= 265 isd= 733 ied= 843 jsd= 210 jed= 268
+110:  enter get_nggps_ic is=   1 ie= 105 js= 578 je= 629 isd=  -2 ied= 108 jsd= 575 jed= 632
+127:  enter get_nggps_ic is= 736 ie= 840 js= 630 je= 681 isd= 733 ied= 843 jsd= 627 jed= 684
+ 52:  enter get_nggps_ic is= 211 ie= 315 js= 266 je= 317 isd= 208 ied= 318 jsd= 263 jed= 320
+137:  enter get_nggps_ic is= 736 ie= 840 js= 682 je= 733 isd= 733 ied= 843 jsd= 679 jed= 736
+ 54:  enter get_nggps_ic is= 421 ie= 525 js= 266 je= 317 isd= 418 ied= 528 jsd= 263 jed= 320
+109:  enter get_nggps_ic is= 946 ie=1050 js= 526 je= 577 isd= 943 ied=1053 jsd= 523 jed= 580
+138:  enter get_nggps_ic is= 841 ie= 945 js= 682 je= 733 isd= 838 ied= 948 jsd= 679 jed= 736
+ 55:  enter get_nggps_ic is= 526 ie= 630 js= 266 je= 317 isd= 523 ied= 633 jsd= 263 jed= 320
+112:  enter get_nggps_ic is= 211 ie= 315 js= 578 je= 629 isd= 208 ied= 318 jsd= 575 jed= 632
+139:  enter get_nggps_ic is= 946 ie=1050 js= 682 je= 733 isd= 943 ied=1053 jsd= 679 jed= 736
+ 57:  enter get_nggps_ic is= 736 ie= 840 js= 266 je= 317 isd= 733 ied= 843 jsd= 263 jed= 320
+113:  enter get_nggps_ic is= 316 ie= 420 js= 578 je= 629 isd= 313 ied= 423 jsd= 575 jed= 632
+136:  enter get_nggps_ic is= 631 ie= 735 js= 682 je= 733 isd= 628 ied= 738 jsd= 679 jed= 736
+115:  enter get_nggps_ic is= 526 ie= 630 js= 578 je= 629 isd= 523 ied= 633 jsd= 575 jed= 632
+ 49:  enter get_nggps_ic is= 946 ie=1050 js= 213 je= 265 isd= 943 ied=1053 jsd= 210 jed= 268
+117:  enter get_nggps_ic is= 736 ie= 840 js= 578 je= 629 isd= 733 ied= 843 jsd= 575 jed= 632
+ 56:  enter get_nggps_ic is= 631 ie= 735 js= 266 je= 317 isd= 628 ied= 738 jsd= 263 jed= 320
+111:  enter get_nggps_ic is= 106 ie= 210 js= 578 je= 629 isd= 103 ied= 213 jsd= 575 jed= 632
+ 58:  enter get_nggps_ic is= 841 ie= 945 js= 266 je= 317 isd= 838 ied= 948 jsd= 263 jed= 320
+114:  enter get_nggps_ic is= 421 ie= 525 js= 578 je= 629 isd= 418 ied= 528 jsd= 575 jed= 632
+ 59:  enter get_nggps_ic is= 946 ie=1050 js= 266 je= 317 isd= 943 ied=1053 jsd= 263 jed= 320
+116:  enter get_nggps_ic is= 631 ie= 735 js= 578 je= 629 isd= 628 ied= 738 jsd= 575 jed= 632
+108:  enter get_nggps_ic is= 841 ie= 945 js= 526 je= 577 isd= 838 ied= 948 jsd= 523 jed= 580
+118:  enter get_nggps_ic is= 841 ie= 945 js= 578 je= 629 isd= 838 ied= 948 jsd= 575 jed= 632
+119:  enter get_nggps_ic is= 946 ie=1050 js= 578 je= 629 isd= 943 ied=1053 jsd= 575 jed= 632
+ 82:  enter get_nggps_ic is= 211 ie= 315 js= 422 je= 473 isd= 208 ied= 318 jsd= 419 jed= 476
+ 89:  enter get_nggps_ic is= 946 ie=1050 js= 422 je= 473 isd= 943 ied=1053 jsd= 419 jed= 476
+ 91:  enter get_nggps_ic is= 106 ie= 210 js= 474 je= 525 isd= 103 ied= 213 jsd= 471 jed= 528
+ 99:  enter get_nggps_ic is= 946 ie=1050 js= 474 je= 525 isd= 943 ied=1053 jsd= 471 jed= 528
+ 80:  enter get_nggps_ic is=   1 ie= 105 js= 422 je= 473 isd=  -2 ied= 108 jsd= 419 jed= 476
+ 81:  enter get_nggps_ic is= 106 ie= 210 js= 422 je= 473 isd= 103 ied= 213 jsd= 419 jed= 476
+ 83:  enter get_nggps_ic is= 316 ie= 420 js= 422 je= 473 isd= 313 ied= 423 jsd= 419 jed= 476
+ 84:  enter get_nggps_ic is= 421 ie= 525 js= 422 je= 473 isd= 418 ied= 528 jsd= 419 jed= 476
+ 85:  enter get_nggps_ic is= 526 ie= 630 js= 422 je= 473 isd= 523 ied= 633 jsd= 419 jed= 476
+ 86:  enter get_nggps_ic is= 631 ie= 735 js= 422 je= 473 isd= 628 ied= 738 jsd= 419 jed= 476
+ 87:  enter get_nggps_ic is= 736 ie= 840 js= 422 je= 473 isd= 733 ied= 843 jsd= 419 jed= 476
+ 88:  enter get_nggps_ic is= 841 ie= 945 js= 422 je= 473 isd= 838 ied= 948 jsd= 419 jed= 476
+ 90:  enter get_nggps_ic is=   1 ie= 105 js= 474 je= 525 isd=  -2 ied= 108 jsd= 471 jed= 528
+ 92:  enter get_nggps_ic is= 211 ie= 315 js= 474 je= 525 isd= 208 ied= 318 jsd= 471 jed= 528
+ 93:  enter get_nggps_ic is= 316 ie= 420 js= 474 je= 525 isd= 313 ied= 423 jsd= 471 jed= 528
+ 94:  enter get_nggps_ic is= 421 ie= 525 js= 474 je= 525 isd= 418 ied= 528 jsd= 471 jed= 528
+ 95:  enter get_nggps_ic is= 526 ie= 630 js= 474 je= 525 isd= 523 ied= 633 jsd= 471 jed= 528
+ 96:  enter get_nggps_ic is= 631 ie= 735 js= 474 je= 525 isd= 628 ied= 738 jsd= 471 jed= 528
+ 97:  enter get_nggps_ic is= 736 ie= 840 js= 474 je= 525 isd= 733 ied= 843 jsd= 471 jed= 528
+ 98:  enter get_nggps_ic is= 841 ie= 945 js= 474 je= 525 isd= 838 ied= 948 jsd= 471 jed= 528
+ 67:  enter get_nggps_ic is= 736 ie= 840 js= 318 je= 369 isd= 733 ied= 843 jsd= 315 jed= 372
+ 69:  enter get_nggps_ic is= 946 ie=1050 js= 318 je= 369 isd= 943 ied=1053 jsd= 315 jed= 372
+ 60:  enter get_nggps_ic is=   1 ie= 105 js= 318 je= 369 isd=  -2 ied= 108 jsd= 315 jed= 372
+ 64:  enter get_nggps_ic is= 421 ie= 525 js= 318 je= 369 isd= 418 ied= 528 jsd= 315 jed= 372
+ 66:  enter get_nggps_ic is= 631 ie= 735 js= 318 je= 369 isd= 628 ied= 738 jsd= 315 jed= 372
+ 70:  enter get_nggps_ic is=   1 ie= 105 js= 370 je= 421 isd=  -2 ied= 108 jsd= 367 jed= 424
+ 61:  enter get_nggps_ic is= 106 ie= 210 js= 318 je= 369 isd= 103 ied= 213 jsd= 315 jed= 372
+ 75:  enter get_nggps_ic is= 526 ie= 630 js= 370 je= 421 isd= 523 ied= 633 jsd= 367 jed= 424
+ 77:  enter get_nggps_ic is= 736 ie= 840 js= 370 je= 421 isd= 733 ied= 843 jsd= 367 jed= 424
+ 74:  enter get_nggps_ic is= 421 ie= 525 js= 370 je= 421 isd= 418 ied= 528 jsd= 367 jed= 424
+ 73:  enter get_nggps_ic is= 316 ie= 420 js= 370 je= 421 isd= 313 ied= 423 jsd= 367 jed= 424
+ 68:  enter get_nggps_ic is= 841 ie= 945 js= 318 je= 369 isd= 838 ied= 948 jsd= 315 jed= 372
+ 76:  enter get_nggps_ic is= 631 ie= 735 js= 370 je= 421 isd= 628 ied= 738 jsd= 367 jed= 424
+ 65:  enter get_nggps_ic is= 526 ie= 630 js= 318 je= 369 isd= 523 ied= 633 jsd= 315 jed= 372
+ 71:  enter get_nggps_ic is= 106 ie= 210 js= 370 je= 421 isd= 103 ied= 213 jsd= 367 jed= 424
+ 72:  enter get_nggps_ic is= 211 ie= 315 js= 370 je= 421 isd= 208 ied= 318 jsd= 367 jed= 424
+ 62:  enter get_nggps_ic is= 211 ie= 315 js= 318 je= 369 isd= 208 ied= 318 jsd= 315 jed= 372
+ 78:  enter get_nggps_ic is= 841 ie= 945 js= 370 je= 421 isd= 838 ied= 948 jsd= 367 jed= 424
+ 79:  enter get_nggps_ic is= 946 ie=1050 js= 370 je= 421 isd= 943 ied=1053 jsd= 367 jed= 424
+ 63:  enter get_nggps_ic is= 316 ie= 420 js= 318 je= 369 isd= 313 ied= 423 jsd= 315 jed= 372
+Model ended: Tue Mar 24 18:17:37 UTC 2026
